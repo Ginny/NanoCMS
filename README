@@ -1,0 +1,4 @@
+Small CMS for newbies in Nette 2 beta framework.
+- Admin section is located at /admin
+- 2 default accounts - admin/admin
+		     - demo/xxx

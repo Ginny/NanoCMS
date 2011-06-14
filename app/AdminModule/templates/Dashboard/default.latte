@@ -1,0 +1,27 @@
+{block #content}
+
+<h1 n:block="title">My pages</h1>
+
+<p><a n:href="add">Add new page</a></p>
+
+<table class="grid">
+    <tr>
+        <th>Title</th>
+        <th>Text</th>
+        <th>Slug</th>
+        <th></th>
+    </tr>
+
+{foreach $pages as $page}
+    <tr>
+        <td>{$page->title}</td>
+        <td>{$page->text|truncate:50}</td>
+        <td>{$page->slug}</td>
+        <td>            
+            <a n:href="edit, $page->id">Edit</a>
+            <a n:href="delete, $page->id">Delete</a>
+        </td>
+    </tr>
+{/foreach}
+
+</table>

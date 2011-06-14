@@ -1,0 +1,11 @@
+{block #content}
+
+<h1 n:block="title">Delete Page</h1>
+
+{if $page}
+<p>Are you sure that you want to delete page ‘{$page->title}’?</p>
+	{control deleteForm}
+
+{else}
+<p>Cannot find page.</p>
+{/if}

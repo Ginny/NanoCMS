@@ -1,0 +1,2438 @@
+<!-- "' --></script></style></pre></xmp></table>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="robots" content="noindex,noarchive">
+	<meta name="generator" content="Nette Framework">
+
+	<title>Nette\MemberAccessException</title><!-- Cannot read an undeclared property Nette\Database\Table\Selection::$title. -->
+
+	<style type="text/css" class="nette">html{overflow-y:scroll}body{margin:0 0 2em;padding:0}#netteBluescreen{font:9pt/1.5 Verdana,sans-serif;background:white;color:#333;position:absolute;left:0;top:0;width:100%;z-index:23178;text-align:left}#netteBluescreen *{font:inherit;color:inherit;background:transparent;border:none;margin:0;padding:0;text-align:inherit;text-indent:0}#netteBluescreen b{font-weight:bold}#netteBluescreen i{font-style:italic}#netteBluescreen a{text-decoration:none;color:#328ADC;padding:2px 4px;margin:-2px -4px}#netteBluescreen a:hover,#netteBluescreen a:active,#netteBluescreen a:focus{color:#085AA3}#netteBluescreen a abbr{font-family:sans-serif;color:#BBB}#netteBluescreenIcon{position:absolute;right:.5em;top:.5em;z-index:23179;text-decoration:none;background:#CD1818;padding:3px}#netteBluescreenError{background:#CD1818;color:white;font:13pt/1.5 Verdana,sans-serif!important;display:block}#netteBluescreenError #netteBsSearch{color:#CD1818;font-size:.7em}#netteBluescreenError:hover #netteBsSearch{color:#ED8383}#netteBluescreen h1{font-size:18pt;font-weight:normal;text-shadow:1px 1px 0 rgba(0,0,0,.4);margin:.7em 0}#netteBluescreen h2{font:14pt/1.5 sans-serif!important;color:#888;margin:.6em 0}#netteBluescreen h3{font:bold 10pt/1.5 Verdana,sans-serif!important;margin:1em 0;padding:0}#netteBluescreen p,#netteBluescreen pre{margin:.8em 0}#netteBluescreen pre,#netteBluescreen code,#netteBluescreen table{font:9pt/1.5 Consolas,monospace!important}#netteBluescreen pre,#netteBluescreen table{background:#FDF5CE;padding:.4em .7em;border:1px dotted silver;overflow:auto}#netteBluescreen table pre{padding:0;margin:0;border:none}#netteBluescreen pre.nette-dump span{color:#C22}#netteBluescreen pre.nette-dump a{color:#333}#netteBluescreen div.panel{padding:1px 25px}#netteBluescreen div.inner{background:#F4F3F1;padding:.1em 1em 1em;border-radius:8px;-moz-border-radius:8px;-webkit-border-radius:8px}#netteBluescreen table{border-collapse:collapse;width:100%}#netteBluescreen .outer{overflow:auto}#netteBluescreen td,#netteBluescreen th{vertical-align:top;text-align:left;padding:2px 6px;border:1px solid #e6dfbf}#netteBluescreen th{width:10%;font-weight:bold}#netteBluescreen tr:nth-child(2n),#netteBluescreen tr:nth-child(2n) pre{background-color:#F7F0CB}#netteBluescreen ol{margin:1em 0;padding-left:2.5em}#netteBluescreen ul{font:7pt/1.5 Verdana,sans-serif!important;padding:2em 4em;margin:1em 0 0;color:#777;background:#F6F5F3 url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFEAAAAjCAMAAADbuxbOAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADBQTFRF/fz24d7Y7Onj5uLd9vPu3drUzMvG09LN39zW8e7o2NbQ3NnT29jS0M7J1tXQAAAApvmsFgAAABB0Uk5T////////////////////AOAjXRkAAAKlSURBVHja7FbbsqQgDAwENEgc//9vN+SCWDtbtXPmZR/Wc6o02mlC58LA9ckFAOszvMV8xNgyUjyXhojfMVKvRL0ZHavxXYy5JrmchMdzou8YlTClxajtK8ZGGpWRoBr1+gFjKfHkJPbizabLgzE3pH7Iu4K980xgFvlrVzMZoVBWhtvouCDdcTDmTgMCJdVxJ9MKO6XxnliM7hxi5lbj2ZVM4l8DqYyKoNLYcfqBB1/LpHYxEcfVG6ZpMDgyFUVWY/Q1sSYPpIdSAKWqLWL0XqWiMWc4hpH0OQOMOAgdycY4N9Sb7wWANQs3rsDSdLAYiuxi5siVfOhBWIrtH0G3kNaF/8Q4kCPE1kMucG/ZMUBUCOgiKJkPuWWTLGVgLGpwns1DraUayCtoBqERyaYtVsm85NActRooezvSLO/sKZP/nq8n4+xcyjNsRu8zW6KWpdb7wjiQd4WrtFZYFiKHENSmWp6xshh96c2RQ+c7Lt+qbijyEjHWUJ/pZsy8MGIUuzNiPySK2Gqoh6ZTRF6ko6q3nVTkaA//itIrDpW6l3SLo8juOmqMXkYknu5FdQxWbhCfKHEGDhxxyTVaXJF3ZjSl3jMksjSOOKmne9pI+mcG5QvaUJhI9HpkmRo2NpCrDJvsktRhRE2MM6F2n7dt4OaMUq8bCctk0+PoMRzL+1l5PZ2eyM/Owr86gf8z/tOM53lom5+nVcFuB+eJVzlXwAYy9TZ9s537tfqcsJWbEU4nBngZo6FfO9T9CdhfBtmk2dLiAy8uS4zwOpMx2HqYbTC+amNeAYTpsP4SIgvWfUBWXxn3CMHW3ffd7k3+YIkx7w0t/CVGvcPejoeOlzOWzeGbawOHqXQGUTMZRcfj4XPCgW9y/fuvVn8zD9P1QHzv80uAAQA0i3Jer7Jr7gAAAABJRU5ErkJggg==') 99% 10px no-repeat;border-top:1px solid #DDD}#netteBluescreen .highlight{background:#CD1818;color:white;font-weight:bold;font-style:normal;display:block;padding:0 .4em;margin:0 -.4em}#netteBluescreen .line{color:#9F9C7F;font-weight:normal;font-style:normal}#netteBluescreen a[href^=editor\:]{color:inherit;border-bottom:1px dotted #C1D2E1}</style>
+</head>
+
+
+
+<body>
+<div id="netteBluescreen">
+	<a id="netteBluescreenIcon" href="#" rel="next"><abbr>&#x25bc;</abbr></a
+
+	><div>
+		<div id="netteBluescreenError" class="panel">
+			<h1>Nette\MemberAccessException</h1>
+
+			<p>Cannot read an undeclared property Nette\Database\Table\Selection::$title. <a href="http://www.google.cz/search?sourceid=nette&amp;q=Nette%5CMemberAccessException+Cannot+read+an+undeclared+property+Nette%5CDatabase%5CTable%5CSelection%3A%3A%24title." id="netteBsSearch">search&#x25ba;</a></p>
+		</div>
+
+
+
+				
+			
+
+
+									
+
+
+						
+			<div class="panel">
+			<h2><a href="#" rel="netteBsPnl1">Source file <abbr>&#x25ba;</abbr></a></h2>
+
+			<div id="netteBsPnl1" class="nette-collapsed inner">
+				<p><b>File:</b> <a href="editor://open/?file=%2Fhome%2Fusers%2Fginny%2Fginny.jecool.net%2Fweb%2Flibs%2FNette%2Fcommon%2FObjectMixin.php&amp;line=134" title="/home/users/ginny/ginny.jecool.net/web/libs/Nette/common/ObjectMixin.php:134">.../libs/Nette/common/<b>ObjectMixin.php</b></a> &nbsp; <b>Line:</b> 134</p>
+				<pre><code><span style="color: #06B"><span style="color: #D24; font-weight: bold"><span class='line'>127:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(isset(</span><span style="color: #000">self</span><span style="color: #D24; font-weight: bold">::</span><span style="color: #000">$methods</span><span style="color: #D24; font-weight: bold">[</span><span style="color: #000">$class</span><span style="color: #D24; font-weight: bold">][</span><span style="color: #000">$m</span><span style="color: #D24; font-weight: bold">]))&nbsp;{
+<span class='line'>128:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #000">$val&nbsp;</span><span style="color: #D24; font-weight: bold">=&nbsp;</span><span style="color: #000">$_this</span><span style="color: #D24; font-weight: bold">-&gt;</span><span style="color: #000">$m</span><span style="color: #D24; font-weight: bold">();
+<span class='line'>129:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #000">$val</span><span style="color: #D24; font-weight: bold">;
+<span class='line'>130:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+<span class='line'>131:</span>    
+<span class='line'>132:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #000">$type&nbsp;</span><span style="color: #D24; font-weight: bold">=&nbsp;isset(</span><span style="color: #000">self</span><span style="color: #D24; font-weight: bold">::</span><span style="color: #000">$methods</span><span style="color: #D24; font-weight: bold">[</span><span style="color: #000">$class</span><span style="color: #D24; font-weight: bold">][</span><span style="color: #080">'set'&nbsp;</span><span style="color: #D24; font-weight: bold">.&nbsp;</span><span style="color: #000">$name</span><span style="color: #D24; font-weight: bold">])&nbsp;?&nbsp;</span><span style="color: #080">'a&nbsp;write-only'&nbsp;</span><span style="color: #D24; font-weight: bold">:&nbsp;</span><span style="color: #080">'an&nbsp;undeclared'</span><span style="color: #D24; font-weight: bold">;
+<span class='line'>133:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #000">$name&nbsp;</span><span style="color: #D24; font-weight: bold">=&nbsp;</span><span style="color: #000">func_get_arg</span><span style="color: #D24; font-weight: bold">(</span><span style="color: #000">1</span><span style="color: #D24; font-weight: bold">);
+<span class='highlight'>134:    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;throw&nbsp;new&nbsp;MemberAccessException("Cannot&nbsp;read&nbsp;$type&nbsp;property&nbsp;$class::\$$name.");
+</span></span><span style="color: #000"></span><span style="color: #D24; font-weight: bold"></span><span style="color: #080"></span><span style="color: #000"></span><span style="color: #080"></span><span style="color: #000"></span><span style="color: #080"></span><span style="color: #000"></span><span style="color: #080"></span><span style="color: #D24; font-weight: bold"><span class='line'>135:</span>    &nbsp;&nbsp;&nbsp;&nbsp;}
+<span class='line'>136:</span>    
+<span class='line'>137:</span>    
+<span class='line'>138:</span>    
+<span class='line'>139:</span>    &nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #999; font-style: italic">/**
+<span class='line'>140:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;Sets&nbsp;value&nbsp;of&nbsp;a&nbsp;property.
+<span class='line'>141:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;&nbsp;object
+</span></span></code></pre>			</div></div>
+
+
+
+									<div class="panel">
+				<h2><a href="#" rel="netteBsPnl2">Call stack <abbr>&#x25bc;</abbr></a></h2>
+
+				<div id="netteBsPnl2" class="inner">
+				<ol>
+										<li><p>
+
+											<a href="editor://open/?file=%2Fhome%2Fusers%2Fginny%2Fginny.jecool.net%2Fweb%2Flibs%2FNette%2Fcommon%2FObject.php&amp;line=132" title="/home/users/ginny/ginny.jecool.net/web/libs/Nette/common/Object.php:132">.../libs/Nette/common/<b>Object.php</b></a>:132					
+					<a href="#" rel="netteBsSrc1-0">source <abbr>&#x25ba;</abbr></a>&nbsp; 
+					Nette\ObjectMixin::					get
+					(<a href="#" rel="netteBsArgs1-0">arguments <abbr>&#x25ba;</abbr></a>)
+					</p>
+
+											<div class="nette-collapsed outer" id="netteBsArgs1-0">
+						<table>
+						<tr><th>$_this</th><td><pre class="nette-dump"><a href='#' rel='next'><span>Nette\Database\Table\Selection</span>(22) <abbr>&#x25ba;</abbr> </a><code class="nette-collapsed">{
+   <a href='#' rel='next'>"connection" => <span>Nette\Database\Connection</span>(6) <abbr>&#x25bc;</abbr> </a><code>{
+      <a href='#' rel='next'>"driver" <span>private</span> => <span>Nette\Database\Drivers\Sqlite2Driver</span>(3) <abbr>&#x25bc;</abbr> </a><code>{
+         "supports" => <span>array</span>(1) { ... }
+         "connection" <span>private</span> => <span>Nette\Database\Connection</span>(6) { *RECURSION* }
+         <a href='#' rel='next'>"fmtDateTime" <span>private</span> => "U"
+      }</code>
+      "preprocessor" <span>private</span> => <span>Nette\Database\SqlPreprocessor</span>(6) <abbr>&#x25bc;</abbr> </a><code>{
+         "connection" <span>private</span> => <span>Nette\Database\Connection</span>(6) { *RECURSION* }
+         "driver" <span>private</span> => <span>Nette\Database\Drivers\Sqlite2Driver</span>(3) { ... }
+         "params" <span>private</span> => NULL
+         "remaining" <span>private</span> => NULL
+         <a href='#' rel='next'>"counter" <span>private</span> => NULL
+         "arrayMode" <span>private</span> => NULL
+      }</code>
+      "databaseReflection" => <span>Nette\Database\Reflection\DatabaseReflection</span>(3) <abbr>&#x25bc;</abbr> </a><code>{
+         "primary" <span>private</span> => "id" (2)
+         "foreign" <span>private</span> => "%s_id" (5)
+         "table" <span>private</span> => "%s" (2)
+      }</code>
+      "cache" => NULL
+      "substitutions" => <span>array</span>(0) 
+      "onQuery" => NULL
+   }</code>
+   "name" => "pages" (5)
+   "primary" => "id" (2)
+   "rows" <span>protected</span> => NULL
+   "data" <span>protected</span> => NULL
+   "select" <span>protected</span> => <span>array</span>(0) 
+   <a href='#' rel='next'>"where" <span>protected</span> => <span>array</span>(1) <abbr>&#x25bc;</abbr> </a><code>[
+      0 => "[slug] = ?" (10)
+   <a href='#' rel='next'>]</code>
+   "conditions" <span>protected</span> => <span>array</span>(1) <abbr>&#x25bc;</abbr> </a><code>[
+      0 => "[slug]" (6)
+   <a href='#' rel='next'>]</code>
+   "parameters" <span>protected</span> => <span>array</span>(1) <abbr>&#x25bc;</abbr> </a><code>[
+      0 => "o-nas" (5)
+   ]</code>
+   "order" <span>protected</span> => <span>array</span>(0) 
+   "limit" <span>protected</span> => NULL
+   "offset" <span>protected</span> => NULL
+   "group" <span>protected</span> => ""
+   "having" <span>protected</span> => ""
+   "referenced" <span>protected</span> => <span>array</span>(0) 
+   "referencing" <span>protected</span> => <span>array</span>(0) 
+   "aggregation" <span>protected</span> => <span>array</span>(0) 
+   "accessed" <span>protected</span> => NULL
+   "prevAccessed" <span>protected</span> => NULL
+   "keys" <span>protected</span> => <span>array</span>(0) 
+   "delimitedName" <span>protected</span> => "[pages]" (7)
+   "delimitedPrimary" <span>protected</span> => "[id]" (4)
+}</code>
+</pre></td></tr>
+<tr><th>$name</th><td><pre class="nette-dump">"title" (5)
+</pre></td></tr>
+						</table>
+						</div>
+					
+
+											<pre class="nette-collapsed" id="netteBsSrc1-0"><code><span style="color: #06B"><span style="color: #999; font-style: italic"><span class='line'>125:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;Returns&nbsp;property&nbsp;value.&nbsp;Do&nbsp;not&nbsp;call&nbsp;directly.
+<span class='line'>126:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;&nbsp;string&nbsp;&nbsp;property&nbsp;name
+<span class='line'>127:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@return&nbsp;mixed&nbsp;&nbsp;&nbsp;property&nbsp;value
+<span class='line'>128:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@throws&nbsp;MemberAccessException&nbsp;if&nbsp;the&nbsp;property&nbsp;is&nbsp;not&nbsp;defined.
+<span class='line'>129:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/
+<span class='line'>130:</span>    &nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #D24; font-weight: bold">public&nbsp;function&nbsp;&amp;</span><span style="color: #000">__get</span><span style="color: #D24; font-weight: bold">(</span><span style="color: #000">$name</span><span style="color: #D24; font-weight: bold">)
+<span class='line'>131:</span>    &nbsp;&nbsp;&nbsp;&nbsp;{
+<span class='highlight'>132:    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;ObjectMixin::get($this,&nbsp;$name);
+</span></span><span style="color: #000"></span><span style="color: #D24; font-weight: bold"></span><span style="color: #000"></span><span style="color: #D24; font-weight: bold"></span><span style="color: #000"></span><span style="color: #D24; font-weight: bold"></span><span style="color: #000"></span><span style="color: #D24; font-weight: bold"><span class='line'>133:</span>    &nbsp;&nbsp;&nbsp;&nbsp;}
+<span class='line'>134:</span>    
+<span class='line'>135:</span>    
+<span class='line'>136:</span>    
+<span class='line'>137:</span>    &nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #999; font-style: italic">/**
+<span class='line'>138:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;Sets&nbsp;value&nbsp;of&nbsp;a&nbsp;property.&nbsp;Do&nbsp;not&nbsp;call&nbsp;directly.
+<span class='line'>139:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;&nbsp;string&nbsp;&nbsp;property&nbsp;name
+</span></span></code></pre>
+					
+					</li>
+										<li><p>
+
+											<a href="editor://open/?file=%2Fhome%2Fusers%2Fginny%2Fginny.jecool.net%2Fweb%2Ftemp%2Fcache%2F_Nette.FileTemplate%2F_Default.page.latte-29ed9d517b634fbd6dffe4e6e280568f.php&amp;line=14" title="/home/users/ginny/ginny.jecool.net/web/temp/cache/_Nette.FileTemplate/_Default.page.latte-29ed9d517b634fbd6dffe4e6e280568f.php:14">.../temp/cache/_Nette.FileTemplate/<b>_Default.page.latte-29ed9d517b634fbd6dffe4e6e280568f.php</b></a>:14					
+					<a href="#" rel="netteBsSrc1-1">source <abbr>&#x25ba;</abbr></a>&nbsp; 
+					Nette\Object->					__get
+					(<a href="#" rel="netteBsArgs1-1">arguments <abbr>&#x25ba;</abbr></a>)
+					</p>
+
+											<div class="nette-collapsed outer" id="netteBsArgs1-1">
+						<table>
+						<tr><th>$name</th><td><pre class="nette-dump">"title" (5)
+</pre></td></tr>
+						</table>
+						</div>
+					
+
+											<pre  id="netteBsSrc1-1"><code><span style="color: #06B"><span style="color: #999; font-style: italic"><span class='line'> 7:</span>    //&nbsp;block&nbsp;content
+<span class='line'> 8:</span>    //
+<span class='line'> 9:</span>    </span><span style="color: #D24; font-weight: bold">if&nbsp;(!</span><span style="color: #000">function_exists</span><span style="color: #D24; font-weight: bold">(</span><span style="color: #000">$_l</span><span style="color: #D24; font-weight: bold">-&gt;</span><span style="color: #000">blocks</span><span style="color: #D24; font-weight: bold">[</span><span style="color: #080">'content'</span><span style="color: #D24; font-weight: bold">][]&nbsp;=&nbsp;</span><span style="color: #080">'_lb5f89694992_content'</span><span style="color: #D24; font-weight: bold">))&nbsp;{&nbsp;function&nbsp;</span><span style="color: #000">_lb5f89694992_content</span><span style="color: #D24; font-weight: bold">(</span><span style="color: #000">$_l</span><span style="color: #D24; font-weight: bold">,&nbsp;</span><span style="color: #000">$_args</span><span style="color: #D24; font-weight: bold">)&nbsp;{&nbsp;</span><span style="color: #000">extract</span><span style="color: #D24; font-weight: bold">(</span><span style="color: #000">$_args</span><span style="color: #D24; font-weight: bold">)
+<span class='line'>10:</span>    </span><span style="color: #000">?&gt;
+<span class='line'>11:</span>    </span>
+<span class='line'>12:</span>    <span style="color: #000">&lt;?php&nbsp;call_user_func</span><span style="color: #D24; font-weight: bold">(</span><span style="color: #000">reset</span><span style="color: #D24; font-weight: bold">(</span><span style="color: #000">$_l</span><span style="color: #D24; font-weight: bold">-&gt;</span><span style="color: #000">blocks</span><span style="color: #D24; font-weight: bold">[</span><span style="color: #080">'title'</span><span style="color: #D24; font-weight: bold">]),&nbsp;</span><span style="color: #000">$_l</span><span style="color: #D24; font-weight: bold">,&nbsp;</span><span style="color: #000">get_defined_vars</span><span style="color: #D24; font-weight: bold">())&nbsp;&nbsp;</span><span style="color: #000">?&gt;
+<span class='line'>13:</span>    </span>
+<span class='highlight'>14:    &lt;p&gt;&lt;h1&gt;&lt;?php&nbsp;echo&nbsp;Nette\Templating\DefaultHelpers::escapeHtml($page-&gt;title,&nbsp;'')&nbsp;?&gt;&lt;/h1&gt;&lt;/p&gt;
+</span><span style="color: #000"></span><span style="color: #D24; font-weight: bold"></span><span style="color: #000"></span><span style="color: #D24; font-weight: bold"></span><span style="color: #000"></span><span style="color: #D24; font-weight: bold"></span><span style="color: #000"></span><span style="color: #D24; font-weight: bold"></span><span style="color: #000"></span><span style="color: #D24; font-weight: bold"></span><span style="color: #000"></span><span style="color: #D24; font-weight: bold"></span><span style="color: #000"></span><span style="color: #D24; font-weight: bold"></span><span style="color: #080"></span><span style="color: #D24; font-weight: bold"></span><span style="color: #000"></span><span class='line'>15:</span>    
+<span class='line'>16:</span>    &lt;p&gt;<span style="color: #000">&lt;?php&nbsp;</span><span style="color: #D24; font-weight: bold">echo&nbsp;</span><span style="color: #000">Nette</span><span style="color: #D24; font-weight: bold">\</span><span style="color: #000">Templating</span><span style="color: #D24; font-weight: bold">\</span><span style="color: #000">DefaultHelpers</span><span style="color: #D24; font-weight: bold">::</span><span style="color: #000">escapeHtml</span><span style="color: #D24; font-weight: bold">(</span><span style="color: #000">$page</span><span style="color: #D24; font-weight: bold">-&gt;</span><span style="color: #000">text</span><span style="color: #D24; font-weight: bold">,&nbsp;</span><span style="color: #080">''</span><span style="color: #D24; font-weight: bold">)&nbsp;</span><span style="color: #000">?&gt;</span>&lt;/p&gt;<span style="color: #000">&lt;?php
+<span class='line'>17:</span>    </span><span style="color: #D24; font-weight: bold">}}
+<span class='line'>18:</span>    
+<span class='line'>19:</span>    </span><span style="color: #999; font-style: italic">//
+<span class='line'>20:</span>    //&nbsp;block&nbsp;title
+<span class='line'>21:</span>    //
+</span></span></code></pre>
+					
+					</li>
+										<li><p>
+
+											<a href="editor://open/?file=%2Fhome%2Fusers%2Fginny%2Fginny.jecool.net%2Fweb%2Flibs%2FNette%2FLatte%2FMacros%2FUIMacros.php&amp;line=423" title="/home/users/ginny/ginny.jecool.net/web/libs/Nette/Latte/Macros/UIMacros.php:423">.../libs/Nette/Latte/Macros/<b>UIMacros.php</b></a>:423					
+					<a href="#" rel="netteBsSrc1-2">source <abbr>&#x25ba;</abbr></a>&nbsp; 
+										_lb5f89694992_content
+					(<a href="#" rel="netteBsArgs1-2">arguments <abbr>&#x25ba;</abbr></a>)
+					</p>
+
+											<div class="nette-collapsed outer" id="netteBsArgs1-2">
+						<table>
+						<tr><th>$_l</th><td><pre class="nette-dump"><a href='#' rel='next'><span>stdClass</span>(3) <abbr>&#x25bc;</abbr> </a><code>{
+   <a href='#' rel='next'>"templates" => <span>array</span>(2) <abbr>&#x25bc;</abbr> </a><code>{
+      <a href='#' rel='next'>"5157jgezog" => <span>Nette\Templating\FileTemplate</span>(8) <abbr>&#x25ba;</abbr> </a><code class="nette-collapsed">{
+         "file" <span>private</span> => "/home/users/ginny/ginny.jecool.net/web/app/FrontModule/templates/Default/page.latte" (83)
+         "warnOnUndefined" => TRUE
+         "onPrepareFilters" => <span>array</span>(1) [ ... ]
+         "params" <span>private</span> => <span>array</span>(17) { ... }
+         "filters" <span>private</span> => <span>array</span>(1) [ ... ]
+         "helpers" <span>private</span> => <span>array</span>(0) 
+         "helperLoaders" <span>private</span> => <span>array</span>(1) [ ... ]
+         "cacheStorage" <span>private</span> => <span>Nette\Caching\Storages\PhpFileStorage</span>(4) { ... }
+      <a href='#' rel='next'>}</code>
+      "wy08dh2vrr" => <span>Nette\Templating\FileTemplate</span>(8) <abbr>&#x25ba;</abbr> </a><code class="nette-collapsed">{
+         "file" <span>private</span> => "/home/users/ginny/ginny.jecool.net/web/app/FrontModule/templates/@layout.latte" (78)
+         "warnOnUndefined" => TRUE
+         "onPrepareFilters" => <span>array</span>(1) [ ... ]
+         "params" <span>private</span> => <span>array</span>(17) { ... }
+         "filters" <span>private</span> => <span>array</span>(1) [ ... ]
+         "helpers" <span>private</span> => <span>array</span>(0) 
+         "helperLoaders" <span>private</span> => <span>array</span>(1) [ ... ]
+         "cacheStorage" <span>private</span> => <span>Nette\Caching\Storages\PhpFileStorage</span>(4) { ... }
+      <a href='#' rel='next'>}</code>
+   }</code>
+   "blocks" => <span>array</span>(2) <abbr>&#x25bc;</abbr> </a><code>{
+      <a href='#' rel='next'>"content" => <span>array</span>(1) <abbr>&#x25bc;</abbr> </a><code>[
+         0 => "_lb5f89694992_content" (21)
+      <a href='#' rel='next'>]</code>
+      "title" => <span>array</span>(1) <abbr>&#x25bc;</abbr> </a><code>[
+         0 => "_lb8ffb82fcbc_title" (19)
+      ]</code>
+   }</code>
+   "extends" => "/home/users/ginny/ginny.jecool.net/web/app/FrontModule/templates/@layout.latte" (78)
+}</code>
+</pre></td></tr>
+<tr><th>$_args</th><td><pre class="nette-dump"><a href='#' rel='next'><span>array</span>(17) <abbr>&#x25ba;</abbr> </a><code class="nette-collapsed">{
+   <a href='#' rel='next'>"control" => <span>FrontModule\DefaultPresenter</span>(28) <abbr>&#x25ba;</abbr> </a><code class="nette-collapsed">{
+      <a href='#' rel='next'>"page" <span>private</span> => <span>Nette\Database\Table\Selection</span>(22) <abbr>&#x25ba;</abbr> </a><code class="nette-collapsed">{
+         "connection" => <span>Nette\Database\Connection</span>(6) { ... }
+         "name" => "pages" (5)
+         "primary" => "id" (2)
+         "rows" <span>protected</span> => NULL
+         "data" <span>protected</span> => NULL
+         "select" <span>protected</span> => <span>array</span>(0) 
+         "where" <span>protected</span> => <span>array</span>(1) [ ... ]
+         "conditions" <span>protected</span> => <span>array</span>(1) [ ... ]
+         "parameters" <span>protected</span> => <span>array</span>(1) [ ... ]
+         "order" <span>protected</span> => <span>array</span>(0) 
+         "limit" <span>protected</span> => NULL
+         "offset" <span>protected</span> => NULL
+         "group" <span>protected</span> => ""
+         "having" <span>protected</span> => ""
+         "referenced" <span>protected</span> => <span>array</span>(0) 
+         "referencing" <span>protected</span> => <span>array</span>(0) 
+         "aggregation" <span>protected</span> => <span>array</span>(0) 
+         "accessed" <span>protected</span> => NULL
+         "prevAccessed" <span>protected</span> => NULL
+         "keys" <span>protected</span> => <span>array</span>(0) 
+         "delimitedName" <span>protected</span> => "[pages]" (7)
+         "delimitedPrimary" <span>protected</span> => "[id]" (4)
+      <a href='#' rel='next'>}</code>
+      "onShutdown" => NULL
+      "request" <span>private</span> => <span>Nette\Application\Request</span>(7) <abbr>&#x25ba;</abbr> </a><code class="nette-collapsed">{
+         "method" <span>private</span> => "GET" (3)
+         "flags" <span>private</span> => <span>array</span>(1) { ... }
+         "name" <span>private</span> => "Front:Default" (13)
+         "params" <span>private</span> => <span>array</span>(2) { ... }
+         "post" <span>private</span> => <span>array</span>(0) 
+         "files" <span>private</span> => <span>array</span>(0) 
+         <a href='#' rel='next'>"frozen" <span>private</span> => TRUE
+      }</code>
+      "response" <span>private</span> => <span>Nette\Application\Responses\TextResponse</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+         "source" <span>private</span> => <span>Nette\Templating\FileTemplate</span>(8) { ... }
+      }</code>
+      "autoCanonicalize" => TRUE
+      "absoluteUrls" => FALSE
+      "globalParams" <span>private</span> => <span>array</span>(0) 
+      "globalState" <span>private</span> => <span>array</span>(0) 
+      "globalStateSinces" <span>private</span> => <span>array</span>(0) 
+      "action" <span>private</span> => "page" (4)
+      "view" <span>private</span> => "page" (4)
+      "layout" <span>private</span> => NULL
+      "payload" <span>private</span> => <span>stdClass</span>(0) 
+      "signalReceiver" <span>private</span> => ""
+      "signal" <span>private</span> => NULL
+      <a href='#' rel='next'>"ajaxMode" <span>private</span> => FALSE
+      "startupCheck" <span>private</span> => TRUE
+      "lastCreatedRequest" <span>private</span> => <span>Nette\Application\Request</span>(7) <abbr>&#x25ba;</abbr> </a><code class="nette-collapsed">{
+         "method" <span>private</span> => "FORWARD" (7)
+         "flags" <span>private</span> => <span>array</span>(0) 
+         "name" <span>private</span> => "Front:Default" (13)
+         "params" <span>private</span> => <span>array</span>(2) { ... }
+         "post" <span>private</span> => <span>array</span>(0) 
+         "files" <span>private</span> => <span>array</span>(0) 
+         <a href='#' rel='next'>"frozen" <span>private</span> => FALSE
+      }</code>
+      "lastCreatedRequestFlag" <span>private</span> => <span>array</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+         <a href='#' rel='next'>"current" => TRUE
+      }</code>
+      "context" <span>private</span> => <span>Nette\DI\Container</span>(6) <abbr>&#x25bc;</abbr> </a><code>{
+         "params" => <span>Nette\ArrayHash</span>(6) { ... }
+         "registry" <span>private</span> => <span>array</span>(16) { ... }
+         "factories" <span>private</span> => <span>array</span>(3) { ... }
+         "tags" <span>private</span> => <span>array</span>(16) { ... }
+         "creating" <span>private</span> => <span>array</span>(0) 
+         <a href='#' rel='next'>"frozen" <span>private</span> => FALSE
+      }</code>
+      "template" <span>private</span> => <span>Nette\Templating\FileTemplate</span>(8) <abbr>&#x25ba;</abbr> </a><code class="nette-collapsed">{
+         "file" <span>private</span> => "/home/users/ginny/ginny.jecool.net/web/app/FrontModule/templates/Default/page.latte" (83)
+         "warnOnUndefined" => TRUE
+         "onPrepareFilters" => <span>array</span>(1) [ ... ]
+         "params" <span>private</span> => <span>array</span>(17) { ... }
+         "filters" <span>private</span> => <span>array</span>(1) [ ... ]
+         "helpers" <span>private</span> => <span>array</span>(0) 
+         "helperLoaders" <span>private</span> => <span>array</span>(1) [ ... ]
+         "cacheStorage" <span>private</span> => <span>Nette\Caching\Storages\PhpFileStorage</span>(4) { ... }
+      }</code>
+      "invalidSnippets" <span>private</span> => <span>array</span>(0) 
+      <a href='#' rel='next'>"params" <span>protected</span> => <span>array</span>(2) <abbr>&#x25bc;</abbr> </a><code>{
+         "slug" => "o-nas" (5)
+         "action" => "page" (4)
+      }</code>
+      "components" <span>private</span> => <span>array</span>(0) 
+      "cloning" <span>private</span> => NULL
+      "parent" <span>private</span> => NULL
+      "name" <span>private</span> => "Front:Default" (13)
+      <a href='#' rel='next'>"monitors" <span>private</span> => <span>array</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+         "Nette\Application\UI\Presenter" => <span>array</span>(4) [ ... ]
+      <a href='#' rel='next'>}</code>
+   }</code>
+   "presenter" => <span>FrontModule\DefaultPresenter</span>(28) <abbr>&#x25ba;</abbr> </a><code class="nette-collapsed">{
+      <a href='#' rel='next'>"page" <span>private</span> => <span>Nette\Database\Table\Selection</span>(22) <abbr>&#x25ba;</abbr> </a><code class="nette-collapsed">{
+         "connection" => <span>Nette\Database\Connection</span>(6) { ... }
+         "name" => "pages" (5)
+         "primary" => "id" (2)
+         "rows" <span>protected</span> => NULL
+         "data" <span>protected</span> => NULL
+         "select" <span>protected</span> => <span>array</span>(0) 
+         "where" <span>protected</span> => <span>array</span>(1) [ ... ]
+         "conditions" <span>protected</span> => <span>array</span>(1) [ ... ]
+         "parameters" <span>protected</span> => <span>array</span>(1) [ ... ]
+         "order" <span>protected</span> => <span>array</span>(0) 
+         "limit" <span>protected</span> => NULL
+         "offset" <span>protected</span> => NULL
+         "group" <span>protected</span> => ""
+         "having" <span>protected</span> => ""
+         "referenced" <span>protected</span> => <span>array</span>(0) 
+         "referencing" <span>protected</span> => <span>array</span>(0) 
+         "aggregation" <span>protected</span> => <span>array</span>(0) 
+         "accessed" <span>protected</span> => NULL
+         "prevAccessed" <span>protected</span> => NULL
+         "keys" <span>protected</span> => <span>array</span>(0) 
+         "delimitedName" <span>protected</span> => "[pages]" (7)
+         "delimitedPrimary" <span>protected</span> => "[id]" (4)
+      <a href='#' rel='next'>}</code>
+      "onShutdown" => NULL
+      "request" <span>private</span> => <span>Nette\Application\Request</span>(7) <abbr>&#x25ba;</abbr> </a><code class="nette-collapsed">{
+         "method" <span>private</span> => "GET" (3)
+         "flags" <span>private</span> => <span>array</span>(1) { ... }
+         "name" <span>private</span> => "Front:Default" (13)
+         "params" <span>private</span> => <span>array</span>(2) { ... }
+         "post" <span>private</span> => <span>array</span>(0) 
+         "files" <span>private</span> => <span>array</span>(0) 
+         <a href='#' rel='next'>"frozen" <span>private</span> => TRUE
+      }</code>
+      "response" <span>private</span> => <span>Nette\Application\Responses\TextResponse</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+         "source" <span>private</span> => <span>Nette\Templating\FileTemplate</span>(8) { ... }
+      }</code>
+      "autoCanonicalize" => TRUE
+      "absoluteUrls" => FALSE
+      "globalParams" <span>private</span> => <span>array</span>(0) 
+      "globalState" <span>private</span> => <span>array</span>(0) 
+      "globalStateSinces" <span>private</span> => <span>array</span>(0) 
+      "action" <span>private</span> => "page" (4)
+      "view" <span>private</span> => "page" (4)
+      "layout" <span>private</span> => NULL
+      "payload" <span>private</span> => <span>stdClass</span>(0) 
+      "signalReceiver" <span>private</span> => ""
+      "signal" <span>private</span> => NULL
+      <a href='#' rel='next'>"ajaxMode" <span>private</span> => FALSE
+      "startupCheck" <span>private</span> => TRUE
+      "lastCreatedRequest" <span>private</span> => <span>Nette\Application\Request</span>(7) <abbr>&#x25ba;</abbr> </a><code class="nette-collapsed">{
+         "method" <span>private</span> => "FORWARD" (7)
+         "flags" <span>private</span> => <span>array</span>(0) 
+         "name" <span>private</span> => "Front:Default" (13)
+         "params" <span>private</span> => <span>array</span>(2) { ... }
+         "post" <span>private</span> => <span>array</span>(0) 
+         "files" <span>private</span> => <span>array</span>(0) 
+         <a href='#' rel='next'>"frozen" <span>private</span> => FALSE
+      }</code>
+      "lastCreatedRequestFlag" <span>private</span> => <span>array</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+         <a href='#' rel='next'>"current" => TRUE
+      }</code>
+      "context" <span>private</span> => <span>Nette\DI\Container</span>(6) <abbr>&#x25bc;</abbr> </a><code>{
+         "params" => <span>Nette\ArrayHash</span>(6) { ... }
+         "registry" <span>private</span> => <span>array</span>(16) { ... }
+         "factories" <span>private</span> => <span>array</span>(3) { ... }
+         "tags" <span>private</span> => <span>array</span>(16) { ... }
+         "creating" <span>private</span> => <span>array</span>(0) 
+         <a href='#' rel='next'>"frozen" <span>private</span> => FALSE
+      }</code>
+      "template" <span>private</span> => <span>Nette\Templating\FileTemplate</span>(8) <abbr>&#x25ba;</abbr> </a><code class="nette-collapsed">{
+         "file" <span>private</span> => "/home/users/ginny/ginny.jecool.net/web/app/FrontModule/templates/Default/page.latte" (83)
+         "warnOnUndefined" => TRUE
+         "onPrepareFilters" => <span>array</span>(1) [ ... ]
+         "params" <span>private</span> => <span>array</span>(17) { ... }
+         "filters" <span>private</span> => <span>array</span>(1) [ ... ]
+         "helpers" <span>private</span> => <span>array</span>(0) 
+         "helperLoaders" <span>private</span> => <span>array</span>(1) [ ... ]
+         "cacheStorage" <span>private</span> => <span>Nette\Caching\Storages\PhpFileStorage</span>(4) { ... }
+      }</code>
+      "invalidSnippets" <span>private</span> => <span>array</span>(0) 
+      <a href='#' rel='next'>"params" <span>protected</span> => <span>array</span>(2) <abbr>&#x25bc;</abbr> </a><code>{
+         "slug" => "o-nas" (5)
+         "action" => "page" (4)
+      }</code>
+      "components" <span>private</span> => <span>array</span>(0) 
+      "cloning" <span>private</span> => NULL
+      "parent" <span>private</span> => NULL
+      "name" <span>private</span> => "Front:Default" (13)
+      <a href='#' rel='next'>"monitors" <span>private</span> => <span>array</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+         "Nette\Application\UI\Presenter" => <span>array</span>(4) [ ... ]
+      <a href='#' rel='next'>}</code>
+   }</code>
+   "user" => <span>Nette\Http\User</span>(7) <abbr>&#x25ba;</abbr> </a><code class="nette-collapsed">{
+      "guestRole" => "guest" (5)
+      "authenticatedRole" => "authenticated" (13)
+      "onLoggedIn" => NULL
+      <a href='#' rel='next'>"onLoggedOut" => NULL
+      "namespace" <span>private</span> => ""
+      "session" <span>private</span> => NULL
+      "context" <span>private</span> => <span>Nette\DI\Container</span>(6) <abbr>&#x25bc;</abbr> </a><code>{
+         "params" => <span>array</span>(0) 
+         "registry" <span>private</span> => <span>array</span>(3) { ... }
+         "factories" <span>private</span> => <span>array</span>(2) { ... }
+         "tags" <span>private</span> => <span>array</span>(3) { ... }
+         <a href='#' rel='next'>"creating" <span>private</span> => NULL
+         "frozen" <span>private</span> => FALSE
+      }</code>
+   }</code>
+   "netteHttpResponse" => <span>Nette\Http\Response</span>(5) <abbr>&#x25bc;</abbr> </a><code>{
+      "cookieDomain" => ""
+      "cookiePath" => "/"
+      <a href='#' rel='next'>"cookieSecure" => FALSE
+      "cookieHttpOnly" => TRUE
+      "code" <span>private</span> => 500
+   }</code>
+   "netteCacheStorage" => <span>Nette\Caching\Storages\FileStorage</span>(3) <abbr>&#x25bc;</abbr> </a><code>{
+      "dir" <span>private</span> => "/home/users/ginny/ginny.jecool.net/web/temp/cache" (49)
+      <a href='#' rel='next'>"useDirs" <span>private</span> => TRUE
+      "journal" <span>private</span> => <span>Nette\Caching\Storages\FileJournal</span>(9) <abbr>&#x25ba;</abbr> </a><code class="nette-collapsed">{
+         "file" <span>private</span> => "/home/users/ginny/ginny.jecool.net/web/temp/btfj.dat" (52)
+         "handle" <span>private</span> => <span>stream resource</span>
+         "lastNode" <span>private</span> => 2
+         "lastModTime" <span>private</span> => NULL
+         "nodeCache" <span>private</span> => <span>array</span>(0) 
+         "nodeChanged" <span>private</span> => <span>array</span>(0) 
+         "toCommit" <span>private</span> => <span>array</span>(0) 
+         "deletedLinks" <span>private</span> => <span>array</span>(0) 
+         "dataNodeFreeSpace" <span>private</span> => <span>array</span>(0) 
+      }</code>
+   }</code>
+   "baseUrl" => "http://ginny.jecool.net/www" (27)
+   "baseUri" => "http://ginny.jecool.net/www" (27)
+   "basePath" => "/www" (4)
+   "flashes" => <span>array</span>(0) 
+   "viewName" => "page" (4)
+   "root" => "/home/users/ginny/ginny.jecool.net/web" (38)
+   "moduleName" => "Front:" (6)
+   "presenterName" => "Default" (7)
+   <a href='#' rel='next'>"page" => <span>Nette\Database\Table\Selection</span>(22) <abbr>&#x25ba;</abbr> </a><code class="nette-collapsed">{
+      <a href='#' rel='next'>"connection" => <span>Nette\Database\Connection</span>(6) <abbr>&#x25bc;</abbr> </a><code>{
+         "driver" <span>private</span> => <span>Nette\Database\Drivers\Sqlite2Driver</span>(3) { ... }
+         "preprocessor" <span>private</span> => <span>Nette\Database\SqlPreprocessor</span>(6) { ... }
+         "databaseReflection" => <span>Nette\Database\Reflection\DatabaseReflection</span>(3) { ... }
+         "cache" => NULL
+         "substitutions" => <span>array</span>(0) 
+         "onQuery" => NULL
+      }</code>
+      "name" => "pages" (5)
+      "primary" => "id" (2)
+      "rows" <span>protected</span> => NULL
+      "data" <span>protected</span> => NULL
+      "select" <span>protected</span> => <span>array</span>(0) 
+      <a href='#' rel='next'>"where" <span>protected</span> => <span>array</span>(1) <abbr>&#x25bc;</abbr> </a><code>[
+         0 => "[slug] = ?" (10)
+      <a href='#' rel='next'>]</code>
+      "conditions" <span>protected</span> => <span>array</span>(1) <abbr>&#x25bc;</abbr> </a><code>[
+         0 => "[slug]" (6)
+      <a href='#' rel='next'>]</code>
+      "parameters" <span>protected</span> => <span>array</span>(1) <abbr>&#x25bc;</abbr> </a><code>[
+         0 => "o-nas" (5)
+      ]</code>
+      "order" <span>protected</span> => <span>array</span>(0) 
+      "limit" <span>protected</span> => NULL
+      "offset" <span>protected</span> => NULL
+      "group" <span>protected</span> => ""
+      "having" <span>protected</span> => ""
+      "referenced" <span>protected</span> => <span>array</span>(0) 
+      "referencing" <span>protected</span> => <span>array</span>(0) 
+      "aggregation" <span>protected</span> => <span>array</span>(0) 
+      "accessed" <span>protected</span> => NULL
+      "prevAccessed" <span>protected</span> => NULL
+      "keys" <span>protected</span> => <span>array</span>(0) 
+      "delimitedName" <span>protected</span> => "[pages]" (7)
+      "delimitedPrimary" <span>protected</span> => "[id]" (4)
+   }</code>
+   "layout" => "/home/users/ginny/ginny.jecool.net/web/app/FrontModule/templates/@layout.latte" (78)
+   <a href='#' rel='next'>"template" => <span>Nette\Templating\FileTemplate</span>(8) <abbr>&#x25ba;</abbr> </a><code class="nette-collapsed">{
+      "file" <span>private</span> => "/home/users/ginny/ginny.jecool.net/web/app/FrontModule/templates/@layout.latte" (78)
+      <a href='#' rel='next'>"warnOnUndefined" => TRUE
+      "onPrepareFilters" => <span>array</span>(1) <abbr>&#x25bc;</abbr> </a><code>[
+         0 => <span>Nette\Callback</span>(1) { ... }
+      <a href='#' rel='next'>]</code>
+      "params" <span>private</span> => <span>array</span>(17) <abbr>&#x25ba;</abbr> </a><code class="nette-collapsed">{
+         "control" => <span>FrontModule\DefaultPresenter</span>(28) { ... }
+         "presenter" => <span>FrontModule\DefaultPresenter</span>(28) { ... }
+         "user" => <span>Nette\Http\User</span>(7) { ... }
+         "netteHttpResponse" => <span>Nette\Http\Response</span>(5) { ... }
+         "netteCacheStorage" => <span>Nette\Caching\Storages\FileStorage</span>(3) { ... }
+         "baseUrl" => "http://ginny.jecool.net/www" (27)
+         "baseUri" => "http://ginny.jecool.net/www" (27)
+         "basePath" => "/www" (4)
+         "flashes" => <span>array</span>(0) 
+         "viewName" => "page" (4)
+         "root" => "/home/users/ginny/ginny.jecool.net/web" (38)
+         "moduleName" => "Front:" (6)
+         "presenterName" => "Default" (7)
+         "page" => <span>Nette\Database\Table\Selection</span>(22) { ... }
+         "layout" => "/home/users/ginny/ginny.jecool.net/web/app/FrontModule/templates/@layout.latte" (78)
+         "template" => <span>Nette\Templating\FileTemplate</span>(8) { *RECURSION* }
+         "_g" => <span>stdClass</span>(0) 
+      <a href='#' rel='next'>}</code>
+      "filters" <span>private</span> => <span>array</span>(1) <abbr>&#x25bc;</abbr> </a><code>[
+         0 => <span>Nette\Callback</span>(1) { ... }
+      ]</code>
+      "helpers" <span>private</span> => <span>array</span>(0) 
+      <a href='#' rel='next'>"helperLoaders" <span>private</span> => <span>array</span>(1) <abbr>&#x25bc;</abbr> </a><code>[
+         0 => <span>Nette\Callback</span>(1) { ... }
+      <a href='#' rel='next'>]</code>
+      "cacheStorage" <span>private</span> => <span>Nette\Caching\Storages\PhpFileStorage</span>(4) <abbr>&#x25bc;</abbr> </a><code>{
+         "hint" => "/templates/@layout.latte" (24)
+         "dir" <span>private</span> => "/home/users/ginny/ginny.jecool.net/web/temp/cache" (49)
+         "useDirs" <span>private</span> => TRUE
+         "journal" <span>private</span> => NULL
+      }</code>
+   }</code>
+   "_g" => <span>stdClass</span>(0) 
+}</code>
+</pre></td></tr>
+						</table>
+						</div>
+					
+
+											<pre class="nette-collapsed" id="netteBsSrc1-2"><code><span style="color: #06B"><span style="color: #999; font-style: italic"><span class='line'>416:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/
+<span class='line'>417:</span>    &nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #D24; font-weight: bold">public&nbsp;static&nbsp;function&nbsp;</span><span style="color: #000">callBlock</span><span style="color: #D24; font-weight: bold">(</span><span style="color: #000">$context</span><span style="color: #D24; font-weight: bold">,&nbsp;</span><span style="color: #000">$name</span><span style="color: #D24; font-weight: bold">,&nbsp;</span><span style="color: #000">$params</span><span style="color: #D24; font-weight: bold">)
+<span class='line'>418:</span>    &nbsp;&nbsp;&nbsp;&nbsp;{
+<span class='line'>419:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(empty(</span><span style="color: #000">$context</span><span style="color: #D24; font-weight: bold">-&gt;</span><span style="color: #000">blocks</span><span style="color: #D24; font-weight: bold">[</span><span style="color: #000">$name</span><span style="color: #D24; font-weight: bold">]))&nbsp;{
+<span class='line'>420:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;throw&nbsp;new&nbsp;</span><span style="color: #000">Nette</span><span style="color: #D24; font-weight: bold">\</span><span style="color: #000">InvalidStateException</span><span style="color: #D24; font-weight: bold">(</span><span style="color: #080">"Cannot&nbsp;include&nbsp;undefined&nbsp;block&nbsp;'</span><span style="color: #000">$name</span><span style="color: #080">'."</span><span style="color: #D24; font-weight: bold">);
+<span class='line'>421:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+<span class='line'>422:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #000">$block&nbsp;</span><span style="color: #D24; font-weight: bold">=&nbsp;</span><span style="color: #000">reset</span><span style="color: #D24; font-weight: bold">(</span><span style="color: #000">$context</span><span style="color: #D24; font-weight: bold">-&gt;</span><span style="color: #000">blocks</span><span style="color: #D24; font-weight: bold">[</span><span style="color: #000">$name</span><span style="color: #D24; font-weight: bold">]);
+<span class='highlight'>423:    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$block($context,&nbsp;$params);
+</span></span><span style="color: #000"></span><span style="color: #D24; font-weight: bold"></span><span style="color: #000"></span><span style="color: #D24; font-weight: bold"></span><span style="color: #000"></span><span style="color: #D24; font-weight: bold"><span class='line'>424:</span>    &nbsp;&nbsp;&nbsp;&nbsp;}
+<span class='line'>425:</span>    
+<span class='line'>426:</span>    
+<span class='line'>427:</span>    
+<span class='line'>428:</span>    &nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #999; font-style: italic">/**
+<span class='line'>429:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;Calls&nbsp;parent&nbsp;block.
+<span class='line'>430:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;&nbsp;stdClass
+</span></span></code></pre>
+					
+					</li>
+										<li><p>
+
+											<a href="editor://open/?file=%2Fhome%2Fusers%2Fginny%2Fginny.jecool.net%2Fweb%2Ftemp%2Fcache%2F_Nette.FileTemplate%2F_templates._layout.latte-44613c2af9c19737eb710710e326b040.php&amp;line=27" title="/home/users/ginny/ginny.jecool.net/web/temp/cache/_Nette.FileTemplate/_templates._layout.latte-44613c2af9c19737eb710710e326b040.php:27">.../temp/cache/_Nette.FileTemplate/<b>_templates._layout.latte-44613c2af9c19737eb710710e326b040.php</b></a>:27					
+					<a href="#" rel="netteBsSrc1-3">source <abbr>&#x25ba;</abbr></a>&nbsp; 
+					Nette\Latte\Macros\UIMacros::					callBlock
+					(<a href="#" rel="netteBsArgs1-3">arguments <abbr>&#x25ba;</abbr></a>)
+					</p>
+
+											<div class="nette-collapsed outer" id="netteBsArgs1-3">
+						<table>
+						<tr><th>$context</th><td><pre class="nette-dump"><a href='#' rel='next'><span>stdClass</span>(3) <abbr>&#x25bc;</abbr> </a><code>{
+   <a href='#' rel='next'>"templates" => <span>array</span>(2) <abbr>&#x25bc;</abbr> </a><code>{
+      <a href='#' rel='next'>"5157jgezog" => <span>Nette\Templating\FileTemplate</span>(8) <abbr>&#x25ba;</abbr> </a><code class="nette-collapsed">{
+         "file" <span>private</span> => "/home/users/ginny/ginny.jecool.net/web/app/FrontModule/templates/Default/page.latte" (83)
+         "warnOnUndefined" => TRUE
+         "onPrepareFilters" => <span>array</span>(1) [ ... ]
+         "params" <span>private</span> => <span>array</span>(17) { ... }
+         "filters" <span>private</span> => <span>array</span>(1) [ ... ]
+         "helpers" <span>private</span> => <span>array</span>(0) 
+         "helperLoaders" <span>private</span> => <span>array</span>(1) [ ... ]
+         "cacheStorage" <span>private</span> => <span>Nette\Caching\Storages\PhpFileStorage</span>(4) { ... }
+      <a href='#' rel='next'>}</code>
+      "wy08dh2vrr" => <span>Nette\Templating\FileTemplate</span>(8) <abbr>&#x25ba;</abbr> </a><code class="nette-collapsed">{
+         "file" <span>private</span> => "/home/users/ginny/ginny.jecool.net/web/app/FrontModule/templates/@layout.latte" (78)
+         "warnOnUndefined" => TRUE
+         "onPrepareFilters" => <span>array</span>(1) [ ... ]
+         "params" <span>private</span> => <span>array</span>(17) { ... }
+         "filters" <span>private</span> => <span>array</span>(1) [ ... ]
+         "helpers" <span>private</span> => <span>array</span>(0) 
+         "helperLoaders" <span>private</span> => <span>array</span>(1) [ ... ]
+         "cacheStorage" <span>private</span> => <span>Nette\Caching\Storages\PhpFileStorage</span>(4) { ... }
+      <a href='#' rel='next'>}</code>
+   }</code>
+   "blocks" => <span>array</span>(2) <abbr>&#x25bc;</abbr> </a><code>{
+      <a href='#' rel='next'>"content" => <span>array</span>(1) <abbr>&#x25bc;</abbr> </a><code>[
+         0 => "_lb5f89694992_content" (21)
+      <a href='#' rel='next'>]</code>
+      "title" => <span>array</span>(1) <abbr>&#x25bc;</abbr> </a><code>[
+         0 => "_lb8ffb82fcbc_title" (19)
+      ]</code>
+   }</code>
+   "extends" => "/home/users/ginny/ginny.jecool.net/web/app/FrontModule/templates/@layout.latte" (78)
+}</code>
+</pre></td></tr>
+<tr><th>$name</th><td><pre class="nette-dump">"content" (7)
+</pre></td></tr>
+<tr><th>$params</th><td><pre class="nette-dump"><a href='#' rel='next'><span>array</span>(17) <abbr>&#x25ba;</abbr> </a><code class="nette-collapsed">{
+   <a href='#' rel='next'>"control" => <span>FrontModule\DefaultPresenter</span>(28) <abbr>&#x25ba;</abbr> </a><code class="nette-collapsed">{
+      <a href='#' rel='next'>"page" <span>private</span> => <span>Nette\Database\Table\Selection</span>(22) <abbr>&#x25ba;</abbr> </a><code class="nette-collapsed">{
+         "connection" => <span>Nette\Database\Connection</span>(6) { ... }
+         "name" => "pages" (5)
+         "primary" => "id" (2)
+         "rows" <span>protected</span> => NULL
+         "data" <span>protected</span> => NULL
+         "select" <span>protected</span> => <span>array</span>(0) 
+         "where" <span>protected</span> => <span>array</span>(1) [ ... ]
+         "conditions" <span>protected</span> => <span>array</span>(1) [ ... ]
+         "parameters" <span>protected</span> => <span>array</span>(1) [ ... ]
+         "order" <span>protected</span> => <span>array</span>(0) 
+         "limit" <span>protected</span> => NULL
+         "offset" <span>protected</span> => NULL
+         "group" <span>protected</span> => ""
+         "having" <span>protected</span> => ""
+         "referenced" <span>protected</span> => <span>array</span>(0) 
+         "referencing" <span>protected</span> => <span>array</span>(0) 
+         "aggregation" <span>protected</span> => <span>array</span>(0) 
+         "accessed" <span>protected</span> => NULL
+         "prevAccessed" <span>protected</span> => NULL
+         "keys" <span>protected</span> => <span>array</span>(0) 
+         "delimitedName" <span>protected</span> => "[pages]" (7)
+         "delimitedPrimary" <span>protected</span> => "[id]" (4)
+      <a href='#' rel='next'>}</code>
+      "onShutdown" => NULL
+      "request" <span>private</span> => <span>Nette\Application\Request</span>(7) <abbr>&#x25ba;</abbr> </a><code class="nette-collapsed">{
+         "method" <span>private</span> => "GET" (3)
+         "flags" <span>private</span> => <span>array</span>(1) { ... }
+         "name" <span>private</span> => "Front:Default" (13)
+         "params" <span>private</span> => <span>array</span>(2) { ... }
+         "post" <span>private</span> => <span>array</span>(0) 
+         "files" <span>private</span> => <span>array</span>(0) 
+         <a href='#' rel='next'>"frozen" <span>private</span> => TRUE
+      }</code>
+      "response" <span>private</span> => <span>Nette\Application\Responses\TextResponse</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+         "source" <span>private</span> => <span>Nette\Templating\FileTemplate</span>(8) { ... }
+      }</code>
+      "autoCanonicalize" => TRUE
+      "absoluteUrls" => FALSE
+      "globalParams" <span>private</span> => <span>array</span>(0) 
+      "globalState" <span>private</span> => <span>array</span>(0) 
+      "globalStateSinces" <span>private</span> => <span>array</span>(0) 
+      "action" <span>private</span> => "page" (4)
+      "view" <span>private</span> => "page" (4)
+      "layout" <span>private</span> => NULL
+      "payload" <span>private</span> => <span>stdClass</span>(0) 
+      "signalReceiver" <span>private</span> => ""
+      "signal" <span>private</span> => NULL
+      <a href='#' rel='next'>"ajaxMode" <span>private</span> => FALSE
+      "startupCheck" <span>private</span> => TRUE
+      "lastCreatedRequest" <span>private</span> => <span>Nette\Application\Request</span>(7) <abbr>&#x25ba;</abbr> </a><code class="nette-collapsed">{
+         "method" <span>private</span> => "FORWARD" (7)
+         "flags" <span>private</span> => <span>array</span>(0) 
+         "name" <span>private</span> => "Front:Default" (13)
+         "params" <span>private</span> => <span>array</span>(2) { ... }
+         "post" <span>private</span> => <span>array</span>(0) 
+         "files" <span>private</span> => <span>array</span>(0) 
+         <a href='#' rel='next'>"frozen" <span>private</span> => FALSE
+      }</code>
+      "lastCreatedRequestFlag" <span>private</span> => <span>array</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+         <a href='#' rel='next'>"current" => TRUE
+      }</code>
+      "context" <span>private</span> => <span>Nette\DI\Container</span>(6) <abbr>&#x25bc;</abbr> </a><code>{
+         "params" => <span>Nette\ArrayHash</span>(6) { ... }
+         "registry" <span>private</span> => <span>array</span>(16) { ... }
+         "factories" <span>private</span> => <span>array</span>(3) { ... }
+         "tags" <span>private</span> => <span>array</span>(16) { ... }
+         "creating" <span>private</span> => <span>array</span>(0) 
+         <a href='#' rel='next'>"frozen" <span>private</span> => FALSE
+      }</code>
+      "template" <span>private</span> => <span>Nette\Templating\FileTemplate</span>(8) <abbr>&#x25ba;</abbr> </a><code class="nette-collapsed">{
+         "file" <span>private</span> => "/home/users/ginny/ginny.jecool.net/web/app/FrontModule/templates/Default/page.latte" (83)
+         "warnOnUndefined" => TRUE
+         "onPrepareFilters" => <span>array</span>(1) [ ... ]
+         "params" <span>private</span> => <span>array</span>(17) { ... }
+         "filters" <span>private</span> => <span>array</span>(1) [ ... ]
+         "helpers" <span>private</span> => <span>array</span>(0) 
+         "helperLoaders" <span>private</span> => <span>array</span>(1) [ ... ]
+         "cacheStorage" <span>private</span> => <span>Nette\Caching\Storages\PhpFileStorage</span>(4) { ... }
+      }</code>
+      "invalidSnippets" <span>private</span> => <span>array</span>(0) 
+      <a href='#' rel='next'>"params" <span>protected</span> => <span>array</span>(2) <abbr>&#x25bc;</abbr> </a><code>{
+         "slug" => "o-nas" (5)
+         "action" => "page" (4)
+      }</code>
+      "components" <span>private</span> => <span>array</span>(0) 
+      "cloning" <span>private</span> => NULL
+      "parent" <span>private</span> => NULL
+      "name" <span>private</span> => "Front:Default" (13)
+      <a href='#' rel='next'>"monitors" <span>private</span> => <span>array</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+         "Nette\Application\UI\Presenter" => <span>array</span>(4) [ ... ]
+      <a href='#' rel='next'>}</code>
+   }</code>
+   "presenter" => <span>FrontModule\DefaultPresenter</span>(28) <abbr>&#x25ba;</abbr> </a><code class="nette-collapsed">{
+      <a href='#' rel='next'>"page" <span>private</span> => <span>Nette\Database\Table\Selection</span>(22) <abbr>&#x25ba;</abbr> </a><code class="nette-collapsed">{
+         "connection" => <span>Nette\Database\Connection</span>(6) { ... }
+         "name" => "pages" (5)
+         "primary" => "id" (2)
+         "rows" <span>protected</span> => NULL
+         "data" <span>protected</span> => NULL
+         "select" <span>protected</span> => <span>array</span>(0) 
+         "where" <span>protected</span> => <span>array</span>(1) [ ... ]
+         "conditions" <span>protected</span> => <span>array</span>(1) [ ... ]
+         "parameters" <span>protected</span> => <span>array</span>(1) [ ... ]
+         "order" <span>protected</span> => <span>array</span>(0) 
+         "limit" <span>protected</span> => NULL
+         "offset" <span>protected</span> => NULL
+         "group" <span>protected</span> => ""
+         "having" <span>protected</span> => ""
+         "referenced" <span>protected</span> => <span>array</span>(0) 
+         "referencing" <span>protected</span> => <span>array</span>(0) 
+         "aggregation" <span>protected</span> => <span>array</span>(0) 
+         "accessed" <span>protected</span> => NULL
+         "prevAccessed" <span>protected</span> => NULL
+         "keys" <span>protected</span> => <span>array</span>(0) 
+         "delimitedName" <span>protected</span> => "[pages]" (7)
+         "delimitedPrimary" <span>protected</span> => "[id]" (4)
+      <a href='#' rel='next'>}</code>
+      "onShutdown" => NULL
+      "request" <span>private</span> => <span>Nette\Application\Request</span>(7) <abbr>&#x25ba;</abbr> </a><code class="nette-collapsed">{
+         "method" <span>private</span> => "GET" (3)
+         "flags" <span>private</span> => <span>array</span>(1) { ... }
+         "name" <span>private</span> => "Front:Default" (13)
+         "params" <span>private</span> => <span>array</span>(2) { ... }
+         "post" <span>private</span> => <span>array</span>(0) 
+         "files" <span>private</span> => <span>array</span>(0) 
+         <a href='#' rel='next'>"frozen" <span>private</span> => TRUE
+      }</code>
+      "response" <span>private</span> => <span>Nette\Application\Responses\TextResponse</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+         "source" <span>private</span> => <span>Nette\Templating\FileTemplate</span>(8) { ... }
+      }</code>
+      "autoCanonicalize" => TRUE
+      "absoluteUrls" => FALSE
+      "globalParams" <span>private</span> => <span>array</span>(0) 
+      "globalState" <span>private</span> => <span>array</span>(0) 
+      "globalStateSinces" <span>private</span> => <span>array</span>(0) 
+      "action" <span>private</span> => "page" (4)
+      "view" <span>private</span> => "page" (4)
+      "layout" <span>private</span> => NULL
+      "payload" <span>private</span> => <span>stdClass</span>(0) 
+      "signalReceiver" <span>private</span> => ""
+      "signal" <span>private</span> => NULL
+      <a href='#' rel='next'>"ajaxMode" <span>private</span> => FALSE
+      "startupCheck" <span>private</span> => TRUE
+      "lastCreatedRequest" <span>private</span> => <span>Nette\Application\Request</span>(7) <abbr>&#x25ba;</abbr> </a><code class="nette-collapsed">{
+         "method" <span>private</span> => "FORWARD" (7)
+         "flags" <span>private</span> => <span>array</span>(0) 
+         "name" <span>private</span> => "Front:Default" (13)
+         "params" <span>private</span> => <span>array</span>(2) { ... }
+         "post" <span>private</span> => <span>array</span>(0) 
+         "files" <span>private</span> => <span>array</span>(0) 
+         <a href='#' rel='next'>"frozen" <span>private</span> => FALSE
+      }</code>
+      "lastCreatedRequestFlag" <span>private</span> => <span>array</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+         <a href='#' rel='next'>"current" => TRUE
+      }</code>
+      "context" <span>private</span> => <span>Nette\DI\Container</span>(6) <abbr>&#x25bc;</abbr> </a><code>{
+         "params" => <span>Nette\ArrayHash</span>(6) { ... }
+         "registry" <span>private</span> => <span>array</span>(16) { ... }
+         "factories" <span>private</span> => <span>array</span>(3) { ... }
+         "tags" <span>private</span> => <span>array</span>(16) { ... }
+         "creating" <span>private</span> => <span>array</span>(0) 
+         <a href='#' rel='next'>"frozen" <span>private</span> => FALSE
+      }</code>
+      "template" <span>private</span> => <span>Nette\Templating\FileTemplate</span>(8) <abbr>&#x25ba;</abbr> </a><code class="nette-collapsed">{
+         "file" <span>private</span> => "/home/users/ginny/ginny.jecool.net/web/app/FrontModule/templates/Default/page.latte" (83)
+         "warnOnUndefined" => TRUE
+         "onPrepareFilters" => <span>array</span>(1) [ ... ]
+         "params" <span>private</span> => <span>array</span>(17) { ... }
+         "filters" <span>private</span> => <span>array</span>(1) [ ... ]
+         "helpers" <span>private</span> => <span>array</span>(0) 
+         "helperLoaders" <span>private</span> => <span>array</span>(1) [ ... ]
+         "cacheStorage" <span>private</span> => <span>Nette\Caching\Storages\PhpFileStorage</span>(4) { ... }
+      }</code>
+      "invalidSnippets" <span>private</span> => <span>array</span>(0) 
+      <a href='#' rel='next'>"params" <span>protected</span> => <span>array</span>(2) <abbr>&#x25bc;</abbr> </a><code>{
+         "slug" => "o-nas" (5)
+         "action" => "page" (4)
+      }</code>
+      "components" <span>private</span> => <span>array</span>(0) 
+      "cloning" <span>private</span> => NULL
+      "parent" <span>private</span> => NULL
+      "name" <span>private</span> => "Front:Default" (13)
+      <a href='#' rel='next'>"monitors" <span>private</span> => <span>array</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+         "Nette\Application\UI\Presenter" => <span>array</span>(4) [ ... ]
+      <a href='#' rel='next'>}</code>
+   }</code>
+   "user" => <span>Nette\Http\User</span>(7) <abbr>&#x25ba;</abbr> </a><code class="nette-collapsed">{
+      "guestRole" => "guest" (5)
+      "authenticatedRole" => "authenticated" (13)
+      "onLoggedIn" => NULL
+      <a href='#' rel='next'>"onLoggedOut" => NULL
+      "namespace" <span>private</span> => ""
+      "session" <span>private</span> => NULL
+      "context" <span>private</span> => <span>Nette\DI\Container</span>(6) <abbr>&#x25bc;</abbr> </a><code>{
+         "params" => <span>array</span>(0) 
+         "registry" <span>private</span> => <span>array</span>(3) { ... }
+         "factories" <span>private</span> => <span>array</span>(2) { ... }
+         "tags" <span>private</span> => <span>array</span>(3) { ... }
+         <a href='#' rel='next'>"creating" <span>private</span> => NULL
+         "frozen" <span>private</span> => FALSE
+      }</code>
+   }</code>
+   "netteHttpResponse" => <span>Nette\Http\Response</span>(5) <abbr>&#x25bc;</abbr> </a><code>{
+      "cookieDomain" => ""
+      "cookiePath" => "/"
+      <a href='#' rel='next'>"cookieSecure" => FALSE
+      "cookieHttpOnly" => TRUE
+      "code" <span>private</span> => 500
+   }</code>
+   "netteCacheStorage" => <span>Nette\Caching\Storages\FileStorage</span>(3) <abbr>&#x25bc;</abbr> </a><code>{
+      "dir" <span>private</span> => "/home/users/ginny/ginny.jecool.net/web/temp/cache" (49)
+      <a href='#' rel='next'>"useDirs" <span>private</span> => TRUE
+      "journal" <span>private</span> => <span>Nette\Caching\Storages\FileJournal</span>(9) <abbr>&#x25ba;</abbr> </a><code class="nette-collapsed">{
+         "file" <span>private</span> => "/home/users/ginny/ginny.jecool.net/web/temp/btfj.dat" (52)
+         "handle" <span>private</span> => <span>stream resource</span>
+         "lastNode" <span>private</span> => 2
+         "lastModTime" <span>private</span> => NULL
+         "nodeCache" <span>private</span> => <span>array</span>(0) 
+         "nodeChanged" <span>private</span> => <span>array</span>(0) 
+         "toCommit" <span>private</span> => <span>array</span>(0) 
+         "deletedLinks" <span>private</span> => <span>array</span>(0) 
+         "dataNodeFreeSpace" <span>private</span> => <span>array</span>(0) 
+      }</code>
+   }</code>
+   "baseUrl" => "http://ginny.jecool.net/www" (27)
+   "baseUri" => "http://ginny.jecool.net/www" (27)
+   "basePath" => "/www" (4)
+   "flashes" => <span>array</span>(0) 
+   "viewName" => "page" (4)
+   "root" => "/home/users/ginny/ginny.jecool.net/web" (38)
+   "moduleName" => "Front:" (6)
+   "presenterName" => "Default" (7)
+   <a href='#' rel='next'>"page" => <span>Nette\Database\Table\Selection</span>(22) <abbr>&#x25ba;</abbr> </a><code class="nette-collapsed">{
+      <a href='#' rel='next'>"connection" => <span>Nette\Database\Connection</span>(6) <abbr>&#x25bc;</abbr> </a><code>{
+         "driver" <span>private</span> => <span>Nette\Database\Drivers\Sqlite2Driver</span>(3) { ... }
+         "preprocessor" <span>private</span> => <span>Nette\Database\SqlPreprocessor</span>(6) { ... }
+         "databaseReflection" => <span>Nette\Database\Reflection\DatabaseReflection</span>(3) { ... }
+         "cache" => NULL
+         "substitutions" => <span>array</span>(0) 
+         "onQuery" => NULL
+      }</code>
+      "name" => "pages" (5)
+      "primary" => "id" (2)
+      "rows" <span>protected</span> => NULL
+      "data" <span>protected</span> => NULL
+      "select" <span>protected</span> => <span>array</span>(0) 
+      <a href='#' rel='next'>"where" <span>protected</span> => <span>array</span>(1) <abbr>&#x25bc;</abbr> </a><code>[
+         0 => "[slug] = ?" (10)
+      <a href='#' rel='next'>]</code>
+      "conditions" <span>protected</span> => <span>array</span>(1) <abbr>&#x25bc;</abbr> </a><code>[
+         0 => "[slug]" (6)
+      <a href='#' rel='next'>]</code>
+      "parameters" <span>protected</span> => <span>array</span>(1) <abbr>&#x25bc;</abbr> </a><code>[
+         0 => "o-nas" (5)
+      ]</code>
+      "order" <span>protected</span> => <span>array</span>(0) 
+      "limit" <span>protected</span> => NULL
+      "offset" <span>protected</span> => NULL
+      "group" <span>protected</span> => ""
+      "having" <span>protected</span> => ""
+      "referenced" <span>protected</span> => <span>array</span>(0) 
+      "referencing" <span>protected</span> => <span>array</span>(0) 
+      "aggregation" <span>protected</span> => <span>array</span>(0) 
+      "accessed" <span>protected</span> => NULL
+      "prevAccessed" <span>protected</span> => NULL
+      "keys" <span>protected</span> => <span>array</span>(0) 
+      "delimitedName" <span>protected</span> => "[pages]" (7)
+      "delimitedPrimary" <span>protected</span> => "[id]" (4)
+   }</code>
+   "layout" => "/home/users/ginny/ginny.jecool.net/web/app/FrontModule/templates/@layout.latte" (78)
+   <a href='#' rel='next'>"template" => <span>Nette\Templating\FileTemplate</span>(8) <abbr>&#x25ba;</abbr> </a><code class="nette-collapsed">{
+      "file" <span>private</span> => "/home/users/ginny/ginny.jecool.net/web/app/FrontModule/templates/@layout.latte" (78)
+      <a href='#' rel='next'>"warnOnUndefined" => TRUE
+      "onPrepareFilters" => <span>array</span>(1) <abbr>&#x25bc;</abbr> </a><code>[
+         0 => <span>Nette\Callback</span>(1) { ... }
+      <a href='#' rel='next'>]</code>
+      "params" <span>private</span> => <span>array</span>(17) <abbr>&#x25ba;</abbr> </a><code class="nette-collapsed">{
+         "control" => <span>FrontModule\DefaultPresenter</span>(28) { ... }
+         "presenter" => <span>FrontModule\DefaultPresenter</span>(28) { ... }
+         "user" => <span>Nette\Http\User</span>(7) { ... }
+         "netteHttpResponse" => <span>Nette\Http\Response</span>(5) { ... }
+         "netteCacheStorage" => <span>Nette\Caching\Storages\FileStorage</span>(3) { ... }
+         "baseUrl" => "http://ginny.jecool.net/www" (27)
+         "baseUri" => "http://ginny.jecool.net/www" (27)
+         "basePath" => "/www" (4)
+         "flashes" => <span>array</span>(0) 
+         "viewName" => "page" (4)
+         "root" => "/home/users/ginny/ginny.jecool.net/web" (38)
+         "moduleName" => "Front:" (6)
+         "presenterName" => "Default" (7)
+         "page" => <span>Nette\Database\Table\Selection</span>(22) { ... }
+         "layout" => "/home/users/ginny/ginny.jecool.net/web/app/FrontModule/templates/@layout.latte" (78)
+         "template" => <span>Nette\Templating\FileTemplate</span>(8) { *RECURSION* }
+         "_g" => <span>stdClass</span>(0) 
+      <a href='#' rel='next'>}</code>
+      "filters" <span>private</span> => <span>array</span>(1) <abbr>&#x25bc;</abbr> </a><code>[
+         0 => <span>Nette\Callback</span>(1) { ... }
+      ]</code>
+      "helpers" <span>private</span> => <span>array</span>(0) 
+      <a href='#' rel='next'>"helperLoaders" <span>private</span> => <span>array</span>(1) <abbr>&#x25bc;</abbr> </a><code>[
+         0 => <span>Nette\Callback</span>(1) { ... }
+      <a href='#' rel='next'>]</code>
+      "cacheStorage" <span>private</span> => <span>Nette\Caching\Storages\PhpFileStorage</span>(4) <abbr>&#x25bc;</abbr> </a><code>{
+         "hint" => "/templates/@layout.latte" (24)
+         "dir" <span>private</span> => "/home/users/ginny/ginny.jecool.net/web/temp/cache" (49)
+         "useDirs" <span>private</span> => TRUE
+         "journal" <span>private</span> => NULL
+      }</code>
+   }</code>
+   "_g" => <span>stdClass</span>(0) 
+}</code>
+</pre></td></tr>
+						</table>
+						</div>
+					
+
+											<pre class="nette-collapsed" id="netteBsSrc1-3"><code><span style="color: #06B"><span class='line'>20:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Web&lt;/title&gt;
+<span class='line'>21:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&lt;link&nbsp;rel="stylesheet"&nbsp;type="text/css"&nbsp;media="screen"&nbsp;href="<span style="color: #000">&lt;?php&nbsp;</span><span style="color: #D24; font-weight: bold">echo&nbsp;</span><span style="color: #000">Nette</span><span style="color: #D24; font-weight: bold">\</span><span style="color: #000">Templating</span><span style="color: #D24; font-weight: bold">\</span><span style="color: #000">DefaultHelpers</span><span style="color: #D24; font-weight: bold">::</span><span style="color: #000">escapeHtml</span><span style="color: #D24; font-weight: bold">(</span><span style="color: #000">$basePath</span><span style="color: #D24; font-weight: bold">,&nbsp;</span><span style="color: #080">'"'</span><span style="color: #D24; font-weight: bold">)&nbsp;</span><span style="color: #000">?&gt;</span>/css/site.css"&nbsp;/&gt;
+<span class='line'>22:</span>    &lt;/head&gt;
+<span class='line'>23:</span>    
+<span class='line'>24:</span>    &lt;body&gt;
+<span class='line'>25:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;Webík&lt;/h1&gt;
+<span class='line'>26:</span>    
+<span class='highlight'>27:    &lt;?php&nbsp;Nette\Latte\Macros\UIMacros::callBlock($_l,&nbsp;'content',&nbsp;$template-&gt;getParams())&nbsp;?&gt;
+</span><span style="color: #000"></span><span style="color: #D24; font-weight: bold"></span><span style="color: #000"></span><span style="color: #D24; font-weight: bold"></span><span style="color: #000"></span><span style="color: #D24; font-weight: bold"></span><span style="color: #000"></span><span style="color: #D24; font-weight: bold"></span><span style="color: #000"></span><span style="color: #D24; font-weight: bold"></span><span style="color: #000"></span><span style="color: #D24; font-weight: bold"></span><span style="color: #080"></span><span style="color: #D24; font-weight: bold"></span><span style="color: #000"></span><span style="color: #D24; font-weight: bold"></span><span style="color: #000"></span><span style="color: #D24; font-weight: bold"></span><span style="color: #000"><span class='line'>28:</span>    </span>
+<span class='line'>29:</span>    &lt;/body&gt;
+<span class='line'>30:</span>    &lt;/html&gt;</span>
+</code></pre>
+					
+					</li>
+										<li><p>
+
+											<a href="editor://open/?file=%2Fhome%2Fusers%2Fginny%2Fginny.jecool.net%2Fweb%2Flibs%2FNette%2FUtils%2FLimitedScope.php&amp;line=70" title="/home/users/ginny/ginny.jecool.net/web/libs/Nette/Utils/LimitedScope.php:70">.../libs/Nette/Utils/<b>LimitedScope.php</b></a>:70					
+					<a href="#" rel="netteBsSrc1-4">source <abbr>&#x25ba;</abbr></a>&nbsp; 
+										include
+					(<a href="#" rel="netteBsArgs1-4">arguments <abbr>&#x25ba;</abbr></a>)
+					</p>
+
+											<div class="nette-collapsed outer" id="netteBsArgs1-4">
+						<table>
+						<tr><th>#0</th><td><pre class="nette-dump">"/home/users/ginny/ginny.jecool.net/web/temp/cache/_Nette.FileTemplate/_templates._layout.latte-44613c2af9c19737eb710710e326b040.php" (131)
+</pre></td></tr>
+						</table>
+						</div>
+					
+
+											<pre class="nette-collapsed" id="netteBsSrc1-4"><code><span style="color: #06B"><span style="color: #999; font-style: italic"><span class='line'>63:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/
+<span class='line'>64:</span>    &nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #D24; font-weight: bold">public&nbsp;static&nbsp;function&nbsp;</span><span style="color: #000">load</span><span style="color: #D24; font-weight: bold">(</span><span style="color: #999; font-style: italic">/*$file,&nbsp;array&nbsp;$vars&nbsp;=&nbsp;NULL*/</span><span style="color: #D24; font-weight: bold">)
+<span class='line'>65:</span>    &nbsp;&nbsp;&nbsp;&nbsp;{
+<span class='line'>66:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(</span><span style="color: #000">func_num_args</span><span style="color: #D24; font-weight: bold">()&nbsp;&gt;&nbsp;</span><span style="color: #000">1</span><span style="color: #D24; font-weight: bold">)&nbsp;{
+<span class='line'>67:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #000">self</span><span style="color: #D24; font-weight: bold">::</span><span style="color: #000">$vars&nbsp;</span><span style="color: #D24; font-weight: bold">=&nbsp;</span><span style="color: #000">func_get_arg</span><span style="color: #D24; font-weight: bold">(</span><span style="color: #000">1</span><span style="color: #D24; font-weight: bold">);
+<span class='line'>68:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #000">extract</span><span style="color: #D24; font-weight: bold">(</span><span style="color: #000">self</span><span style="color: #D24; font-weight: bold">::</span><span style="color: #000">$vars</span><span style="color: #D24; font-weight: bold">);
+<span class='line'>69:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+<span class='highlight'>70:    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;include&nbsp;func_get_arg(0);
+</span></span><span style="color: #000"></span><span style="color: #D24; font-weight: bold"></span><span style="color: #000"></span><span style="color: #D24; font-weight: bold"><span class='line'>71:</span>    &nbsp;&nbsp;&nbsp;&nbsp;}
+<span class='line'>72:</span>    
+<span class='line'>73:</span>    }
+<span class='line'>74:</span>    </span>
+</span></code></pre>
+					
+					</li>
+										<li><p>
+
+											<a href="editor://open/?file=%2Fhome%2Fusers%2Fginny%2Fginny.jecool.net%2Fweb%2Flibs%2FNette%2FTemplating%2FFileTemplate.php&amp;line=110" title="/home/users/ginny/ginny.jecool.net/web/libs/Nette/Templating/FileTemplate.php:110">.../libs/Nette/Templating/<b>FileTemplate.php</b></a>:110					
+					<a href="#" rel="netteBsSrc1-5">source <abbr>&#x25ba;</abbr></a>&nbsp; 
+					Nette\Utils\LimitedScope::					load
+					(<a href="#" rel="netteBsArgs1-5">arguments <abbr>&#x25ba;</abbr></a>)
+					</p>
+
+											<div class="nette-collapsed outer" id="netteBsArgs1-5">
+						<table>
+						<tr><th>#0</th><td><pre class="nette-dump">"/home/users/ginny/ginny.jecool.net/web/temp/cache/_Nette.FileTemplate/_templates._layout.latte-44613c2af9c19737eb710710e326b040.php" (131)
+</pre></td></tr>
+<tr><th>#1</th><td><pre class="nette-dump"><a href='#' rel='next'><span>array</span>(18) <abbr>&#x25ba;</abbr> </a><code class="nette-collapsed">{
+   <a href='#' rel='next'>"control" => <span>FrontModule\DefaultPresenter</span>(28) <abbr>&#x25ba;</abbr> </a><code class="nette-collapsed">{
+      <a href='#' rel='next'>"page" <span>private</span> => <span>Nette\Database\Table\Selection</span>(22) <abbr>&#x25ba;</abbr> </a><code class="nette-collapsed">{
+         "connection" => <span>Nette\Database\Connection</span>(6) { ... }
+         "name" => "pages" (5)
+         "primary" => "id" (2)
+         "rows" <span>protected</span> => NULL
+         "data" <span>protected</span> => NULL
+         "select" <span>protected</span> => <span>array</span>(0) 
+         "where" <span>protected</span> => <span>array</span>(1) [ ... ]
+         "conditions" <span>protected</span> => <span>array</span>(1) [ ... ]
+         "parameters" <span>protected</span> => <span>array</span>(1) [ ... ]
+         "order" <span>protected</span> => <span>array</span>(0) 
+         "limit" <span>protected</span> => NULL
+         "offset" <span>protected</span> => NULL
+         "group" <span>protected</span> => ""
+         "having" <span>protected</span> => ""
+         "referenced" <span>protected</span> => <span>array</span>(0) 
+         "referencing" <span>protected</span> => <span>array</span>(0) 
+         "aggregation" <span>protected</span> => <span>array</span>(0) 
+         "accessed" <span>protected</span> => NULL
+         "prevAccessed" <span>protected</span> => NULL
+         "keys" <span>protected</span> => <span>array</span>(0) 
+         "delimitedName" <span>protected</span> => "[pages]" (7)
+         "delimitedPrimary" <span>protected</span> => "[id]" (4)
+      <a href='#' rel='next'>}</code>
+      "onShutdown" => NULL
+      "request" <span>private</span> => <span>Nette\Application\Request</span>(7) <abbr>&#x25ba;</abbr> </a><code class="nette-collapsed">{
+         "method" <span>private</span> => "GET" (3)
+         "flags" <span>private</span> => <span>array</span>(1) { ... }
+         "name" <span>private</span> => "Front:Default" (13)
+         "params" <span>private</span> => <span>array</span>(2) { ... }
+         "post" <span>private</span> => <span>array</span>(0) 
+         "files" <span>private</span> => <span>array</span>(0) 
+         <a href='#' rel='next'>"frozen" <span>private</span> => TRUE
+      }</code>
+      "response" <span>private</span> => <span>Nette\Application\Responses\TextResponse</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+         "source" <span>private</span> => <span>Nette\Templating\FileTemplate</span>(8) { ... }
+      }</code>
+      "autoCanonicalize" => TRUE
+      "absoluteUrls" => FALSE
+      "globalParams" <span>private</span> => <span>array</span>(0) 
+      "globalState" <span>private</span> => <span>array</span>(0) 
+      "globalStateSinces" <span>private</span> => <span>array</span>(0) 
+      "action" <span>private</span> => "page" (4)
+      "view" <span>private</span> => "page" (4)
+      "layout" <span>private</span> => NULL
+      "payload" <span>private</span> => <span>stdClass</span>(0) 
+      "signalReceiver" <span>private</span> => ""
+      "signal" <span>private</span> => NULL
+      <a href='#' rel='next'>"ajaxMode" <span>private</span> => FALSE
+      "startupCheck" <span>private</span> => TRUE
+      "lastCreatedRequest" <span>private</span> => <span>Nette\Application\Request</span>(7) <abbr>&#x25ba;</abbr> </a><code class="nette-collapsed">{
+         "method" <span>private</span> => "FORWARD" (7)
+         "flags" <span>private</span> => <span>array</span>(0) 
+         "name" <span>private</span> => "Front:Default" (13)
+         "params" <span>private</span> => <span>array</span>(2) { ... }
+         "post" <span>private</span> => <span>array</span>(0) 
+         "files" <span>private</span> => <span>array</span>(0) 
+         <a href='#' rel='next'>"frozen" <span>private</span> => FALSE
+      }</code>
+      "lastCreatedRequestFlag" <span>private</span> => <span>array</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+         <a href='#' rel='next'>"current" => TRUE
+      }</code>
+      "context" <span>private</span> => <span>Nette\DI\Container</span>(6) <abbr>&#x25bc;</abbr> </a><code>{
+         "params" => <span>Nette\ArrayHash</span>(6) { ... }
+         "registry" <span>private</span> => <span>array</span>(16) { ... }
+         "factories" <span>private</span> => <span>array</span>(3) { ... }
+         "tags" <span>private</span> => <span>array</span>(16) { ... }
+         "creating" <span>private</span> => <span>array</span>(0) 
+         <a href='#' rel='next'>"frozen" <span>private</span> => FALSE
+      }</code>
+      "template" <span>private</span> => <span>Nette\Templating\FileTemplate</span>(8) <abbr>&#x25ba;</abbr> </a><code class="nette-collapsed">{
+         "file" <span>private</span> => "/home/users/ginny/ginny.jecool.net/web/app/FrontModule/templates/Default/page.latte" (83)
+         "warnOnUndefined" => TRUE
+         "onPrepareFilters" => <span>array</span>(1) [ ... ]
+         "params" <span>private</span> => <span>array</span>(17) { ... }
+         "filters" <span>private</span> => <span>array</span>(1) [ ... ]
+         "helpers" <span>private</span> => <span>array</span>(0) 
+         "helperLoaders" <span>private</span> => <span>array</span>(1) [ ... ]
+         "cacheStorage" <span>private</span> => <span>Nette\Caching\Storages\PhpFileStorage</span>(4) { ... }
+      }</code>
+      "invalidSnippets" <span>private</span> => <span>array</span>(0) 
+      <a href='#' rel='next'>"params" <span>protected</span> => <span>array</span>(2) <abbr>&#x25bc;</abbr> </a><code>{
+         "slug" => "o-nas" (5)
+         "action" => "page" (4)
+      }</code>
+      "components" <span>private</span> => <span>array</span>(0) 
+      "cloning" <span>private</span> => NULL
+      "parent" <span>private</span> => NULL
+      "name" <span>private</span> => "Front:Default" (13)
+      <a href='#' rel='next'>"monitors" <span>private</span> => <span>array</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+         "Nette\Application\UI\Presenter" => <span>array</span>(4) [ ... ]
+      <a href='#' rel='next'>}</code>
+   }</code>
+   "presenter" => <span>FrontModule\DefaultPresenter</span>(28) <abbr>&#x25ba;</abbr> </a><code class="nette-collapsed">{
+      <a href='#' rel='next'>"page" <span>private</span> => <span>Nette\Database\Table\Selection</span>(22) <abbr>&#x25ba;</abbr> </a><code class="nette-collapsed">{
+         "connection" => <span>Nette\Database\Connection</span>(6) { ... }
+         "name" => "pages" (5)
+         "primary" => "id" (2)
+         "rows" <span>protected</span> => NULL
+         "data" <span>protected</span> => NULL
+         "select" <span>protected</span> => <span>array</span>(0) 
+         "where" <span>protected</span> => <span>array</span>(1) [ ... ]
+         "conditions" <span>protected</span> => <span>array</span>(1) [ ... ]
+         "parameters" <span>protected</span> => <span>array</span>(1) [ ... ]
+         "order" <span>protected</span> => <span>array</span>(0) 
+         "limit" <span>protected</span> => NULL
+         "offset" <span>protected</span> => NULL
+         "group" <span>protected</span> => ""
+         "having" <span>protected</span> => ""
+         "referenced" <span>protected</span> => <span>array</span>(0) 
+         "referencing" <span>protected</span> => <span>array</span>(0) 
+         "aggregation" <span>protected</span> => <span>array</span>(0) 
+         "accessed" <span>protected</span> => NULL
+         "prevAccessed" <span>protected</span> => NULL
+         "keys" <span>protected</span> => <span>array</span>(0) 
+         "delimitedName" <span>protected</span> => "[pages]" (7)
+         "delimitedPrimary" <span>protected</span> => "[id]" (4)
+      <a href='#' rel='next'>}</code>
+      "onShutdown" => NULL
+      "request" <span>private</span> => <span>Nette\Application\Request</span>(7) <abbr>&#x25ba;</abbr> </a><code class="nette-collapsed">{
+         "method" <span>private</span> => "GET" (3)
+         "flags" <span>private</span> => <span>array</span>(1) { ... }
+         "name" <span>private</span> => "Front:Default" (13)
+         "params" <span>private</span> => <span>array</span>(2) { ... }
+         "post" <span>private</span> => <span>array</span>(0) 
+         "files" <span>private</span> => <span>array</span>(0) 
+         <a href='#' rel='next'>"frozen" <span>private</span> => TRUE
+      }</code>
+      "response" <span>private</span> => <span>Nette\Application\Responses\TextResponse</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+         "source" <span>private</span> => <span>Nette\Templating\FileTemplate</span>(8) { ... }
+      }</code>
+      "autoCanonicalize" => TRUE
+      "absoluteUrls" => FALSE
+      "globalParams" <span>private</span> => <span>array</span>(0) 
+      "globalState" <span>private</span> => <span>array</span>(0) 
+      "globalStateSinces" <span>private</span> => <span>array</span>(0) 
+      "action" <span>private</span> => "page" (4)
+      "view" <span>private</span> => "page" (4)
+      "layout" <span>private</span> => NULL
+      "payload" <span>private</span> => <span>stdClass</span>(0) 
+      "signalReceiver" <span>private</span> => ""
+      "signal" <span>private</span> => NULL
+      <a href='#' rel='next'>"ajaxMode" <span>private</span> => FALSE
+      "startupCheck" <span>private</span> => TRUE
+      "lastCreatedRequest" <span>private</span> => <span>Nette\Application\Request</span>(7) <abbr>&#x25ba;</abbr> </a><code class="nette-collapsed">{
+         "method" <span>private</span> => "FORWARD" (7)
+         "flags" <span>private</span> => <span>array</span>(0) 
+         "name" <span>private</span> => "Front:Default" (13)
+         "params" <span>private</span> => <span>array</span>(2) { ... }
+         "post" <span>private</span> => <span>array</span>(0) 
+         "files" <span>private</span> => <span>array</span>(0) 
+         <a href='#' rel='next'>"frozen" <span>private</span> => FALSE
+      }</code>
+      "lastCreatedRequestFlag" <span>private</span> => <span>array</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+         <a href='#' rel='next'>"current" => TRUE
+      }</code>
+      "context" <span>private</span> => <span>Nette\DI\Container</span>(6) <abbr>&#x25bc;</abbr> </a><code>{
+         "params" => <span>Nette\ArrayHash</span>(6) { ... }
+         "registry" <span>private</span> => <span>array</span>(16) { ... }
+         "factories" <span>private</span> => <span>array</span>(3) { ... }
+         "tags" <span>private</span> => <span>array</span>(16) { ... }
+         "creating" <span>private</span> => <span>array</span>(0) 
+         <a href='#' rel='next'>"frozen" <span>private</span> => FALSE
+      }</code>
+      "template" <span>private</span> => <span>Nette\Templating\FileTemplate</span>(8) <abbr>&#x25ba;</abbr> </a><code class="nette-collapsed">{
+         "file" <span>private</span> => "/home/users/ginny/ginny.jecool.net/web/app/FrontModule/templates/Default/page.latte" (83)
+         "warnOnUndefined" => TRUE
+         "onPrepareFilters" => <span>array</span>(1) [ ... ]
+         "params" <span>private</span> => <span>array</span>(17) { ... }
+         "filters" <span>private</span> => <span>array</span>(1) [ ... ]
+         "helpers" <span>private</span> => <span>array</span>(0) 
+         "helperLoaders" <span>private</span> => <span>array</span>(1) [ ... ]
+         "cacheStorage" <span>private</span> => <span>Nette\Caching\Storages\PhpFileStorage</span>(4) { ... }
+      }</code>
+      "invalidSnippets" <span>private</span> => <span>array</span>(0) 
+      <a href='#' rel='next'>"params" <span>protected</span> => <span>array</span>(2) <abbr>&#x25bc;</abbr> </a><code>{
+         "slug" => "o-nas" (5)
+         "action" => "page" (4)
+      }</code>
+      "components" <span>private</span> => <span>array</span>(0) 
+      "cloning" <span>private</span> => NULL
+      "parent" <span>private</span> => NULL
+      "name" <span>private</span> => "Front:Default" (13)
+      <a href='#' rel='next'>"monitors" <span>private</span> => <span>array</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+         "Nette\Application\UI\Presenter" => <span>array</span>(4) [ ... ]
+      <a href='#' rel='next'>}</code>
+   }</code>
+   "user" => <span>Nette\Http\User</span>(7) <abbr>&#x25ba;</abbr> </a><code class="nette-collapsed">{
+      "guestRole" => "guest" (5)
+      "authenticatedRole" => "authenticated" (13)
+      "onLoggedIn" => NULL
+      <a href='#' rel='next'>"onLoggedOut" => NULL
+      "namespace" <span>private</span> => ""
+      "session" <span>private</span> => NULL
+      "context" <span>private</span> => <span>Nette\DI\Container</span>(6) <abbr>&#x25bc;</abbr> </a><code>{
+         "params" => <span>array</span>(0) 
+         "registry" <span>private</span> => <span>array</span>(3) { ... }
+         "factories" <span>private</span> => <span>array</span>(2) { ... }
+         "tags" <span>private</span> => <span>array</span>(3) { ... }
+         <a href='#' rel='next'>"creating" <span>private</span> => NULL
+         "frozen" <span>private</span> => FALSE
+      }</code>
+   }</code>
+   "netteHttpResponse" => <span>Nette\Http\Response</span>(5) <abbr>&#x25bc;</abbr> </a><code>{
+      "cookieDomain" => ""
+      "cookiePath" => "/"
+      <a href='#' rel='next'>"cookieSecure" => FALSE
+      "cookieHttpOnly" => TRUE
+      "code" <span>private</span> => 500
+   }</code>
+   "netteCacheStorage" => <span>Nette\Caching\Storages\FileStorage</span>(3) <abbr>&#x25bc;</abbr> </a><code>{
+      "dir" <span>private</span> => "/home/users/ginny/ginny.jecool.net/web/temp/cache" (49)
+      <a href='#' rel='next'>"useDirs" <span>private</span> => TRUE
+      "journal" <span>private</span> => <span>Nette\Caching\Storages\FileJournal</span>(9) <abbr>&#x25ba;</abbr> </a><code class="nette-collapsed">{
+         "file" <span>private</span> => "/home/users/ginny/ginny.jecool.net/web/temp/btfj.dat" (52)
+         "handle" <span>private</span> => <span>stream resource</span>
+         "lastNode" <span>private</span> => 2
+         "lastModTime" <span>private</span> => NULL
+         "nodeCache" <span>private</span> => <span>array</span>(0) 
+         "nodeChanged" <span>private</span> => <span>array</span>(0) 
+         "toCommit" <span>private</span> => <span>array</span>(0) 
+         "deletedLinks" <span>private</span> => <span>array</span>(0) 
+         "dataNodeFreeSpace" <span>private</span> => <span>array</span>(0) 
+      }</code>
+   }</code>
+   "baseUrl" => "http://ginny.jecool.net/www" (27)
+   "baseUri" => "http://ginny.jecool.net/www" (27)
+   "basePath" => "/www" (4)
+   "flashes" => <span>array</span>(0) 
+   "viewName" => "page" (4)
+   "root" => "/home/users/ginny/ginny.jecool.net/web" (38)
+   "moduleName" => "Front:" (6)
+   "presenterName" => "Default" (7)
+   <a href='#' rel='next'>"page" => <span>Nette\Database\Table\Selection</span>(22) <abbr>&#x25ba;</abbr> </a><code class="nette-collapsed">{
+      <a href='#' rel='next'>"connection" => <span>Nette\Database\Connection</span>(6) <abbr>&#x25bc;</abbr> </a><code>{
+         "driver" <span>private</span> => <span>Nette\Database\Drivers\Sqlite2Driver</span>(3) { ... }
+         "preprocessor" <span>private</span> => <span>Nette\Database\SqlPreprocessor</span>(6) { ... }
+         "databaseReflection" => <span>Nette\Database\Reflection\DatabaseReflection</span>(3) { ... }
+         "cache" => NULL
+         "substitutions" => <span>array</span>(0) 
+         "onQuery" => NULL
+      }</code>
+      "name" => "pages" (5)
+      "primary" => "id" (2)
+      "rows" <span>protected</span> => NULL
+      "data" <span>protected</span> => NULL
+      "select" <span>protected</span> => <span>array</span>(0) 
+      <a href='#' rel='next'>"where" <span>protected</span> => <span>array</span>(1) <abbr>&#x25bc;</abbr> </a><code>[
+         0 => "[slug] = ?" (10)
+      <a href='#' rel='next'>]</code>
+      "conditions" <span>protected</span> => <span>array</span>(1) <abbr>&#x25bc;</abbr> </a><code>[
+         0 => "[slug]" (6)
+      <a href='#' rel='next'>]</code>
+      "parameters" <span>protected</span> => <span>array</span>(1) <abbr>&#x25bc;</abbr> </a><code>[
+         0 => "o-nas" (5)
+      ]</code>
+      "order" <span>protected</span> => <span>array</span>(0) 
+      "limit" <span>protected</span> => NULL
+      "offset" <span>protected</span> => NULL
+      "group" <span>protected</span> => ""
+      "having" <span>protected</span> => ""
+      "referenced" <span>protected</span> => <span>array</span>(0) 
+      "referencing" <span>protected</span> => <span>array</span>(0) 
+      "aggregation" <span>protected</span> => <span>array</span>(0) 
+      "accessed" <span>protected</span> => NULL
+      "prevAccessed" <span>protected</span> => NULL
+      "keys" <span>protected</span> => <span>array</span>(0) 
+      "delimitedName" <span>protected</span> => "[pages]" (7)
+      "delimitedPrimary" <span>protected</span> => "[id]" (4)
+   }</code>
+   "layout" => "/home/users/ginny/ginny.jecool.net/web/app/FrontModule/templates/@layout.latte" (78)
+   <a href='#' rel='next'>"template" => <span>Nette\Templating\FileTemplate</span>(8) <abbr>&#x25ba;</abbr> </a><code class="nette-collapsed">{
+      "file" <span>private</span> => "/home/users/ginny/ginny.jecool.net/web/app/FrontModule/templates/@layout.latte" (78)
+      <a href='#' rel='next'>"warnOnUndefined" => TRUE
+      "onPrepareFilters" => <span>array</span>(1) <abbr>&#x25bc;</abbr> </a><code>[
+         0 => <span>Nette\Callback</span>(1) { ... }
+      <a href='#' rel='next'>]</code>
+      "params" <span>private</span> => <span>array</span>(17) <abbr>&#x25ba;</abbr> </a><code class="nette-collapsed">{
+         "control" => <span>FrontModule\DefaultPresenter</span>(28) { ... }
+         "presenter" => <span>FrontModule\DefaultPresenter</span>(28) { ... }
+         "user" => <span>Nette\Http\User</span>(7) { ... }
+         "netteHttpResponse" => <span>Nette\Http\Response</span>(5) { ... }
+         "netteCacheStorage" => <span>Nette\Caching\Storages\FileStorage</span>(3) { ... }
+         "baseUrl" => "http://ginny.jecool.net/www" (27)
+         "baseUri" => "http://ginny.jecool.net/www" (27)
+         "basePath" => "/www" (4)
+         "flashes" => <span>array</span>(0) 
+         "viewName" => "page" (4)
+         "root" => "/home/users/ginny/ginny.jecool.net/web" (38)
+         "moduleName" => "Front:" (6)
+         "presenterName" => "Default" (7)
+         "page" => <span>Nette\Database\Table\Selection</span>(22) { ... }
+         "layout" => "/home/users/ginny/ginny.jecool.net/web/app/FrontModule/templates/@layout.latte" (78)
+         "template" => <span>Nette\Templating\FileTemplate</span>(8) { *RECURSION* }
+         "_g" => <span>stdClass</span>(0) 
+      <a href='#' rel='next'>}</code>
+      "filters" <span>private</span> => <span>array</span>(1) <abbr>&#x25bc;</abbr> </a><code>[
+         0 => <span>Nette\Callback</span>(1) { ... }
+      ]</code>
+      "helpers" <span>private</span> => <span>array</span>(0) 
+      <a href='#' rel='next'>"helperLoaders" <span>private</span> => <span>array</span>(1) <abbr>&#x25bc;</abbr> </a><code>[
+         0 => <span>Nette\Callback</span>(1) { ... }
+      <a href='#' rel='next'>]</code>
+      "cacheStorage" <span>private</span> => <span>Nette\Caching\Storages\PhpFileStorage</span>(4) <abbr>&#x25bc;</abbr> </a><code>{
+         "hint" => "/templates/@layout.latte" (24)
+         "dir" <span>private</span> => "/home/users/ginny/ginny.jecool.net/web/temp/cache" (49)
+         "useDirs" <span>private</span> => TRUE
+         "journal" <span>private</span> => NULL
+      }</code>
+   }</code>
+   "_g" => <span>stdClass</span>(0) 
+   <a href='#' rel='next'>"_l" => <span>stdClass</span>(3) <abbr>&#x25bc;</abbr> </a><code>{
+      <a href='#' rel='next'>"templates" => <span>array</span>(2) <abbr>&#x25bc;</abbr> </a><code>{
+         "5157jgezog" => <span>Nette\Templating\FileTemplate</span>(8) { ... }
+         "wy08dh2vrr" => <span>Nette\Templating\FileTemplate</span>(8) { ... }
+      <a href='#' rel='next'>}</code>
+      "blocks" => <span>array</span>(2) <abbr>&#x25bc;</abbr> </a><code>{
+         "content" => <span>array</span>(1) [ ... ]
+         "title" => <span>array</span>(1) [ ... ]
+      }</code>
+      "extends" => "/home/users/ginny/ginny.jecool.net/web/app/FrontModule/templates/@layout.latte" (78)
+   }</code>
+}</code>
+</pre></td></tr>
+						</table>
+						</div>
+					
+
+											<pre class="nette-collapsed" id="netteBsSrc1-5"><code><span style="color: #06B"><span style="color: #D24; font-weight: bold"><span class='line'>103:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #000">Caching</span><span style="color: #D24; font-weight: bold">\</span><span style="color: #000">Cache</span><span style="color: #D24; font-weight: bold">::</span><span style="color: #000">CONSTS&nbsp;</span><span style="color: #D24; font-weight: bold">=&gt;&nbsp;</span><span style="color: #080">'Nette\Framework::REVISION'</span><span style="color: #D24; font-weight: bold">,
+<span class='line'>104:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;));
+<span class='line'>105:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #000">$cache</span><span style="color: #D24; font-weight: bold">-&gt;</span><span style="color: #000">release</span><span style="color: #D24; font-weight: bold">();
+<span class='line'>106:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #000">$cached&nbsp;</span><span style="color: #D24; font-weight: bold">=&nbsp;</span><span style="color: #000">$cache</span><span style="color: #D24; font-weight: bold">-&gt;</span><span style="color: #000">load</span><span style="color: #D24; font-weight: bold">(</span><span style="color: #000">$this</span><span style="color: #D24; font-weight: bold">-&gt;</span><span style="color: #000">file</span><span style="color: #D24; font-weight: bold">);
+<span class='line'>107:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+<span class='line'>108:</span>    
+<span class='line'>109:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(</span><span style="color: #000">$cached&nbsp;</span><span style="color: #D24; font-weight: bold">!==&nbsp;</span><span style="color: #000">NULL&nbsp;</span><span style="color: #D24; font-weight: bold">&amp;&amp;&nbsp;</span><span style="color: #000">$storage&nbsp;</span><span style="color: #D24; font-weight: bold">instanceof&nbsp;</span><span style="color: #000">Caching</span><span style="color: #D24; font-weight: bold">\</span><span style="color: #000">Storages</span><span style="color: #D24; font-weight: bold">\</span><span style="color: #000">PhpFileStorage</span><span style="color: #D24; font-weight: bold">)&nbsp;{
+<span class='highlight'>110:    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nette\Utils\LimitedScope::load($cached['file'],&nbsp;$this-&gt;getParams());
+</span></span><span style="color: #000"></span><span style="color: #D24; font-weight: bold"></span><span style="color: #000"></span><span style="color: #D24; font-weight: bold"></span><span style="color: #000"></span><span style="color: #D24; font-weight: bold"></span><span style="color: #000"></span><span style="color: #D24; font-weight: bold"></span><span style="color: #000"></span><span style="color: #D24; font-weight: bold"></span><span style="color: #080"></span><span style="color: #D24; font-weight: bold"></span><span style="color: #000"></span><span style="color: #D24; font-weight: bold"></span><span style="color: #000"></span><span style="color: #D24; font-weight: bold"><span class='line'>111:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;else&nbsp;{
+<span class='line'>112:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #000">Nette</span><span style="color: #D24; font-weight: bold">\</span><span style="color: #000">Utils</span><span style="color: #D24; font-weight: bold">\</span><span style="color: #000">LimitedScope</span><span style="color: #D24; font-weight: bold">::</span><span style="color: #000">evaluate</span><span style="color: #D24; font-weight: bold">(</span><span style="color: #000">$compiled</span><span style="color: #D24; font-weight: bold">,&nbsp;</span><span style="color: #000">$this</span><span style="color: #D24; font-weight: bold">-&gt;</span><span style="color: #000">getParams</span><span style="color: #D24; font-weight: bold">());
+<span class='line'>113:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+<span class='line'>114:</span>    &nbsp;&nbsp;&nbsp;&nbsp;}
+<span class='line'>115:</span>    
+<span class='line'>116:</span>    }
+<span class='line'>117:</span>    </span>
+</span></code></pre>
+					
+					</li>
+										<li><p>
+
+											<a href="editor://open/?file=%2Fhome%2Fusers%2Fginny%2Fginny.jecool.net%2Fweb%2Ftemp%2Fcache%2F_Nette.FileTemplate%2F_Default.page.latte-29ed9d517b634fbd6dffe4e6e280568f.php&amp;line=50" title="/home/users/ginny/ginny.jecool.net/web/temp/cache/_Nette.FileTemplate/_Default.page.latte-29ed9d517b634fbd6dffe4e6e280568f.php:50">.../temp/cache/_Nette.FileTemplate/<b>_Default.page.latte-29ed9d517b634fbd6dffe4e6e280568f.php</b></a>:50					
+					<a href="#" rel="netteBsSrc1-6">source <abbr>&#x25ba;</abbr></a>&nbsp; 
+					Nette\Templating\FileTemplate->					render
+					()
+					</p>
+
+					
+
+											<pre class="nette-collapsed" id="netteBsSrc1-6"><code><span style="color: #06B"><span style="color: #D24; font-weight: bold"><span class='line'>43:</span>    </span><span style="color: #999; font-style: italic">//
+<span class='line'>44:</span>    //&nbsp;main&nbsp;template
+<span class='line'>45:</span>    //
+<span class='line'>46:</span>    </span><span style="color: #D24; font-weight: bold">if&nbsp;(!</span><span style="color: #000">$_l</span><span style="color: #D24; font-weight: bold">-&gt;</span><span style="color: #000">extends</span><span style="color: #D24; font-weight: bold">)&nbsp;{&nbsp;</span><span style="color: #000">call_user_func</span><span style="color: #D24; font-weight: bold">(</span><span style="color: #000">reset</span><span style="color: #D24; font-weight: bold">(</span><span style="color: #000">$_l</span><span style="color: #D24; font-weight: bold">-&gt;</span><span style="color: #000">blocks</span><span style="color: #D24; font-weight: bold">[</span><span style="color: #080">'content'</span><span style="color: #D24; font-weight: bold">]),&nbsp;</span><span style="color: #000">$_l</span><span style="color: #D24; font-weight: bold">,&nbsp;</span><span style="color: #000">get_defined_vars</span><span style="color: #D24; font-weight: bold">());&nbsp;}&nbsp;&nbsp;
+<span class='line'>47:</span>    </span><span style="color: #999; font-style: italic">//&nbsp;template&nbsp;extending&nbsp;support
+<span class='line'>48:</span>    </span><span style="color: #D24; font-weight: bold">if&nbsp;(</span><span style="color: #000">$_l</span><span style="color: #D24; font-weight: bold">-&gt;</span><span style="color: #000">extends</span><span style="color: #D24; font-weight: bold">)&nbsp;{
+<span class='line'>49:</span>    &nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #000">ob_end_clean</span><span style="color: #D24; font-weight: bold">();
+<span class='highlight'>50:    &nbsp;&nbsp;&nbsp;&nbsp;Nette\Latte\Macros\CoreMacros::includeTemplate($_l-&gt;extends,&nbsp;get_defined_vars(),&nbsp;$template)-&gt;render();
+</span></span><span style="color: #000"></span><span style="color: #D24; font-weight: bold"></span><span style="color: #000"></span><span style="color: #D24; font-weight: bold"></span><span style="color: #000"></span><span style="color: #D24; font-weight: bold"></span><span style="color: #000"></span><span style="color: #D24; font-weight: bold"></span><span style="color: #000"></span><span style="color: #D24; font-weight: bold"></span><span style="color: #000"></span><span style="color: #D24; font-weight: bold"></span><span style="color: #000"></span><span style="color: #D24; font-weight: bold"></span><span style="color: #000"></span><span style="color: #D24; font-weight: bold"></span><span style="color: #000"></span><span style="color: #D24; font-weight: bold"></span><span style="color: #000"></span><span style="color: #D24; font-weight: bold"><span class='line'>51:</span>    }
+<span class='line'>52:</span>    </span>
+</span></code></pre>
+					
+					</li>
+										<li><p>
+
+											<a href="editor://open/?file=%2Fhome%2Fusers%2Fginny%2Fginny.jecool.net%2Fweb%2Flibs%2FNette%2FUtils%2FLimitedScope.php&amp;line=70" title="/home/users/ginny/ginny.jecool.net/web/libs/Nette/Utils/LimitedScope.php:70">.../libs/Nette/Utils/<b>LimitedScope.php</b></a>:70					
+					<a href="#" rel="netteBsSrc1-7">source <abbr>&#x25ba;</abbr></a>&nbsp; 
+										include
+					(<a href="#" rel="netteBsArgs1-7">arguments <abbr>&#x25ba;</abbr></a>)
+					</p>
+
+											<div class="nette-collapsed outer" id="netteBsArgs1-7">
+						<table>
+						<tr><th>#0</th><td><pre class="nette-dump">"/home/users/ginny/ginny.jecool.net/web/temp/cache/_Nette.FileTemplate/_Default.page.latte-29ed9d517b634fbd6dffe4e6e280568f.php" (126)
+</pre></td></tr>
+						</table>
+						</div>
+					
+
+											<pre class="nette-collapsed" id="netteBsSrc1-7"><code><span style="color: #06B"><span style="color: #999; font-style: italic"><span class='line'>63:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/
+<span class='line'>64:</span>    &nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #D24; font-weight: bold">public&nbsp;static&nbsp;function&nbsp;</span><span style="color: #000">load</span><span style="color: #D24; font-weight: bold">(</span><span style="color: #999; font-style: italic">/*$file,&nbsp;array&nbsp;$vars&nbsp;=&nbsp;NULL*/</span><span style="color: #D24; font-weight: bold">)
+<span class='line'>65:</span>    &nbsp;&nbsp;&nbsp;&nbsp;{
+<span class='line'>66:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(</span><span style="color: #000">func_num_args</span><span style="color: #D24; font-weight: bold">()&nbsp;&gt;&nbsp;</span><span style="color: #000">1</span><span style="color: #D24; font-weight: bold">)&nbsp;{
+<span class='line'>67:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #000">self</span><span style="color: #D24; font-weight: bold">::</span><span style="color: #000">$vars&nbsp;</span><span style="color: #D24; font-weight: bold">=&nbsp;</span><span style="color: #000">func_get_arg</span><span style="color: #D24; font-weight: bold">(</span><span style="color: #000">1</span><span style="color: #D24; font-weight: bold">);
+<span class='line'>68:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #000">extract</span><span style="color: #D24; font-weight: bold">(</span><span style="color: #000">self</span><span style="color: #D24; font-weight: bold">::</span><span style="color: #000">$vars</span><span style="color: #D24; font-weight: bold">);
+<span class='line'>69:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+<span class='highlight'>70:    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;include&nbsp;func_get_arg(0);
+</span></span><span style="color: #000"></span><span style="color: #D24; font-weight: bold"></span><span style="color: #000"></span><span style="color: #D24; font-weight: bold"><span class='line'>71:</span>    &nbsp;&nbsp;&nbsp;&nbsp;}
+<span class='line'>72:</span>    
+<span class='line'>73:</span>    }
+<span class='line'>74:</span>    </span>
+</span></code></pre>
+					
+					</li>
+										<li><p>
+
+											<a href="editor://open/?file=%2Fhome%2Fusers%2Fginny%2Fginny.jecool.net%2Fweb%2Flibs%2FNette%2FTemplating%2FFileTemplate.php&amp;line=110" title="/home/users/ginny/ginny.jecool.net/web/libs/Nette/Templating/FileTemplate.php:110">.../libs/Nette/Templating/<b>FileTemplate.php</b></a>:110					
+					<a href="#" rel="netteBsSrc1-8">source <abbr>&#x25ba;</abbr></a>&nbsp; 
+					Nette\Utils\LimitedScope::					load
+					(<a href="#" rel="netteBsArgs1-8">arguments <abbr>&#x25ba;</abbr></a>)
+					</p>
+
+											<div class="nette-collapsed outer" id="netteBsArgs1-8">
+						<table>
+						<tr><th>#0</th><td><pre class="nette-dump">"/home/users/ginny/ginny.jecool.net/web/temp/cache/_Nette.FileTemplate/_Default.page.latte-29ed9d517b634fbd6dffe4e6e280568f.php" (126)
+</pre></td></tr>
+<tr><th>#1</th><td><pre class="nette-dump"><a href='#' rel='next'><span>array</span>(17) <abbr>&#x25ba;</abbr> </a><code class="nette-collapsed">{
+   <a href='#' rel='next'>"control" => <span>FrontModule\DefaultPresenter</span>(28) <abbr>&#x25ba;</abbr> </a><code class="nette-collapsed">{
+      <a href='#' rel='next'>"page" <span>private</span> => <span>Nette\Database\Table\Selection</span>(22) <abbr>&#x25ba;</abbr> </a><code class="nette-collapsed">{
+         "connection" => <span>Nette\Database\Connection</span>(6) { ... }
+         "name" => "pages" (5)
+         "primary" => "id" (2)
+         "rows" <span>protected</span> => NULL
+         "data" <span>protected</span> => NULL
+         "select" <span>protected</span> => <span>array</span>(0) 
+         "where" <span>protected</span> => <span>array</span>(1) [ ... ]
+         "conditions" <span>protected</span> => <span>array</span>(1) [ ... ]
+         "parameters" <span>protected</span> => <span>array</span>(1) [ ... ]
+         "order" <span>protected</span> => <span>array</span>(0) 
+         "limit" <span>protected</span> => NULL
+         "offset" <span>protected</span> => NULL
+         "group" <span>protected</span> => ""
+         "having" <span>protected</span> => ""
+         "referenced" <span>protected</span> => <span>array</span>(0) 
+         "referencing" <span>protected</span> => <span>array</span>(0) 
+         "aggregation" <span>protected</span> => <span>array</span>(0) 
+         "accessed" <span>protected</span> => NULL
+         "prevAccessed" <span>protected</span> => NULL
+         "keys" <span>protected</span> => <span>array</span>(0) 
+         "delimitedName" <span>protected</span> => "[pages]" (7)
+         "delimitedPrimary" <span>protected</span> => "[id]" (4)
+      <a href='#' rel='next'>}</code>
+      "onShutdown" => NULL
+      "request" <span>private</span> => <span>Nette\Application\Request</span>(7) <abbr>&#x25ba;</abbr> </a><code class="nette-collapsed">{
+         "method" <span>private</span> => "GET" (3)
+         "flags" <span>private</span> => <span>array</span>(1) { ... }
+         "name" <span>private</span> => "Front:Default" (13)
+         "params" <span>private</span> => <span>array</span>(2) { ... }
+         "post" <span>private</span> => <span>array</span>(0) 
+         "files" <span>private</span> => <span>array</span>(0) 
+         <a href='#' rel='next'>"frozen" <span>private</span> => TRUE
+      }</code>
+      "response" <span>private</span> => <span>Nette\Application\Responses\TextResponse</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+         "source" <span>private</span> => <span>Nette\Templating\FileTemplate</span>(8) { ... }
+      }</code>
+      "autoCanonicalize" => TRUE
+      "absoluteUrls" => FALSE
+      "globalParams" <span>private</span> => <span>array</span>(0) 
+      "globalState" <span>private</span> => <span>array</span>(0) 
+      "globalStateSinces" <span>private</span> => <span>array</span>(0) 
+      "action" <span>private</span> => "page" (4)
+      "view" <span>private</span> => "page" (4)
+      "layout" <span>private</span> => NULL
+      "payload" <span>private</span> => <span>stdClass</span>(0) 
+      "signalReceiver" <span>private</span> => ""
+      "signal" <span>private</span> => NULL
+      <a href='#' rel='next'>"ajaxMode" <span>private</span> => FALSE
+      "startupCheck" <span>private</span> => TRUE
+      "lastCreatedRequest" <span>private</span> => <span>Nette\Application\Request</span>(7) <abbr>&#x25ba;</abbr> </a><code class="nette-collapsed">{
+         "method" <span>private</span> => "FORWARD" (7)
+         "flags" <span>private</span> => <span>array</span>(0) 
+         "name" <span>private</span> => "Front:Default" (13)
+         "params" <span>private</span> => <span>array</span>(2) { ... }
+         "post" <span>private</span> => <span>array</span>(0) 
+         "files" <span>private</span> => <span>array</span>(0) 
+         <a href='#' rel='next'>"frozen" <span>private</span> => FALSE
+      }</code>
+      "lastCreatedRequestFlag" <span>private</span> => <span>array</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+         <a href='#' rel='next'>"current" => TRUE
+      }</code>
+      "context" <span>private</span> => <span>Nette\DI\Container</span>(6) <abbr>&#x25bc;</abbr> </a><code>{
+         "params" => <span>Nette\ArrayHash</span>(6) { ... }
+         "registry" <span>private</span> => <span>array</span>(16) { ... }
+         "factories" <span>private</span> => <span>array</span>(3) { ... }
+         "tags" <span>private</span> => <span>array</span>(16) { ... }
+         "creating" <span>private</span> => <span>array</span>(0) 
+         <a href='#' rel='next'>"frozen" <span>private</span> => FALSE
+      }</code>
+      "template" <span>private</span> => <span>Nette\Templating\FileTemplate</span>(8) <abbr>&#x25ba;</abbr> </a><code class="nette-collapsed">{
+         "file" <span>private</span> => "/home/users/ginny/ginny.jecool.net/web/app/FrontModule/templates/Default/page.latte" (83)
+         "warnOnUndefined" => TRUE
+         "onPrepareFilters" => <span>array</span>(1) [ ... ]
+         "params" <span>private</span> => <span>array</span>(17) { ... }
+         "filters" <span>private</span> => <span>array</span>(1) [ ... ]
+         "helpers" <span>private</span> => <span>array</span>(0) 
+         "helperLoaders" <span>private</span> => <span>array</span>(1) [ ... ]
+         "cacheStorage" <span>private</span> => <span>Nette\Caching\Storages\PhpFileStorage</span>(4) { ... }
+      }</code>
+      "invalidSnippets" <span>private</span> => <span>array</span>(0) 
+      <a href='#' rel='next'>"params" <span>protected</span> => <span>array</span>(2) <abbr>&#x25bc;</abbr> </a><code>{
+         "slug" => "o-nas" (5)
+         "action" => "page" (4)
+      }</code>
+      "components" <span>private</span> => <span>array</span>(0) 
+      "cloning" <span>private</span> => NULL
+      "parent" <span>private</span> => NULL
+      "name" <span>private</span> => "Front:Default" (13)
+      <a href='#' rel='next'>"monitors" <span>private</span> => <span>array</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+         "Nette\Application\UI\Presenter" => <span>array</span>(4) [ ... ]
+      <a href='#' rel='next'>}</code>
+   }</code>
+   "presenter" => <span>FrontModule\DefaultPresenter</span>(28) <abbr>&#x25ba;</abbr> </a><code class="nette-collapsed">{
+      <a href='#' rel='next'>"page" <span>private</span> => <span>Nette\Database\Table\Selection</span>(22) <abbr>&#x25ba;</abbr> </a><code class="nette-collapsed">{
+         "connection" => <span>Nette\Database\Connection</span>(6) { ... }
+         "name" => "pages" (5)
+         "primary" => "id" (2)
+         "rows" <span>protected</span> => NULL
+         "data" <span>protected</span> => NULL
+         "select" <span>protected</span> => <span>array</span>(0) 
+         "where" <span>protected</span> => <span>array</span>(1) [ ... ]
+         "conditions" <span>protected</span> => <span>array</span>(1) [ ... ]
+         "parameters" <span>protected</span> => <span>array</span>(1) [ ... ]
+         "order" <span>protected</span> => <span>array</span>(0) 
+         "limit" <span>protected</span> => NULL
+         "offset" <span>protected</span> => NULL
+         "group" <span>protected</span> => ""
+         "having" <span>protected</span> => ""
+         "referenced" <span>protected</span> => <span>array</span>(0) 
+         "referencing" <span>protected</span> => <span>array</span>(0) 
+         "aggregation" <span>protected</span> => <span>array</span>(0) 
+         "accessed" <span>protected</span> => NULL
+         "prevAccessed" <span>protected</span> => NULL
+         "keys" <span>protected</span> => <span>array</span>(0) 
+         "delimitedName" <span>protected</span> => "[pages]" (7)
+         "delimitedPrimary" <span>protected</span> => "[id]" (4)
+      <a href='#' rel='next'>}</code>
+      "onShutdown" => NULL
+      "request" <span>private</span> => <span>Nette\Application\Request</span>(7) <abbr>&#x25ba;</abbr> </a><code class="nette-collapsed">{
+         "method" <span>private</span> => "GET" (3)
+         "flags" <span>private</span> => <span>array</span>(1) { ... }
+         "name" <span>private</span> => "Front:Default" (13)
+         "params" <span>private</span> => <span>array</span>(2) { ... }
+         "post" <span>private</span> => <span>array</span>(0) 
+         "files" <span>private</span> => <span>array</span>(0) 
+         <a href='#' rel='next'>"frozen" <span>private</span> => TRUE
+      }</code>
+      "response" <span>private</span> => <span>Nette\Application\Responses\TextResponse</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+         "source" <span>private</span> => <span>Nette\Templating\FileTemplate</span>(8) { ... }
+      }</code>
+      "autoCanonicalize" => TRUE
+      "absoluteUrls" => FALSE
+      "globalParams" <span>private</span> => <span>array</span>(0) 
+      "globalState" <span>private</span> => <span>array</span>(0) 
+      "globalStateSinces" <span>private</span> => <span>array</span>(0) 
+      "action" <span>private</span> => "page" (4)
+      "view" <span>private</span> => "page" (4)
+      "layout" <span>private</span> => NULL
+      "payload" <span>private</span> => <span>stdClass</span>(0) 
+      "signalReceiver" <span>private</span> => ""
+      "signal" <span>private</span> => NULL
+      <a href='#' rel='next'>"ajaxMode" <span>private</span> => FALSE
+      "startupCheck" <span>private</span> => TRUE
+      "lastCreatedRequest" <span>private</span> => <span>Nette\Application\Request</span>(7) <abbr>&#x25ba;</abbr> </a><code class="nette-collapsed">{
+         "method" <span>private</span> => "FORWARD" (7)
+         "flags" <span>private</span> => <span>array</span>(0) 
+         "name" <span>private</span> => "Front:Default" (13)
+         "params" <span>private</span> => <span>array</span>(2) { ... }
+         "post" <span>private</span> => <span>array</span>(0) 
+         "files" <span>private</span> => <span>array</span>(0) 
+         <a href='#' rel='next'>"frozen" <span>private</span> => FALSE
+      }</code>
+      "lastCreatedRequestFlag" <span>private</span> => <span>array</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+         <a href='#' rel='next'>"current" => TRUE
+      }</code>
+      "context" <span>private</span> => <span>Nette\DI\Container</span>(6) <abbr>&#x25bc;</abbr> </a><code>{
+         "params" => <span>Nette\ArrayHash</span>(6) { ... }
+         "registry" <span>private</span> => <span>array</span>(16) { ... }
+         "factories" <span>private</span> => <span>array</span>(3) { ... }
+         "tags" <span>private</span> => <span>array</span>(16) { ... }
+         "creating" <span>private</span> => <span>array</span>(0) 
+         <a href='#' rel='next'>"frozen" <span>private</span> => FALSE
+      }</code>
+      "template" <span>private</span> => <span>Nette\Templating\FileTemplate</span>(8) <abbr>&#x25ba;</abbr> </a><code class="nette-collapsed">{
+         "file" <span>private</span> => "/home/users/ginny/ginny.jecool.net/web/app/FrontModule/templates/Default/page.latte" (83)
+         "warnOnUndefined" => TRUE
+         "onPrepareFilters" => <span>array</span>(1) [ ... ]
+         "params" <span>private</span> => <span>array</span>(17) { ... }
+         "filters" <span>private</span> => <span>array</span>(1) [ ... ]
+         "helpers" <span>private</span> => <span>array</span>(0) 
+         "helperLoaders" <span>private</span> => <span>array</span>(1) [ ... ]
+         "cacheStorage" <span>private</span> => <span>Nette\Caching\Storages\PhpFileStorage</span>(4) { ... }
+      }</code>
+      "invalidSnippets" <span>private</span> => <span>array</span>(0) 
+      <a href='#' rel='next'>"params" <span>protected</span> => <span>array</span>(2) <abbr>&#x25bc;</abbr> </a><code>{
+         "slug" => "o-nas" (5)
+         "action" => "page" (4)
+      }</code>
+      "components" <span>private</span> => <span>array</span>(0) 
+      "cloning" <span>private</span> => NULL
+      "parent" <span>private</span> => NULL
+      "name" <span>private</span> => "Front:Default" (13)
+      <a href='#' rel='next'>"monitors" <span>private</span> => <span>array</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+         "Nette\Application\UI\Presenter" => <span>array</span>(4) [ ... ]
+      <a href='#' rel='next'>}</code>
+   }</code>
+   "user" => <span>Nette\Http\User</span>(7) <abbr>&#x25ba;</abbr> </a><code class="nette-collapsed">{
+      "guestRole" => "guest" (5)
+      "authenticatedRole" => "authenticated" (13)
+      "onLoggedIn" => NULL
+      <a href='#' rel='next'>"onLoggedOut" => NULL
+      "namespace" <span>private</span> => ""
+      "session" <span>private</span> => NULL
+      "context" <span>private</span> => <span>Nette\DI\Container</span>(6) <abbr>&#x25bc;</abbr> </a><code>{
+         "params" => <span>array</span>(0) 
+         "registry" <span>private</span> => <span>array</span>(3) { ... }
+         "factories" <span>private</span> => <span>array</span>(2) { ... }
+         "tags" <span>private</span> => <span>array</span>(3) { ... }
+         <a href='#' rel='next'>"creating" <span>private</span> => NULL
+         "frozen" <span>private</span> => FALSE
+      }</code>
+   }</code>
+   "netteHttpResponse" => <span>Nette\Http\Response</span>(5) <abbr>&#x25bc;</abbr> </a><code>{
+      "cookieDomain" => ""
+      "cookiePath" => "/"
+      <a href='#' rel='next'>"cookieSecure" => FALSE
+      "cookieHttpOnly" => TRUE
+      "code" <span>private</span> => 500
+   }</code>
+   "netteCacheStorage" => <span>Nette\Caching\Storages\FileStorage</span>(3) <abbr>&#x25bc;</abbr> </a><code>{
+      "dir" <span>private</span> => "/home/users/ginny/ginny.jecool.net/web/temp/cache" (49)
+      <a href='#' rel='next'>"useDirs" <span>private</span> => TRUE
+      "journal" <span>private</span> => <span>Nette\Caching\Storages\FileJournal</span>(9) <abbr>&#x25ba;</abbr> </a><code class="nette-collapsed">{
+         "file" <span>private</span> => "/home/users/ginny/ginny.jecool.net/web/temp/btfj.dat" (52)
+         "handle" <span>private</span> => <span>stream resource</span>
+         "lastNode" <span>private</span> => 2
+         "lastModTime" <span>private</span> => NULL
+         "nodeCache" <span>private</span> => <span>array</span>(0) 
+         "nodeChanged" <span>private</span> => <span>array</span>(0) 
+         "toCommit" <span>private</span> => <span>array</span>(0) 
+         "deletedLinks" <span>private</span> => <span>array</span>(0) 
+         "dataNodeFreeSpace" <span>private</span> => <span>array</span>(0) 
+      }</code>
+   }</code>
+   "baseUrl" => "http://ginny.jecool.net/www" (27)
+   "baseUri" => "http://ginny.jecool.net/www" (27)
+   "basePath" => "/www" (4)
+   "flashes" => <span>array</span>(0) 
+   "viewName" => "page" (4)
+   "root" => "/home/users/ginny/ginny.jecool.net/web" (38)
+   "moduleName" => "Front:" (6)
+   "presenterName" => "Default" (7)
+   <a href='#' rel='next'>"page" => <span>Nette\Database\Table\Selection</span>(22) <abbr>&#x25ba;</abbr> </a><code class="nette-collapsed">{
+      <a href='#' rel='next'>"connection" => <span>Nette\Database\Connection</span>(6) <abbr>&#x25bc;</abbr> </a><code>{
+         "driver" <span>private</span> => <span>Nette\Database\Drivers\Sqlite2Driver</span>(3) { ... }
+         "preprocessor" <span>private</span> => <span>Nette\Database\SqlPreprocessor</span>(6) { ... }
+         "databaseReflection" => <span>Nette\Database\Reflection\DatabaseReflection</span>(3) { ... }
+         "cache" => NULL
+         "substitutions" => <span>array</span>(0) 
+         "onQuery" => NULL
+      }</code>
+      "name" => "pages" (5)
+      "primary" => "id" (2)
+      "rows" <span>protected</span> => NULL
+      "data" <span>protected</span> => NULL
+      "select" <span>protected</span> => <span>array</span>(0) 
+      <a href='#' rel='next'>"where" <span>protected</span> => <span>array</span>(1) <abbr>&#x25bc;</abbr> </a><code>[
+         0 => "[slug] = ?" (10)
+      <a href='#' rel='next'>]</code>
+      "conditions" <span>protected</span> => <span>array</span>(1) <abbr>&#x25bc;</abbr> </a><code>[
+         0 => "[slug]" (6)
+      <a href='#' rel='next'>]</code>
+      "parameters" <span>protected</span> => <span>array</span>(1) <abbr>&#x25bc;</abbr> </a><code>[
+         0 => "o-nas" (5)
+      ]</code>
+      "order" <span>protected</span> => <span>array</span>(0) 
+      "limit" <span>protected</span> => NULL
+      "offset" <span>protected</span> => NULL
+      "group" <span>protected</span> => ""
+      "having" <span>protected</span> => ""
+      "referenced" <span>protected</span> => <span>array</span>(0) 
+      "referencing" <span>protected</span> => <span>array</span>(0) 
+      "aggregation" <span>protected</span> => <span>array</span>(0) 
+      "accessed" <span>protected</span> => NULL
+      "prevAccessed" <span>protected</span> => NULL
+      "keys" <span>protected</span> => <span>array</span>(0) 
+      "delimitedName" <span>protected</span> => "[pages]" (7)
+      "delimitedPrimary" <span>protected</span> => "[id]" (4)
+   }</code>
+   "layout" => "/home/users/ginny/ginny.jecool.net/web/app/FrontModule/templates/@layout.latte" (78)
+   "_extends" => "/home/users/ginny/ginny.jecool.net/web/app/FrontModule/templates/@layout.latte" (78)
+   <a href='#' rel='next'>"template" => <span>Nette\Templating\FileTemplate</span>(8) <abbr>&#x25ba;</abbr> </a><code class="nette-collapsed">{
+      "file" <span>private</span> => "/home/users/ginny/ginny.jecool.net/web/app/FrontModule/templates/Default/page.latte" (83)
+      <a href='#' rel='next'>"warnOnUndefined" => TRUE
+      "onPrepareFilters" => <span>array</span>(1) <abbr>&#x25bc;</abbr> </a><code>[
+         0 => <span>Nette\Callback</span>(1) { ... }
+      <a href='#' rel='next'>]</code>
+      "params" <span>private</span> => <span>array</span>(17) <abbr>&#x25ba;</abbr> </a><code class="nette-collapsed">{
+         "control" => <span>FrontModule\DefaultPresenter</span>(28) { ... }
+         "presenter" => <span>FrontModule\DefaultPresenter</span>(28) { ... }
+         "user" => <span>Nette\Http\User</span>(7) { ... }
+         "netteHttpResponse" => <span>Nette\Http\Response</span>(5) { ... }
+         "netteCacheStorage" => <span>Nette\Caching\Storages\FileStorage</span>(3) { ... }
+         "baseUrl" => "http://ginny.jecool.net/www" (27)
+         "baseUri" => "http://ginny.jecool.net/www" (27)
+         "basePath" => "/www" (4)
+         "flashes" => <span>array</span>(0) 
+         "viewName" => "page" (4)
+         "root" => "/home/users/ginny/ginny.jecool.net/web" (38)
+         "moduleName" => "Front:" (6)
+         "presenterName" => "Default" (7)
+         "page" => <span>Nette\Database\Table\Selection</span>(22) { ... }
+         "layout" => "/home/users/ginny/ginny.jecool.net/web/app/FrontModule/templates/@layout.latte" (78)
+         "template" => <span>Nette\Templating\FileTemplate</span>(8) { *RECURSION* }
+         "_g" => <span>stdClass</span>(0) 
+      <a href='#' rel='next'>}</code>
+      "filters" <span>private</span> => <span>array</span>(1) <abbr>&#x25bc;</abbr> </a><code>[
+         0 => <span>Nette\Callback</span>(1) { ... }
+      ]</code>
+      "helpers" <span>private</span> => <span>array</span>(0) 
+      <a href='#' rel='next'>"helperLoaders" <span>private</span> => <span>array</span>(1) <abbr>&#x25bc;</abbr> </a><code>[
+         0 => <span>Nette\Callback</span>(1) { ... }
+      <a href='#' rel='next'>]</code>
+      "cacheStorage" <span>private</span> => <span>Nette\Caching\Storages\PhpFileStorage</span>(4) <abbr>&#x25bc;</abbr> </a><code>{
+         "hint" => "/templates/@layout.latte" (24)
+         "dir" <span>private</span> => "/home/users/ginny/ginny.jecool.net/web/temp/cache" (49)
+         "useDirs" <span>private</span> => TRUE
+         "journal" <span>private</span> => NULL
+      }</code>
+   }</code>
+}</code>
+</pre></td></tr>
+						</table>
+						</div>
+					
+
+											<pre class="nette-collapsed" id="netteBsSrc1-8"><code><span style="color: #06B"><span style="color: #D24; font-weight: bold"><span class='line'>103:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #000">Caching</span><span style="color: #D24; font-weight: bold">\</span><span style="color: #000">Cache</span><span style="color: #D24; font-weight: bold">::</span><span style="color: #000">CONSTS&nbsp;</span><span style="color: #D24; font-weight: bold">=&gt;&nbsp;</span><span style="color: #080">'Nette\Framework::REVISION'</span><span style="color: #D24; font-weight: bold">,
+<span class='line'>104:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;));
+<span class='line'>105:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #000">$cache</span><span style="color: #D24; font-weight: bold">-&gt;</span><span style="color: #000">release</span><span style="color: #D24; font-weight: bold">();
+<span class='line'>106:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #000">$cached&nbsp;</span><span style="color: #D24; font-weight: bold">=&nbsp;</span><span style="color: #000">$cache</span><span style="color: #D24; font-weight: bold">-&gt;</span><span style="color: #000">load</span><span style="color: #D24; font-weight: bold">(</span><span style="color: #000">$this</span><span style="color: #D24; font-weight: bold">-&gt;</span><span style="color: #000">file</span><span style="color: #D24; font-weight: bold">);
+<span class='line'>107:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+<span class='line'>108:</span>    
+<span class='line'>109:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(</span><span style="color: #000">$cached&nbsp;</span><span style="color: #D24; font-weight: bold">!==&nbsp;</span><span style="color: #000">NULL&nbsp;</span><span style="color: #D24; font-weight: bold">&amp;&amp;&nbsp;</span><span style="color: #000">$storage&nbsp;</span><span style="color: #D24; font-weight: bold">instanceof&nbsp;</span><span style="color: #000">Caching</span><span style="color: #D24; font-weight: bold">\</span><span style="color: #000">Storages</span><span style="color: #D24; font-weight: bold">\</span><span style="color: #000">PhpFileStorage</span><span style="color: #D24; font-weight: bold">)&nbsp;{
+<span class='highlight'>110:    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nette\Utils\LimitedScope::load($cached['file'],&nbsp;$this-&gt;getParams());
+</span></span><span style="color: #000"></span><span style="color: #D24; font-weight: bold"></span><span style="color: #000"></span><span style="color: #D24; font-weight: bold"></span><span style="color: #000"></span><span style="color: #D24; font-weight: bold"></span><span style="color: #000"></span><span style="color: #D24; font-weight: bold"></span><span style="color: #000"></span><span style="color: #D24; font-weight: bold"></span><span style="color: #080"></span><span style="color: #D24; font-weight: bold"></span><span style="color: #000"></span><span style="color: #D24; font-weight: bold"></span><span style="color: #000"></span><span style="color: #D24; font-weight: bold"><span class='line'>111:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;else&nbsp;{
+<span class='line'>112:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #000">Nette</span><span style="color: #D24; font-weight: bold">\</span><span style="color: #000">Utils</span><span style="color: #D24; font-weight: bold">\</span><span style="color: #000">LimitedScope</span><span style="color: #D24; font-weight: bold">::</span><span style="color: #000">evaluate</span><span style="color: #D24; font-weight: bold">(</span><span style="color: #000">$compiled</span><span style="color: #D24; font-weight: bold">,&nbsp;</span><span style="color: #000">$this</span><span style="color: #D24; font-weight: bold">-&gt;</span><span style="color: #000">getParams</span><span style="color: #D24; font-weight: bold">());
+<span class='line'>113:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+<span class='line'>114:</span>    &nbsp;&nbsp;&nbsp;&nbsp;}
+<span class='line'>115:</span>    
+<span class='line'>116:</span>    }
+<span class='line'>117:</span>    </span>
+</span></code></pre>
+					
+					</li>
+										<li><p>
+
+											<a href="editor://open/?file=%2Fhome%2Fusers%2Fginny%2Fginny.jecool.net%2Fweb%2Flibs%2FNette%2FApplication%2FResponses%2FTextResponse.php&amp;line=57" title="/home/users/ginny/ginny.jecool.net/web/libs/Nette/Application/Responses/TextResponse.php:57">.../libs/Nette/Application/Responses/<b>TextResponse.php</b></a>:57					
+					<a href="#" rel="netteBsSrc1-9">source <abbr>&#x25ba;</abbr></a>&nbsp; 
+					Nette\Templating\FileTemplate->					render
+					()
+					</p>
+
+					
+
+											<pre class="nette-collapsed" id="netteBsSrc1-9"><code><span style="color: #06B"><span style="color: #D24; font-weight: bold"><span class='line'>50:</span>    &nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #999; font-style: italic">/**
+<span class='line'>51:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;Sends&nbsp;response&nbsp;to&nbsp;output.
+<span class='line'>52:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@return&nbsp;void
+<span class='line'>53:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/
+<span class='line'>54:</span>    &nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #D24; font-weight: bold">public&nbsp;function&nbsp;</span><span style="color: #000">send</span><span style="color: #D24; font-weight: bold">(</span><span style="color: #000">Nette</span><span style="color: #D24; font-weight: bold">\</span><span style="color: #000">Http</span><span style="color: #D24; font-weight: bold">\</span><span style="color: #000">IRequest&nbsp;$httpRequest</span><span style="color: #D24; font-weight: bold">,&nbsp;</span><span style="color: #000">Nette</span><span style="color: #D24; font-weight: bold">\</span><span style="color: #000">Http</span><span style="color: #D24; font-weight: bold">\</span><span style="color: #000">IResponse&nbsp;$httpResponse</span><span style="color: #D24; font-weight: bold">)
+<span class='line'>55:</span>    &nbsp;&nbsp;&nbsp;&nbsp;{
+<span class='line'>56:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(</span><span style="color: #000">$this</span><span style="color: #D24; font-weight: bold">-&gt;</span><span style="color: #000">source&nbsp;</span><span style="color: #D24; font-weight: bold">instanceof&nbsp;</span><span style="color: #000">Nette</span><span style="color: #D24; font-weight: bold">\</span><span style="color: #000">Templating</span><span style="color: #D24; font-weight: bold">\</span><span style="color: #000">ITemplate</span><span style="color: #D24; font-weight: bold">)&nbsp;{
+<span class='highlight'>57:    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$this-&gt;source-&gt;render();
+</span></span><span style="color: #000"></span><span style="color: #D24; font-weight: bold"></span><span style="color: #000"></span><span style="color: #D24; font-weight: bold"></span><span style="color: #000"></span><span style="color: #D24; font-weight: bold"><span class='line'>58:</span>    
+<span class='line'>59:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;else&nbsp;{
+<span class='line'>60:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;</span><span style="color: #000">$this</span><span style="color: #D24; font-weight: bold">-&gt;</span><span style="color: #000">source</span><span style="color: #D24; font-weight: bold">;
+<span class='line'>61:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+<span class='line'>62:</span>    &nbsp;&nbsp;&nbsp;&nbsp;}
+<span class='line'>63:</span>    
+<span class='line'>64:</span>    }
+</span></span></code></pre>
+					
+					</li>
+										<li><p>
+
+											<a href="editor://open/?file=%2Fhome%2Fusers%2Fginny%2Fginny.jecool.net%2Fweb%2Flibs%2FNette%2FApplication%2FApplication.php&amp;line=144" title="/home/users/ginny/ginny.jecool.net/web/libs/Nette/Application/Application.php:144">.../libs/Nette/Application/<b>Application.php</b></a>:144					
+					<a href="#" rel="netteBsSrc1-10">source <abbr>&#x25ba;</abbr></a>&nbsp; 
+					Nette\Application\Responses\TextResponse->					send
+					(<a href="#" rel="netteBsArgs1-10">arguments <abbr>&#x25ba;</abbr></a>)
+					</p>
+
+											<div class="nette-collapsed outer" id="netteBsArgs1-10">
+						<table>
+						<tr><th>$httpRequest</th><td><pre class="nette-dump"><a href='#' rel='next'><span>Nette\Http\Request</span>(9) <abbr>&#x25ba;</abbr> </a><code class="nette-collapsed">{
+   "method" <span>private</span> => "GET" (3)
+   <a href='#' rel='next'>"url" <span>private</span> => <span>Nette\Http\UrlScript</span>(10) <abbr>&#x25ba;</abbr> </a><code class="nette-collapsed">{
+      "scriptPath" <span>private</span> => "/www/" (5)
+      "scheme" <span>private</span> => "http" (4)
+      "user" <span>private</span> => ""
+      "pass" <span>private</span> => ""
+      "host" <span>private</span> => "ginny.jecool.net" (16)
+      "port" <span>private</span> => 80
+      "path" <span>private</span> => "/www/o-nas" (10)
+      "query" <span>private</span> => ""
+      "fragment" <span>private</span> => ""
+      "frozen" <span>private</span> => TRUE
+   }</code>
+   "query" <span>private</span> => <span>array</span>(0) 
+   "post" <span>private</span> => <span>array</span>(0) 
+   "files" <span>private</span> => <span>array</span>(0) 
+   <a href='#' rel='next'>"cookies" <span>private</span> => <span>array</span>(6) <abbr>&#x25bc;</abbr> </a><code>{
+      "pla3412" => "bratrstvo" (9)
+      "pla3412_salt" => "jfld5ag8y00" (11)
+      "__utma" => "1.1393933072.1307654108.1307654108.1307802238.2" (47)
+      "__utmz" => "1.1307654108.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)" (62)
+      "PHPSESSID" => "bmkf3gdq1ja5oajcei6a38v386" (26)
+      "nette-browser" => "51drroumf8" (10)
+   <a href='#' rel='next'>}</code>
+   "headers" <span>private</span> => <span>array</span>(9) <abbr>&#x25ba;</abbr> </a><code class="nette-collapsed">{
+      "host" => "ginny.jecool.net" (16)
+      "user-agent" => "Mozilla/5.0 (X11; Linux i686; rv:2.0.1) Gecko/20100101 Firefox/4.0.1" (68)
+      "accept" => "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8" (63)
+      "accept-language" => "cs,en-us;q=0.7,en;q=0.3" (23)
+      "accept-encoding" => "gzip, deflate" (13)
+      "accept-charset" => "ISO-8859-2,utf-8;q=0.7,*;q=0.7" (30)
+      "keep-alive" => "115" (3)
+      "connection" => "keep-alive" (10)
+      "cookie" => "pla3412=bratrstvo; pla3412_salt=jfld5ag8y00; __utma=1.1393933072.1307654108.1307654108.1307802238.2; __utmz=1.1307654108.1.1.utmcsr=(direct)|utmccn=(d ... " (234)
+   }</code>
+   "remoteAddress" <span>private</span> => "82.144.134.129" (14)
+   "remoteHost" <span>private</span> => NULL
+}</code>
+</pre></td></tr>
+<tr><th>$httpResponse</th><td><pre class="nette-dump"><a href='#' rel='next'><span>Nette\Http\Response</span>(5) <abbr>&#x25bc;</abbr> </a><code>{
+   "cookieDomain" => ""
+   "cookiePath" => "/"
+   "cookieSecure" => FALSE
+   "cookieHttpOnly" => TRUE
+   "code" <span>private</span> => 500
+}</code>
+</pre></td></tr>
+						</table>
+						</div>
+					
+
+											<pre class="nette-collapsed" id="netteBsSrc1-10"><code><span style="color: #06B"><span style="color: #D24; font-weight: bold"><span class='line'>137:</span>    
+<span class='line'>138:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #999; font-style: italic">//&nbsp;Send&nbsp;response
+<span class='line'>139:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #D24; font-weight: bold">if&nbsp;(</span><span style="color: #000">$response&nbsp;</span><span style="color: #D24; font-weight: bold">instanceof&nbsp;</span><span style="color: #000">Responses</span><span style="color: #D24; font-weight: bold">\</span><span style="color: #000">ForwardResponse</span><span style="color: #D24; font-weight: bold">)&nbsp;{
+<span class='line'>140:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #000">$request&nbsp;</span><span style="color: #D24; font-weight: bold">=&nbsp;</span><span style="color: #000">$response</span><span style="color: #D24; font-weight: bold">-&gt;</span><span style="color: #000">getRequest</span><span style="color: #D24; font-weight: bold">();
+<span class='line'>141:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;continue;
+<span class='line'>142:</span>    
+<span class='line'>143:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;elseif&nbsp;(</span><span style="color: #000">$response&nbsp;</span><span style="color: #D24; font-weight: bold">instanceof&nbsp;</span><span style="color: #000">IResponse</span><span style="color: #D24; font-weight: bold">)&nbsp;{
+<span class='highlight'>144:    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$response-&gt;send($httpRequest,&nbsp;$httpResponse);
+</span></span><span style="color: #000"></span><span style="color: #D24; font-weight: bold"></span><span style="color: #000"></span><span style="color: #D24; font-weight: bold"></span><span style="color: #000"></span><span style="color: #D24; font-weight: bold"></span><span style="color: #000"></span><span style="color: #D24; font-weight: bold"><span class='line'>145:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+<span class='line'>146:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;
+<span class='line'>147:</span>    
+<span class='line'>148:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;catch&nbsp;(\</span><span style="color: #000">Exception&nbsp;$e</span><span style="color: #D24; font-weight: bold">)&nbsp;{
+<span class='line'>149:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #999; font-style: italic">//&nbsp;fault&nbsp;barrier
+<span class='line'>150:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #000">$this</span><span style="color: #D24; font-weight: bold">-&gt;</span><span style="color: #000">onError</span><span style="color: #D24; font-weight: bold">(</span><span style="color: #000">$this</span><span style="color: #D24; font-weight: bold">,&nbsp;</span><span style="color: #000">$e</span><span style="color: #D24; font-weight: bold">);
+<span class='line'>151:</span>    
+</span></span></code></pre>
+					
+					</li>
+										<li><p>
+
+											<a href="editor://open/?file=%2Fhome%2Fusers%2Fginny%2Fginny.jecool.net%2Fweb%2Fapp%2Fbootstrap.php&amp;line=49" title="/home/users/ginny/ginny.jecool.net/web/app/bootstrap.php:49">.../app/<b>bootstrap.php</b></a>:49					
+					<a href="#" rel="netteBsSrc1-11">source <abbr>&#x25ba;</abbr></a>&nbsp; 
+					Nette\Application\Application->					run
+					()
+					</p>
+
+					
+
+											<pre class="nette-collapsed" id="netteBsSrc1-11"><code><span style="color: #06B"><span style="color: #D24; font-weight: bold"><span class='line'>42:</span>    &nbsp;&nbsp;&nbsp;&nbsp;
+<span class='line'>43:</span>    &nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #999; font-style: italic">//&nbsp;&nbsp;&nbsp;&nbsp;$router[]&nbsp;=&nbsp;new&nbsp;SimpleRouter('Front:Default:default');
+<span class='line'>44:</span>    &nbsp;&nbsp;&nbsp;&nbsp;
+<span class='line'>45:</span>    </span><span style="color: #D24; font-weight: bold">};
+<span class='line'>46:</span>    
+<span class='line'>47:</span>    
+<span class='line'>48:</span>    </span><span style="color: #999; font-style: italic">//&nbsp;Run&nbsp;the&nbsp;application!
+<span class='highlight'>49:    $application-&gt;run();
+</span></span><span style="color: #000"></span><span style="color: #D24; font-weight: bold"></span><span style="color: #000"></span><span style="color: #D24; font-weight: bold"><span class='line'>50:</span>    </span>
+</span></code></pre>
+					
+					</li>
+										<li><p>
+
+											<a href="editor://open/?file=%2Fhome%2Fusers%2Fginny%2Fginny.jecool.net%2Fweb%2Fwww%2Findex.php&amp;line=16" title="/home/users/ginny/ginny.jecool.net/web/www/index.php:16">.../www/<b>index.php</b></a>:16					
+					<a href="#" rel="netteBsSrc1-12">source <abbr>&#x25ba;</abbr></a>&nbsp; 
+										require
+					(<a href="#" rel="netteBsArgs1-12">arguments <abbr>&#x25ba;</abbr></a>)
+					</p>
+
+											<div class="nette-collapsed outer" id="netteBsArgs1-12">
+						<table>
+						<tr><th>#0</th><td><pre class="nette-dump">"/home/users/ginny/ginny.jecool.net/web/app/bootstrap.php" (56)
+</pre></td></tr>
+						</table>
+						</div>
+					
+
+											<pre class="nette-collapsed" id="netteBsSrc1-12"><code><span style="color: #06B"><span style="color: #D24; font-weight: bold"><span class='line'> 9:</span>    </span><span style="color: #999; font-style: italic">//&nbsp;absolute&nbsp;filesystem&nbsp;path&nbsp;to&nbsp;the&nbsp;libraries
+<span class='line'>10:</span>    </span><span style="color: #000">define</span><span style="color: #D24; font-weight: bold">(</span><span style="color: #080">'LIBS_DIR'</span><span style="color: #D24; font-weight: bold">,&nbsp;</span><span style="color: #000">WWW_DIR&nbsp;</span><span style="color: #D24; font-weight: bold">.&nbsp;</span><span style="color: #080">'/../libs'</span><span style="color: #D24; font-weight: bold">);
+<span class='line'>11:</span>    
+<span class='line'>12:</span>    </span><span style="color: #999; font-style: italic">//&nbsp;absolute&nbsp;filesystem&nbsp;path&nbsp;to&nbsp;the&nbsp;temporary&nbsp;files
+<span class='line'>13:</span>    </span><span style="color: #000">define</span><span style="color: #D24; font-weight: bold">(</span><span style="color: #080">'TEMP_DIR'</span><span style="color: #D24; font-weight: bold">,&nbsp;</span><span style="color: #000">WWW_DIR&nbsp;</span><span style="color: #D24; font-weight: bold">.&nbsp;</span><span style="color: #080">'/../temp'</span><span style="color: #D24; font-weight: bold">);
+<span class='line'>14:</span>    
+<span class='line'>15:</span>    </span><span style="color: #999; font-style: italic">//&nbsp;load&nbsp;bootstrap&nbsp;file
+<span class='highlight'>16:    require&nbsp;APP_DIR&nbsp;.&nbsp;'/bootstrap.php';
+</span></span><span style="color: #D24; font-weight: bold"></span><span style="color: #000"></span><span style="color: #D24; font-weight: bold"></span><span style="color: #080"></span><span style="color: #D24; font-weight: bold"><span class='line'>17:</span>    </span>
+</span></code></pre>
+					
+					</li>
+									</ol>
+			</div></div>
+			
+
+
+			
+				
+
+
+								<div class="panel">
+			<h2><a href="#" rel="netteBsPnl3">Nette Application <abbr>&#x25ba;</abbr></a></h2>
+
+			<div id="netteBsPnl3" class="nette-collapsed inner">
+			<h3>Requests</h3><pre class="nette-dump"><a href='#' rel='next'><span>array</span>(1) <abbr>&#x25bc;</abbr> </a><code>[
+   <a href='#' rel='next'>0 => <span>Nette\Application\Request</span>(7) <abbr>&#x25ba;</abbr> </a><code class="nette-collapsed">{
+      "method" <span>private</span> => "GET" (3)
+      <a href='#' rel='next'>"flags" <span>private</span> => <span>array</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+         "secured" => FALSE
+      }</code>
+      "name" <span>private</span> => "Front:Default" (13)
+      <a href='#' rel='next'>"params" <span>private</span> => <span>array</span>(2) <abbr>&#x25bc;</abbr> </a><code>{
+         "slug" => "o-nas" (5)
+         "action" => "page" (4)
+      }</code>
+      "post" <span>private</span> => <span>array</span>(0) 
+      "files" <span>private</span> => <span>array</span>(0) 
+      "frozen" <span>private</span> => TRUE
+   }</code>
+]</code>
+</pre><h3>Presenter</h3><pre class="nette-dump"><a href='#' rel='next'><span>FrontModule\DefaultPresenter</span>(28) <abbr>&#x25ba;</abbr> </a><code class="nette-collapsed">{
+   <a href='#' rel='next'>"page" <span>private</span> => <span>Nette\Database\Table\Selection</span>(22) <abbr>&#x25ba;</abbr> </a><code class="nette-collapsed">{
+      <a href='#' rel='next'>"connection" => <span>Nette\Database\Connection</span>(6) <abbr>&#x25bc;</abbr> </a><code>{
+         "driver" <span>private</span> => <span>Nette\Database\Drivers\Sqlite2Driver</span>(3) { ... }
+         "preprocessor" <span>private</span> => <span>Nette\Database\SqlPreprocessor</span>(6) { ... }
+         "databaseReflection" => <span>Nette\Database\Reflection\DatabaseReflection</span>(3) { ... }
+         "cache" => NULL
+         "substitutions" => <span>array</span>(0) 
+         "onQuery" => NULL
+      }</code>
+      "name" => "pages" (5)
+      "primary" => "id" (2)
+      "rows" <span>protected</span> => NULL
+      "data" <span>protected</span> => NULL
+      "select" <span>protected</span> => <span>array</span>(0) 
+      <a href='#' rel='next'>"where" <span>protected</span> => <span>array</span>(1) <abbr>&#x25bc;</abbr> </a><code>[
+         0 => "[slug] = ?" (10)
+      <a href='#' rel='next'>]</code>
+      "conditions" <span>protected</span> => <span>array</span>(1) <abbr>&#x25bc;</abbr> </a><code>[
+         0 => "[slug]" (6)
+      <a href='#' rel='next'>]</code>
+      "parameters" <span>protected</span> => <span>array</span>(1) <abbr>&#x25bc;</abbr> </a><code>[
+         0 => "o-nas" (5)
+      ]</code>
+      "order" <span>protected</span> => <span>array</span>(0) 
+      "limit" <span>protected</span> => NULL
+      "offset" <span>protected</span> => NULL
+      "group" <span>protected</span> => ""
+      "having" <span>protected</span> => ""
+      "referenced" <span>protected</span> => <span>array</span>(0) 
+      "referencing" <span>protected</span> => <span>array</span>(0) 
+      "aggregation" <span>protected</span> => <span>array</span>(0) 
+      "accessed" <span>protected</span> => NULL
+      "prevAccessed" <span>protected</span> => NULL
+      "keys" <span>protected</span> => <span>array</span>(0) 
+      "delimitedName" <span>protected</span> => "[pages]" (7)
+      "delimitedPrimary" <span>protected</span> => "[id]" (4)
+   <a href='#' rel='next'>}</code>
+   "onShutdown" => NULL
+   "request" <span>private</span> => <span>Nette\Application\Request</span>(7) <abbr>&#x25ba;</abbr> </a><code class="nette-collapsed">{
+      "method" <span>private</span> => "GET" (3)
+      <a href='#' rel='next'>"flags" <span>private</span> => <span>array</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+         "secured" => FALSE
+      }</code>
+      "name" <span>private</span> => "Front:Default" (13)
+      <a href='#' rel='next'>"params" <span>private</span> => <span>array</span>(2) <abbr>&#x25bc;</abbr> </a><code>{
+         "slug" => "o-nas" (5)
+         "action" => "page" (4)
+      }</code>
+      "post" <span>private</span> => <span>array</span>(0) 
+      "files" <span>private</span> => <span>array</span>(0) 
+      <a href='#' rel='next'>"frozen" <span>private</span> => TRUE
+   }</code>
+   "response" <span>private</span> => <span>Nette\Application\Responses\TextResponse</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+      <a href='#' rel='next'>"source" <span>private</span> => <span>Nette\Templating\FileTemplate</span>(8) <abbr>&#x25ba;</abbr> </a><code class="nette-collapsed">{
+         "file" <span>private</span> => "/home/users/ginny/ginny.jecool.net/web/app/FrontModule/templates/Default/page.latte" (83)
+         "warnOnUndefined" => TRUE
+         "onPrepareFilters" => <span>array</span>(1) [ ... ]
+         "params" <span>private</span> => <span>array</span>(17) { ... }
+         "filters" <span>private</span> => <span>array</span>(1) [ ... ]
+         "helpers" <span>private</span> => <span>array</span>(0) 
+         "helperLoaders" <span>private</span> => <span>array</span>(1) [ ... ]
+         "cacheStorage" <span>private</span> => <span>Nette\Caching\Storages\PhpFileStorage</span>(4) { ... }
+      }</code>
+   }</code>
+   "autoCanonicalize" => TRUE
+   "absoluteUrls" => FALSE
+   "globalParams" <span>private</span> => <span>array</span>(0) 
+   "globalState" <span>private</span> => <span>array</span>(0) 
+   "globalStateSinces" <span>private</span> => <span>array</span>(0) 
+   "action" <span>private</span> => "page" (4)
+   "view" <span>private</span> => "page" (4)
+   "layout" <span>private</span> => NULL
+   "payload" <span>private</span> => <span>stdClass</span>(0) 
+   "signalReceiver" <span>private</span> => ""
+   "signal" <span>private</span> => NULL
+   <a href='#' rel='next'>"ajaxMode" <span>private</span> => FALSE
+   "startupCheck" <span>private</span> => TRUE
+   "lastCreatedRequest" <span>private</span> => <span>Nette\Application\Request</span>(7) <abbr>&#x25ba;</abbr> </a><code class="nette-collapsed">{
+      "method" <span>private</span> => "FORWARD" (7)
+      "flags" <span>private</span> => <span>array</span>(0) 
+      "name" <span>private</span> => "Front:Default" (13)
+      <a href='#' rel='next'>"params" <span>private</span> => <span>array</span>(2) <abbr>&#x25bc;</abbr> </a><code>{
+         "slug" => "o-nas" (5)
+         "action" => "page" (4)
+      }</code>
+      "post" <span>private</span> => <span>array</span>(0) 
+      "files" <span>private</span> => <span>array</span>(0) 
+      <a href='#' rel='next'>"frozen" <span>private</span> => FALSE
+   }</code>
+   "lastCreatedRequestFlag" <span>private</span> => <span>array</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+      <a href='#' rel='next'>"current" => TRUE
+   }</code>
+   "context" <span>private</span> => <span>Nette\DI\Container</span>(6) <abbr>&#x25bc;</abbr> </a><code>{
+      <a href='#' rel='next'>"params" => <span>Nette\ArrayHash</span>(6) <abbr>&#x25bc;</abbr> </a><code>{
+         "wwwDir" => "/home/users/ginny/ginny.jecool.net/web/www" (42)
+         "appDir" => "/home/users/ginny/ginny.jecool.net/web/app" (42)
+         "libsDir" => "/home/users/ginny/ginny.jecool.net/web/libs" (43)
+         "tempDir" => "/home/users/ginny/ginny.jecool.net/web/temp" (43)
+         <a href='#' rel='next'>"productionMode" => TRUE
+         "consoleMode" => FALSE
+      }</code>
+      "registry" <span>private</span> => <span>array</span>(16) <abbr>&#x25ba;</abbr> </a><code class="nette-collapsed">{
+         "application" => <span>Nette\Application\Application</span>(11) { ... }
+         "presenterFactory" => <span>Nette\Application\PresenterFactory</span>(4) { ... }
+         "router" => <span>Nette\Application\Routers\RouteList</span>(3) { ... }
+         "httpRequest" => <span>Nette\Http\Request</span>(9) { ... }
+         "httpResponse" => <span>Nette\Http\Response</span>(5) { ... }
+         "httpContext" => NULL
+         "session" => <span>Nette\Http\Session</span>(4) { ... }
+         "user" => <span>Nette\Http\User</span>(7) { ... }
+         "cacheStorage" => <span>Nette\Caching\Storages\FileStorage</span>(3) { ... }
+         "templateCacheStorage" => <span>Nette\Caching\Storages\PhpFileStorage</span>(4) { ... }
+         "cacheJournal" => <span>Nette\Caching\Storages\FileJournal</span>(9) { ... }
+         "mailer" => NULL
+         "authenticator" => NULL
+         "robotLoader" => <span>Nette\Loaders\RobotLoader</span>(8) { ... }
+         "database" => <span>Nette\Database\Connection</span>(6) { ... }
+         "model" => <span>Model</span>(1) { ... }
+      <a href='#' rel='next'>}</code>
+      "factories" <span>private</span> => <span>array</span>(3) <abbr>&#x25bc;</abbr> </a><code>{
+         "httpContext" => <span>array</span>(2) [ ... ]
+         "mailer" => <span>array</span>(2) [ ... ]
+         "authenticator" => <span>array</span>(2) [ ... ]
+      <a href='#' rel='next'>}</code>
+      "tags" <span>private</span> => <span>array</span>(16) <abbr>&#x25ba;</abbr> </a><code class="nette-collapsed">{
+         "application" => NULL
+         "presenterFactory" => NULL
+         "router" => NULL
+         "httpRequest" => NULL
+         "httpResponse" => NULL
+         "httpContext" => NULL
+         "session" => NULL
+         "user" => NULL
+         "cacheStorage" => NULL
+         "templateCacheStorage" => NULL
+         "cacheJournal" => NULL
+         "mailer" => NULL
+         "robotLoader" => <span>array</span>(1) { ... }
+         "authenticator" => NULL
+         "database" => NULL
+         "model" => NULL
+      }</code>
+      "creating" <span>private</span> => <span>array</span>(0) 
+      <a href='#' rel='next'>"frozen" <span>private</span> => FALSE
+   }</code>
+   "template" <span>private</span> => <span>Nette\Templating\FileTemplate</span>(8) <abbr>&#x25ba;</abbr> </a><code class="nette-collapsed">{
+      "file" <span>private</span> => "/home/users/ginny/ginny.jecool.net/web/app/FrontModule/templates/Default/page.latte" (83)
+      <a href='#' rel='next'>"warnOnUndefined" => TRUE
+      "onPrepareFilters" => <span>array</span>(1) <abbr>&#x25bc;</abbr> </a><code>[
+         0 => <span>Nette\Callback</span>(1) { ... }
+      <a href='#' rel='next'>]</code>
+      "params" <span>private</span> => <span>array</span>(17) <abbr>&#x25ba;</abbr> </a><code class="nette-collapsed">{
+         "control" => <span>FrontModule\DefaultPresenter</span>(28) { *RECURSION* }
+         "presenter" => <span>FrontModule\DefaultPresenter</span>(28) { *RECURSION* }
+         "user" => <span>Nette\Http\User</span>(7) { ... }
+         "netteHttpResponse" => <span>Nette\Http\Response</span>(5) { ... }
+         "netteCacheStorage" => <span>Nette\Caching\Storages\FileStorage</span>(3) { ... }
+         "baseUrl" => "http://ginny.jecool.net/www" (27)
+         "baseUri" => "http://ginny.jecool.net/www" (27)
+         "basePath" => "/www" (4)
+         "flashes" => <span>array</span>(0) 
+         "viewName" => "page" (4)
+         "root" => "/home/users/ginny/ginny.jecool.net/web" (38)
+         "moduleName" => "Front:" (6)
+         "presenterName" => "Default" (7)
+         "page" => <span>Nette\Database\Table\Selection</span>(22) { ... }
+         "layout" => "/home/users/ginny/ginny.jecool.net/web/app/FrontModule/templates/@layout.latte" (78)
+         "template" => <span>Nette\Templating\FileTemplate</span>(8) { *RECURSION* }
+         "_g" => <span>stdClass</span>(0) 
+      <a href='#' rel='next'>}</code>
+      "filters" <span>private</span> => <span>array</span>(1) <abbr>&#x25bc;</abbr> </a><code>[
+         0 => <span>Nette\Callback</span>(1) { ... }
+      ]</code>
+      "helpers" <span>private</span> => <span>array</span>(0) 
+      <a href='#' rel='next'>"helperLoaders" <span>private</span> => <span>array</span>(1) <abbr>&#x25bc;</abbr> </a><code>[
+         0 => <span>Nette\Callback</span>(1) { ... }
+      <a href='#' rel='next'>]</code>
+      "cacheStorage" <span>private</span> => <span>Nette\Caching\Storages\PhpFileStorage</span>(4) <abbr>&#x25bc;</abbr> </a><code>{
+         "hint" => "/templates/@layout.latte" (24)
+         "dir" <span>private</span> => "/home/users/ginny/ginny.jecool.net/web/temp/cache" (49)
+         "useDirs" <span>private</span> => TRUE
+         "journal" <span>private</span> => NULL
+      }</code>
+   }</code>
+   "invalidSnippets" <span>private</span> => <span>array</span>(0) 
+   <a href='#' rel='next'>"params" <span>protected</span> => <span>array</span>(2) <abbr>&#x25bc;</abbr> </a><code>{
+      "slug" => "o-nas" (5)
+      "action" => "page" (4)
+   }</code>
+   "components" <span>private</span> => <span>array</span>(0) 
+   "cloning" <span>private</span> => NULL
+   "parent" <span>private</span> => NULL
+   "name" <span>private</span> => "Front:Default" (13)
+   <a href='#' rel='next'>"monitors" <span>private</span> => <span>array</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+      <a href='#' rel='next'>"Nette\Application\UI\Presenter" => <span>array</span>(4) <abbr>&#x25bc;</abbr> </a><code>[
+         0 => NULL
+         1 => NULL
+         2 => NULL
+         3 => TRUE
+      ]</code>
+   }</code>
+}</code>
+</pre>		</div></div>
+		
+
+
+		<div class="panel">
+		<h2><a href="#" rel="netteBsPnl4">Environment <abbr>&#x25ba;</abbr></a></h2>
+
+		<div id="netteBsPnl4" class="nette-collapsed inner">
+						<h3><a href="#" rel="netteBsPnl-env-const">Constants <abbr>&#x25bc;</abbr></a></h3>
+			<div class="outer">
+			<table id="netteBsPnl-env-const">
+			<tr><th>WWW_DIR</th><td><pre class="nette-dump">"/home/users/ginny/ginny.jecool.net/web/www" (42)
+</pre></td></tr>
+<tr><th>APP_DIR</th><td><pre class="nette-dump">"/home/users/ginny/ginny.jecool.net/web/www/../app" (49)
+</pre></td></tr>
+<tr><th>LIBS_DIR</th><td><pre class="nette-dump">"/home/users/ginny/ginny.jecool.net/web/www/../libs" (50)
+</pre></td></tr>
+<tr><th>TEMP_DIR</th><td><pre class="nette-dump">"/home/users/ginny/ginny.jecool.net/web/www/../temp" (50)
+</pre></td></tr>
+<tr><th>NETTE</th><td><pre class="nette-dump">TRUE
+</pre></td></tr>
+<tr><th>NETTE_DIR</th><td><pre class="nette-dump">"/home/users/ginny/ginny.jecool.net/web/libs/Nette" (49)
+</pre></td></tr>
+<tr><th>NETTE_VERSION_ID</th><td><pre class="nette-dump">20000
+</pre></td></tr>
+<tr><th>NETTE_PACKAGE</th><td><pre class="nette-dump">"5.3" (3)
+</pre></td></tr>
+			</table>
+			</div>
+			
+
+			<h3><a href="#" rel="netteBsPnl-env-files">Included files <abbr>&#x25ba;</abbr></a> (124)</h3>
+			<div class="outer">
+			<table id="netteBsPnl-env-files" class="nette-collapsed">
+			<tr><td>/home/users/ginny/ginny.jecool.net/web/www/index.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/app/bootstrap.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/loader.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/common/exceptions.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/common/Object.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Utils/LimitedScope.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Loaders/AutoLoader.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Loaders/NetteLoader.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Utils/SafeStream.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Diagnostics/Debugger.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Diagnostics/Helpers.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Utils/Html.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Utils/Strings.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Diagnostics/Logger.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Diagnostics/FireLogger.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Diagnostics/BlueScreen.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Diagnostics/Bar.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Diagnostics/DefaultBarPanel.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Diagnostics/IBarPanel.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/common/Environment.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/common/Configurator.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/DI/Container.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/common/FreezableObject.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/common/IFreezable.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/DI/IContainer.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/common/Callback.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/common/ArrayHash.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Caching/Cache.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Caching/Storages/PhpFileStorage.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Caching/Storages/FileStorage.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Caching/IStorage.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Config/Config.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Config/NeonAdapter.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Config/IAdapter.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Utils/Neon.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Utils/Tokenizer.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Utils/Arrays.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/DI/ContainerBuilder.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Loaders/RobotLoader.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Caching/Storages/FileJournal.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Caching/Storages/IJournal.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/common/Framework.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Utils/CriticalSection.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Utils/Finder.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Iterators/RecursiveFilter.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Iterators/Filter.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Http/RequestFactory.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Http/UrlScript.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Http/Url.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/common/ObjectMixin.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Http/Request.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Http/IRequest.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Http/Response.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Http/IResponse.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Http/Session.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Application/PresenterFactory.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Application/IPresenterFactory.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Application/Routers/RouteList.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/common/ArrayList.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Application/IRouter.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Application/UI/Presenter.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Application/UI/Control.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Application/UI/PresenterComponent.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/ComponentModel/Container.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/ComponentModel/Component.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/ComponentModel/IComponent.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/ComponentModel/IContainer.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Application/UI/ISignalReceiver.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Application/UI/IStatePersistent.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Application/UI/IPartiallyRenderable.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Application/UI/IRenderable.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Application/IPresenter.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Application/Application.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Reflection/ClassType.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Reflection/Property.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Security/Identity.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Security/IIdentity.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Reflection/AnnotationsParser.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Application/Routers/Route.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Application/Diagnostics/RoutingPanel.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Application/Request.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/app/FrontModule/presenters/DefaultPresenter.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/app/presenters/BasePresenter.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Application/UI/PresenterComponentReflection.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/ComponentModel/RecursiveComponentIterator.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Iterators/InstanceFilter.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Reflection/Method.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Templating/FileTemplate.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Templating/Template.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Templating/ITemplate.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Templating/IFileTemplate.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Http/User.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Http/IUser.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/app/models/Model.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Database/Connection.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Database/Statement.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Database/Drivers/Sqlite2Driver.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Database/Drivers/SqliteDriver.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Database/ISupplementalDriver.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Database/SqlPreprocessor.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Database/Reflection/DatabaseReflection.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Database/Diagnostics/ConnectionPanel.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Database/Table/Selection.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Application/Responses/TextResponse.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Application/IResponse.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Application/exceptions.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Templating/DefaultHelpers.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Latte/Engine.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Latte/Parser.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Latte/Macros/CoreMacros.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Latte/Macros/MacroSet.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Latte/IMacro.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Latte/Macros/CacheMacro.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Latte/Macros/UIMacros.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Latte/Macros/FormMacros.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Latte/MacroNode.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Latte/MacroTokenizer.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Latte/PhpWriter.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Latte/HtmlNode.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/temp/cache/_Nette.FileTemplate/_Default.page.latte-29ed9d517b634fbd6dffe4e6e280568f.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Latte/ParseException.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Templating/FilterException.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/temp/cache/_Nette.FileTemplate/_templates._layout.latte-44613c2af9c19737eb710710e326b040.php</td></tr>
+<tr><td>/home/users/ginny/ginny.jecool.net/web/libs/Nette/Diagnostics/templates/bluescreen.phtml</td></tr>
+			</table>
+			</div>
+
+
+			<h3>$_SERVER</h3>
+						<div class="outer">
+			<table>
+			<tr><th>REDIRECT_SCRIPT_URL</th><td><pre class="nette-dump">"/www/o-nas" (10)
+</pre></td></tr>
+<tr><th>REDIRECT_SCRIPT_URI</th><td><pre class="nette-dump">"http://ginny.jecool.net/www/o-nas" (33)
+</pre></td></tr>
+<tr><th>REDIRECT_STATUS</th><td><pre class="nette-dump">"200" (3)
+</pre></td></tr>
+<tr><th>SCRIPT_URL</th><td><pre class="nette-dump">"/www/o-nas" (10)
+</pre></td></tr>
+<tr><th>SCRIPT_URI</th><td><pre class="nette-dump">"http://ginny.jecool.net/www/o-nas" (33)
+</pre></td></tr>
+<tr><th>HTTP_HOST</th><td><pre class="nette-dump">"ginny.jecool.net" (16)
+</pre></td></tr>
+<tr><th>HTTP_USER_AGENT</th><td><pre class="nette-dump">"Mozilla/5.0 (X11; Linux i686; rv:2.0.1) Gecko/20100101 Firefox/4.0.1" (68)
+</pre></td></tr>
+<tr><th>HTTP_ACCEPT</th><td><pre class="nette-dump">"text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8" (63)
+</pre></td></tr>
+<tr><th>HTTP_ACCEPT_LANGUAGE</th><td><pre class="nette-dump">"cs,en-us;q=0.7,en;q=0.3" (23)
+</pre></td></tr>
+<tr><th>HTTP_ACCEPT_ENCODING</th><td><pre class="nette-dump">"gzip, deflate" (13)
+</pre></td></tr>
+<tr><th>HTTP_ACCEPT_CHARSET</th><td><pre class="nette-dump">"ISO-8859-2,utf-8;q=0.7,*;q=0.7" (30)
+</pre></td></tr>
+<tr><th>HTTP_KEEP_ALIVE</th><td><pre class="nette-dump">"115" (3)
+</pre></td></tr>
+<tr><th>HTTP_CONNECTION</th><td><pre class="nette-dump">"keep-alive" (10)
+</pre></td></tr>
+<tr><th>HTTP_COOKIE</th><td><pre class="nette-dump">"pla3412=bratrstvo; pla3412_salt=jfld5ag8y00; __utma=1.1393933072.1307654108.1307654108.1307802238.2; __utmz=1.1307654108.1.1.utmcsr=(direct)|utmccn=(d ... " (234)
+</pre></td></tr>
+<tr><th>PATH</th><td><pre class="nette-dump">"/sbin:/usr/sbin:/bin:/usr/bin" (29)
+</pre></td></tr>
+<tr><th>SERVER_SIGNATURE</th><td><pre class="nette-dump">"&lt;address&gt;Apache/2.2.3 (CentOS) Server at ginny.jecool.net Port 80&lt;/address&gt;
+" (76)
+</pre></td></tr>
+<tr><th>SERVER_SOFTWARE</th><td><pre class="nette-dump">"Apache/2.2.3 (CentOS)" (21)
+</pre></td></tr>
+<tr><th>SERVER_NAME</th><td><pre class="nette-dump">"ginny.jecool.net" (16)
+</pre></td></tr>
+<tr><th>SERVER_ADDR</th><td><pre class="nette-dump">"88.86.121.7" (11)
+</pre></td></tr>
+<tr><th>SERVER_PORT</th><td><pre class="nette-dump">"80" (2)
+</pre></td></tr>
+<tr><th>REMOTE_ADDR</th><td><pre class="nette-dump">"82.144.134.129" (14)
+</pre></td></tr>
+<tr><th>DOCUMENT_ROOT</th><td><pre class="nette-dump">"/home/users/ginny/ginny.jecool.net/web/" (39)
+</pre></td></tr>
+<tr><th>SERVER_ADMIN</th><td><pre class="nette-dump">"root@endora.cz" (14)
+</pre></td></tr>
+<tr><th>SCRIPT_FILENAME</th><td><pre class="nette-dump">"/home/users/ginny/ginny.jecool.net/web/www/index.php" (52)
+</pre></td></tr>
+<tr><th>REMOTE_PORT</th><td><pre class="nette-dump">"41792" (5)
+</pre></td></tr>
+<tr><th>REDIRECT_URL</th><td><pre class="nette-dump">"/www/o-nas" (10)
+</pre></td></tr>
+<tr><th>GATEWAY_INTERFACE</th><td><pre class="nette-dump">"CGI/1.1" (7)
+</pre></td></tr>
+<tr><th>SERVER_PROTOCOL</th><td><pre class="nette-dump">"HTTP/1.1" (8)
+</pre></td></tr>
+<tr><th>REQUEST_METHOD</th><td><pre class="nette-dump">"GET" (3)
+</pre></td></tr>
+<tr><th>QUERY_STRING</th><td><pre class="nette-dump">""
+</pre></td></tr>
+<tr><th>REQUEST_URI</th><td><pre class="nette-dump">"/www/o-nas" (10)
+</pre></td></tr>
+<tr><th>SCRIPT_NAME</th><td><pre class="nette-dump">"/www/index.php" (14)
+</pre></td></tr>
+<tr><th>PHP_SELF</th><td><pre class="nette-dump">"/www/index.php" (14)
+</pre></td></tr>
+<tr><th>REQUEST_TIME</th><td><pre class="nette-dump">1307913038
+</pre></td></tr>
+			</table>
+			</div>
+					</div></div>
+
+
+
+		<div class="panel">
+		<h2><a href="#" rel="netteBsPnl5">HTTP request <abbr>&#x25ba;</abbr></a></h2>
+
+		<div id="netteBsPnl5" class="nette-collapsed inner">
+						<h3>Headers</h3>
+			<div class="outer">
+			<table>
+			<tr><th>Host</th><td>ginny.jecool.net</td></tr>
+<tr><th>User-Agent</th><td>Mozilla/5.0 (X11; Linux i686; rv:2.0.1) Gecko/20100101 Firefox/4.0.1</td></tr>
+<tr><th>Accept</th><td>text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8</td></tr>
+<tr><th>Accept-Language</th><td>cs,en-us;q=0.7,en;q=0.3</td></tr>
+<tr><th>Accept-Encoding</th><td>gzip, deflate</td></tr>
+<tr><th>Accept-Charset</th><td>ISO-8859-2,utf-8;q=0.7,*;q=0.7</td></tr>
+<tr><th>Keep-Alive</th><td>115</td></tr>
+<tr><th>Connection</th><td>keep-alive</td></tr>
+<tr><th>Cookie</th><td>pla3412=bratrstvo; pla3412_salt=jfld5ag8y00; __utma=1.1393933072.1307654108.1307654108.1307802238.2; __utmz=1.1307654108.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); PHPSESSID=bmkf3gdq1ja5oajcei6a38v386; nette-browser=51drroumf8</td></tr>
+			</table>
+			</div>
+			
+
+						<h3>$_GET</h3>
+						<p><i>empty</i></p>
+									<h3>$_POST</h3>
+						<p><i>empty</i></p>
+									<h3>$_COOKIE</h3>
+						<div class="outer">
+			<table>
+			<tr><th>pla3412</th><td><pre class="nette-dump">"bratrstvo" (9)
+</pre></td></tr>
+<tr><th>pla3412_salt</th><td><pre class="nette-dump">"jfld5ag8y00" (11)
+</pre></td></tr>
+<tr><th>__utma</th><td><pre class="nette-dump">"1.1393933072.1307654108.1307654108.1307802238.2" (47)
+</pre></td></tr>
+<tr><th>__utmz</th><td><pre class="nette-dump">"1.1307654108.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)" (62)
+</pre></td></tr>
+<tr><th>PHPSESSID</th><td><pre class="nette-dump">"bmkf3gdq1ja5oajcei6a38v386" (26)
+</pre></td></tr>
+<tr><th>nette-browser</th><td><pre class="nette-dump">"51drroumf8" (10)
+</pre></td></tr>
+			</table>
+			</div>
+								</div></div>
+
+
+
+		<div class="panel">
+		<h2><a href="#" rel="netteBsPnl6">HTTP response <abbr>&#x25ba;</abbr></a></h2>
+
+		<div id="netteBsPnl6" class="nette-collapsed inner">
+			<h3>Headers</h3>
+						<pre>X-Powered-By: Nette Framework<br>Expires: Thu, 19 Nov 1981 08:52:00 GMT<br>Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0<br>Pragma: no-cache<br>Set-Cookie: PHPSESSID=bmkf3gdq1ja5oajcei6a38v386; path=/; httponly<br>Set-Cookie: nette-browser=51drroumf8; path=/; httponly<br></pre>
+					</div></div>
+
+
+		<ul>
+			<li>Report generated at 2011/06/12 23:10:38</li>
+							<li><a href="http://ginny.jecool.net/www/o-nas">http://ginny.jecool.net/www/o-nas</a></li>
+						<li>PHP 5.3.6</li>
+			<li>Apache/2.2.3 (CentOS)</li>			<li>Nette Framework 2.0-beta <i>(revision 37828b8 released on 2011-05-30)</i></li>		</ul>
+	</div>
+</div>
+
+<script type="text/javascript">/*<![CDATA[*/var bs=document.getElementById("netteBluescreen");document.body.appendChild(bs);document.onkeyup=function(b){b=b||window.event;b.keyCode==27&&!b.shiftKey&&!b.altKey&&!b.ctrlKey&&!b.metaKey&&bs.onclick({target:document.getElementById("netteBluescreenIcon")})};
+for(var i=0,styles=document.styleSheets;i<styles.length;i++)if((styles[i].owningElement||styles[i].ownerNode).className!=="nette"){styles[i].oldDisabled=styles[i].disabled;styles[i].disabled=true}else styles[i].addRule?styles[i].addRule(".nette-collapsed","display: none"):styles[i].insertRule(".nette-collapsed { display: none }",0);
+bs.onclick=function(b){b=b||window.event;for(var a=b.target||b.srcElement;a&&a.tagName&&a.tagName.toLowerCase()!=="a";)a=a.parentNode;if(!a||!a.rel)return true;for(var d=a.getElementsByTagName("abbr")[0],c=a.rel==="next"?a.nextSibling:document.getElementById(a.rel);c.nodeType!==1;)c=c.nextSibling;b=c.currentStyle?c.currentStyle.display=="none":getComputedStyle(c,null).display=="none";try{d.innerHTML=String.fromCharCode(b?9660:9658)}catch(e){}c.style.display=b?c.tagName.toLowerCase()==="code"?"inline":
+"block":"none";if(a.id==="netteBluescreenIcon"){a=0;for(d=document.styleSheets;a<d.length;a++)if((d[a].owningElement||d[a].ownerNode).className!=="nette")d[a].disabled=b?true:d[a].oldDisabled}return false};/*]]>*/</script>
+</body>
+</html>
