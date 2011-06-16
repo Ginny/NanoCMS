@@ -23,13 +23,13 @@ class SignPresenter extends BasePresenter {
      */
     protected function createComponentSignInForm() {
         $form = new Form;
-        $form->addText('username', 'Username:')
-                ->setRequired('Please provide a username.');
+        $form->addText('username', 'Účet:')
+                ->setRequired('Vyplňte prosím účet.');
 
-        $form->addPassword('password', 'Password:')
-                ->setRequired('Please provide a password.');
+        $form->addPassword('password', 'Heslo:')
+                ->setRequired('Vyplňte prosím heslo.');
 
-        $form->addSubmit('send', 'Sign in');
+        $form->addSubmit('send', 'Přihlásit se');
 
         $form->onSubmit[] = callback($this, 'signInFormSubmitted');
         return $form;
@@ -48,7 +48,7 @@ class SignPresenter extends BasePresenter {
 
     public function actionOut() {
         $this->getUser()->logout();
-        $this->flashMessage('You have been signed out.');
+        $this->flashMessage('Byl jste odhlášen.');
         $this->redirect('in');
     }
 

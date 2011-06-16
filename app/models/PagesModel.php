@@ -5,7 +5,7 @@ use Nette\Object;
 /**
  * Model base class.
  */
-class Model extends Object {
+class PagesModel extends Object {
 
     /** @var Nette\Database\Connection */
     public $database;
@@ -28,6 +28,10 @@ class Model extends Object {
 
     public function findFirstPage() {
         return $this->database->table('pages')->get(1);
+    }
+    
+    public function getMenu() {
+        return $this->database->table('pages')->fetchPairs('slug', 'title');
     }
 
 }

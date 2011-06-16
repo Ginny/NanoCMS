@@ -1,12 +1,12 @@
 {block #content}
 
-<h1 n:block="title">My pages</h1>
+<h1 n:block="title">Mé stránky</h1>
 
-<p><a n:href="add">Add new page</a></p>
+<p><a n:href="add">Přidat novou stránku</a></p>
 
 <table class="grid">
     <tr>
-        <th>Title</th>
+        <th>Nadpis</th>
         <th>Text</th>
         <th>Slug</th>
         <th></th>
@@ -15,11 +15,11 @@
 {foreach $pages as $page}
     <tr>
         <td>{$page->title}</td>
-        <td>{$page->text|truncate:50}</td>
+        <td>{$page->text|striptags|truncate:50}</td>
         <td>{$page->slug}</td>
         <td>            
-            <a n:href="edit, $page->id">Edit</a>
-            <a n:href="delete, $page->id">Delete</a>
+            <a n:href="edit, $page->id">Upravit</a>
+            <a n:href="delete, $page->id">Smazat</a>
         </td>
     </tr>
 {/foreach}

@@ -20,7 +20,7 @@ class DashboardPresenter extends BasePresenter {
         // user authentication
         if (!$this->user->isLoggedIn()) {
             if ($this->user->logoutReason === User::INACTIVITY) {
-                $this->flashMessage('You have been signed out due to inactivity. Please sign in again.');
+                $this->flashMessage('Byl jste odhlášen z důvodu neaktivity. Přihlašte se prosím znovu.');
             }
             $backlink = $this->application->storeRequest();
             $this->redirect('Sign:in', array('backlink' => $backlink));
@@ -36,7 +36,7 @@ class DashboardPresenter extends BasePresenter {
     /*     * ******************* views add & edit ******************** */
 
     public function renderAdd() {
-        $this['pageForm']['save']->caption = 'Add';
+        $this['pageForm']['save']->caption = 'Přidat';
     }
 
     public function renderEdit($id = 0) {
@@ -44,7 +44,7 @@ class DashboardPresenter extends BasePresenter {
         if (!$form->isSubmitted()) {
             $row = $this->pages->get($id);
             if (!$row) {
-                throw new NA\BadRequestException('Record not found');
+                throw new NA\BadRequestException('Záznam nebyl nalezen');
             }
             $form->setDefaults($row);
         }
@@ -55,7 +55,7 @@ class DashboardPresenter extends BasePresenter {
     public function renderDelete($id = 0) {
         $this->template->page = $this->pages->get($id);
         if (!$this->template->page) {
-            throw new NA\BadRequestException('Record not found');
+            throw new NA\BadRequestException('Záznam nebyl nalezen');
         }
     }
 
@@ -67,17 +67,17 @@ class DashboardPresenter extends BasePresenter {
      */
     protected function createComponentPageForm() {
         $form = new Form;
-        $form->addText('title', 'Title:')
-                ->setRequired('Please enter a title.');
+        $form->addText('title', 'Nadpis:')
+                ->setRequired('Vyplňte prosím nadpis stránky.');
 
         $form->addTextArea('text', 'Text:')
-                ->setRequired('Please enter a text.');
+                ->setRequired('Vyplňte prosím text stránky.');
 
-        $form->addSubmit('save', 'Save')->setAttribute('class', 'default');
-        $form->addSubmit('cancel', 'Cancel')->setValidationScope(NULL);
+        $form->addSubmit('save', 'Uložit')->setAttribute('class', 'default');
+        $form->addSubmit('cancel', 'Zrušit')->setValidationScope(NULL);
         $form->onSubmit[] = callback($this, 'pageFormSubmitted');
 
-        $form->addProtection('Please submit this form again (security token has expired).');
+        $form->addProtection('Odešlete prosím formulář znovu (bezpečnostní token vypršel).');
         return $form;
     }
 
@@ -89,10 +89,10 @@ class DashboardPresenter extends BasePresenter {
             $id = (int) $this->getParam('id');
             if ($id > 0) {
                 $this->pages->find($id)->update($values);
-                $this->flashMessage('The page has been updated.');
+                $this->flashMessage('Stránka byla upravena.');
             } else {
                 $this->pages->insert($values);
-                $this->flashMessage('The page has been added.');
+                $this->flashMessage('Stránka byla přidána.');
             }
         }
 
@@ -106,17 +106,17 @@ class DashboardPresenter extends BasePresenter {
      */
     protected function createComponentDeleteForm() {
         $form = new Form;
-        $form->addSubmit('cancel', 'Cancel');
-        $form->addSubmit('delete', 'Delete')->setAttribute('class', 'default');
+        $form->addSubmit('cancel', 'Zrušit');
+        $form->addSubmit('delete', 'Smazat')->setAttribute('class', 'default');
         $form->onSubmit[] = callback($this, 'deleteFormSubmitted');
-        $form->addProtection('Please submit this form again (security token has expired).');
+        $form->addProtection('Odešlete prosím formulář znovu (bezpečnostní token vypršel).');
         return $form;
     }
 
     public function deleteFormSubmitted(Form $form) {
         if ($form['delete']->isSubmittedBy()) {
             $this->pages->find($this->getParam('id'))->delete();
-            $this->flashMessage('Page has been deleted.');
+            $this->flashMessage('Stránka byla smazána.');
         }
 
         $this->redirect('default');

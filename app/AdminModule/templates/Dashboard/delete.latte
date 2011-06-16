@@ -1,11 +1,11 @@
 {block #content}
 
-<h1 n:block="title">Delete Page</h1>
+<h1 n:block="title">Smazat stránku</h1>
 
 {if $page}
-<p>Are you sure that you want to delete page ‘{$page->title}’?</p>
+<p>Opravdu chcete smazat stránku ‘{$page->title}’?</p>
 	{control deleteForm}
 
 {else}
-<p>Cannot find page.</p>
+<p>Nemůžu nalézt stránku.</p>
 {/if}

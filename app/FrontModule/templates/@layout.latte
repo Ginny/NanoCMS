@@ -1,15 +1,42 @@
+{**
+ * Layout of Nette Framework example CD collection (Akrabat)
+ *
+ * @package    MyApplication
+ *
+ * @param string   $robots   tell robots how to index the content of a page (optional)
+ * @param string   $basePath web base path
+ * @param array    $flashes  flash messages
+ * @param Nette\Web\User $user  current user
+ *}
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
     <head>
-        <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
-        <title>Web</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+        <meta name="description" content="Nette Framework example" />
+        <meta n:ifset="$robots" name="robots" content="{$robots}">
+
+        <title>{block #title|striptags|trim}{/block} | Můj Webík</title>
+        
         <link rel="stylesheet" type="text/css" media="screen" href="{$basePath}/css/site.css">
     </head>
 
     <body>
-    <h1>Webík</h1>
+        <div id="wrapper">
+            <div id="logo"></div>
+
+            <h1>Můj webík</h1>
+
+        <ul id="menu">
+            <li n:foreach="$menu as $slug => $title">        
+                <a n:href="this, 'slug' => $slug" n:class="$presenter->linkCurrent ? active">{$title}</a>
+            </li>
+        </ul>
 
 	{include #content}
 
+	<a n:href=":Admin:Dashboard:">Administrace</a>
+    </div>
 </body>
 </html>

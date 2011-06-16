@@ -18,7 +18,7 @@ common:
 			arguments: [sqlite2:%appDir%/models/demo.db]
 
 		model:
-			class: Model
+			class: PagesModel
 			arguments: ["@database"]
 
 
