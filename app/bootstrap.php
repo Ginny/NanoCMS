@@ -36,13 +36,11 @@ $application->onStartup[] = function() use ($application, $context) {
             $router[] = $adminRouter = new RouteList('Admin');
             $adminRouter[] = new Route('admin/<presenter>/<action>[/<id>]', 'Dashboard:default');
 
-            $first_page = $context->model->findFirstPage(); // vybere první záznam z tabulky pages
-
             $router[] = $frontRouter = new RouteList('Front');
             $frontRouter[] = new Route('<slug [a-z0-9_-]+>', array(
                         'presenter' => 'Default',
                         'action' => 'page',
-                        'slug' => $first_page->slug // slug prvního záznamu
+                        'slug' => NULL,
                     ));
 
 
