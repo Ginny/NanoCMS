@@ -11,7 +11,10 @@ class DefaultPresenter extends \BasePresenter {
     private $page;
     private $menu;
 
-    public function actionPage($slug) {
+    public function actionPage($slug = NULL) {
+        if (is_null($slug)) 
+            $slug = $this->context->model->findFirstPage()->slug; // vybere první záznam z tabulky pages
+    
         $this->page = $this->getService('model')->findBySlug($slug);
         $this->menu = $this->getService('model')->getMenu();
         if (!$this->page) {
@@ -19,7 +22,10 @@ class DefaultPresenter extends \BasePresenter {
         }
     }
 
-    public function renderPage($slug) {
+    public function renderPage($slug = NULL) {
+        if (is_null($slug)) 
+            $slug = $this->context->model->findFirstPage()->slug; // vybere první záznam z tabulky pages
+    
         $this->template->page = $this->page;
         $this->template->menu = $this->menu;
     }
