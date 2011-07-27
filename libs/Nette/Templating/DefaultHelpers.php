@@ -37,7 +37,7 @@ final class DefaultHelpers
 		'trim' => 'Nette\Utils\Strings::trim',
 		'padleft' => 'Nette\Utils\Strings::padLeft',
 		'padright' => 'Nette\Utils\Strings::padRight',
-		'replacere' => 'Nette\Utils\Strings::replaceRE',
+		'replacere' => 'Nette\Utils\Strings::replace',
 		'url' => 'rawurlencode',
 		'striptags' => 'strip_tags',
 		'nl2br' => 'nl2br',
@@ -136,6 +136,19 @@ final class DefaultHelpers
 			$s = $s->__toString(TRUE);
 		}
 		return str_replace(']]>', ']]\x3E', Nette\Utils\Json::encode($s));
+	}
+
+
+
+	/**
+	 * Escapes string for use inside iCal template.
+	 * @param  mixed  UTF-8 encoding
+	 * @return string
+	 */
+	public static function escapeICal($s)
+	{
+		// http://www.ietf.org/rfc/rfc5545.txt
+		return addcslashes(preg_replace('#[\x00-\x08\x0B\x0C-\x1F]+#', '', $s), "\";\\,:\n");
 	}
 
 

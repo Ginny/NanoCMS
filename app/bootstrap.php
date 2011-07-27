@@ -1,7 +1,6 @@
 <?php
 
 use Nette\Diagnostics\Debugger,
-    Nette\Environment,
     Nette\Application\Routers\Route,
     Nette\Application\Routers\SimpleRouter,
     Nette\Application\Routers\RouteList;
@@ -17,31 +16,35 @@ Debugger::enable();
 
 
 // Load configuration from config.neon file
-Environment::loadConfig(__DIR__ . '/config.neon');
+$configurator = new Nette\Configurator;
+$configurator->loadConfig(__DIR__ . '/config.neon');
+$context = $configurator->getContainer();
 
 
 // Configure application
-$application = Environment::getApplication();
+$application = $context->application;
 
+
+$context->addService('authenticator', function ($context) {
+            return $context->modelLoader->loadModel('UsersModel')->getAuthenticatorService();
+        });
 
 // Setup router
-$application->onStartup[] = function() use ($application) {
+$application->onStartup[] = function() use ($application, $context) {
             $router = $application->getRouter();
 
             // mod_rewrite
 
-            $router[] = new Route('index.php', 'Front:Default:default', Route::ONE_WAY);
+            $router[] = new Route('index.php', 'Front:Default:page', Route::ONE_WAY);
 
             $router[] = $adminRouter = new RouteList('Admin');
             $adminRouter[] = new Route('admin/<presenter>/<action>[/<id>]', 'Dashboard:default');
-
-            $first_page = Environment::getService('model')->findFirstPage(); // vybere první záznam z tabulky pages
 
             $router[] = $frontRouter = new RouteList('Front');
             $frontRouter[] = new Route('<slug [a-z0-9_-]+>', array(
                         'presenter' => 'Default',
                         'action' => 'page',
-                        'slug' => $first_page->slug // slug prvního záznamu
+                        'slug' => NULL,
                     ));
 
 

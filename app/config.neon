@@ -7,19 +7,18 @@ common:
 		date.timezone: Europe/Prague
 
 	services:
-		authenticator: 
-			factory: ["@model", getAuthenticatorService]
-
+		
 		robotLoader:
 			run: true
 
 		database:
 			class: Nette\Database\Connection
-			arguments: [sqlite2:%appDir%/models/demo.db]
+			arguments: [sqlite2:%appDir%/models/demo.db] # nebo ['mysql:host=localhost;dbname=test', root, root]
 
-		model:
-			class: PagesModel
+		modelLoader:
+			class: ModelLoader
 			arguments: ["@database"]
+
 
 
 production < common:

@@ -11,11 +11,12 @@ class DashboardPresenter extends BasePresenter {
 
     /** @var Nette\Database\Table\Selection */
     private $pages;
+    private $existingSlug;
 
     protected function startup() {
         parent::startup();
 
-        $this->pages = $this->getService('model')->getPages();
+        $this->pages = $this->getModel('PagesModel')->getPages();
 
         // user authentication
         if (!$this->user->isLoggedIn()) {
@@ -84,20 +85,26 @@ class DashboardPresenter extends BasePresenter {
     public function pageFormSubmitted(Form $form) {
         $values = $form->values;
         $values->slug = Strings::webalize($values->title); // z title udelame url adresu-slug
+        $this->existingSlug = $this->getModel('PagesModel')->countAllWithSlug($values->slug); // Spocita pocet zaznamu, ktery maji slug stejny jak nadpis z formulare
 
         if ($form['save']->isSubmittedBy()) {
-            $id = (int) $this->getParam('id');
-            if ($id > 0) {
-                $this->pages->find($id)->update($values);
-                $this->flashMessage('Stránka byla upravena.');
-            } else {
-                $this->pages->insert($values);
-                $this->flashMessage('Stránka byla přidána.');
+            if (($this->existingSlug == 0) AND ($values->slug !== "admin")) { // Pokud neni v databazi zaznam se stejnym slugem a pokud se slug nerovna hodnote admin 
+                $id = (int) $this->getParam('id');
+                if ($id > 0) {
+                    $this->pages->find($id)->update($values);
+                    $this->flashMessage('Stránka byla upravena.');
+                } else {
+                    $this->pages->insert($values);
+                    $this->flashMessage('Stránka byla přidána.');
+                }
+            } else { // pokud se snazime ulozit existujici slug nebo admin slug
+                $this->flashMessage('Nemůžete přidat existující stránku.');
+                $this->redirect('default');
             }
         }
 
+
         $this->redirect('default');
-        
     }
 
     /**

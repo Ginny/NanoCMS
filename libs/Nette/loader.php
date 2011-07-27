@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Nette Framework (version 2.0-dev released on 2011-06-03, http://nette.org)
+ * Nette Framework (version 2.0-dev released on 2011-07-13, http://nette.org)
  *
  * Copyright (c) 2004, 2011 David Grudl (http://davidgrudl.com)
  *
@@ -19,6 +19,7 @@ error_reporting(E_ALL | E_STRICT);
 iconv_set_encoding('internal_encoding', 'UTF-8');
 extension_loaded('mbstring') && mb_internal_encoding('UTF-8');
 @header('X-Powered-By: Nette Framework'); // @ - headers may be sent
+@header('Content-Type: text/html; charset=utf-8'); // @ - headers may be sent
 
 
 
@@ -40,6 +41,10 @@ require_once __DIR__ . '/Loaders/NetteLoader.php';
 
 
 Nette\Loaders\NetteLoader::getInstance()->register();
+
+require_once __DIR__ . '/Diagnostics/Helpers.php';
+require_once __DIR__ . '/Utils/Html.php';
+Nette\Diagnostics\Debugger::_init();
 
 Nette\Utils\SafeStream::register();
 

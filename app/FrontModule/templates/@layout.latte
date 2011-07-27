@@ -29,8 +29,9 @@
             <h1>Můj webík</h1>
 
         <ul id="menu">
-            <li n:foreach="$menu as $slug => $title">        
-                <a n:href="this, 'slug' => $slug" n:class="$presenter->linkCurrent ? active">{$title}</a>
+            <li n:foreach="$menu as $slug => $title">                        
+               {first}<a n:href="this, 'slug' => NULL" n:class="$presenter->linkCurrent ? active">Home</a>{/first}  {*odkaz na první stranu chceme bez slugu*} 
+               {if !$iterator->first}<a n:href="this, 'slug' => $slug" n:class="$presenter->linkCurrent ? active">{$title}</a>{/if}
             </li>
         </ul>
 

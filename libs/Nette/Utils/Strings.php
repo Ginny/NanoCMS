@@ -112,7 +112,7 @@ class Strings
 		$s = strtr($s, "\r", "\n"); // Mac
 
 		// remove control characters; leave \t + \n
-		$s = preg_replace('#[\x00-\x08\x0B-\x1F]+#', '', $s);
+		$s = preg_replace('#[\x00-\x08\x0B-\x1F\x7F]+#', '', $s);
 
 		// right trim
 		$s = preg_replace("#[\t ]+$#m", '', $s);
@@ -481,6 +481,47 @@ class Strings
 			$code = preg_last_error();
 			throw new RegexpException((isset($messages[$code]) ? $messages[$code] : 'Unknown error') . " (pattern: $pattern)", $code);
 		}
+	}
+
+
+
+	/**
+	 * Expands %placeholders% in string.
+	 * @param  string
+	 * @param  array
+	 * @param  bool
+	 * @return mixed
+	 * @throws Nette\InvalidArgumentException
+	 */
+	public static function expand($s, array $params, $recursive = FALSE)
+	{
+		$parts = preg_split('#%([\w.-]*)%#i', $s, -1, PREG_SPLIT_DELIM_CAPTURE);
+		$res = '';
+		foreach ($parts as $n => $part) {
+			if ($n % 2 === 0) {
+				$res .= $part;
+
+			} elseif ($part === '') {
+				$res .= '%';
+
+			} elseif (isset($recursive[$part])) {
+				throw new Nette\InvalidArgumentException('Circular reference detected for variables: ' . implode(', ', array_keys($recursive)) . '.');
+
+			} else {
+				$val = Arrays::get($params, explode('.', $part));
+				if ($recursive && is_string($val)) {
+					$val = self::expand($val, $params, (is_array($recursive) ? $recursive : array()) + array($part => 1));
+				}
+				if (strlen($part) + 2 === strlen($s)) {
+					return $val;
+				}
+				if (!is_scalar($val)) {
+					throw new Nette\InvalidArgumentException("Unable to concatenate non-scalar parameter '$part' into '$s'.");
+				}
+				$res .= $val;
+			}
+		}
+		return $res;
 	}
 
 }

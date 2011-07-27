@@ -16,4 +16,8 @@ abstract class BasePresenter extends Nette\Application\UI\Presenter {
         }
     }
 
+    public function getModel($model) {
+        return $this->context->modelLoader->loadModel($model); // umozni nam v presenterech nacitat model ve tvaru: $this->getModel('foo')
+    }
+
 }

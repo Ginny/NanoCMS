@@ -73,7 +73,7 @@ class CoreMacros extends MacroSet
 		$me->addMacro('l', '?>{<?php');
 		$me->addMacro('r', '?>}<?php');
 
-		$me->addMacro('_', array($me, 'macroTranslate'));
+		$me->addMacro('_', array($me, 'macroTranslate'), array($me, 'macroTranslate'));
 		$me->addMacro('=', array($me, 'macroExpr'));
 		$me->addMacro('?', array($me, 'macroExpr'));
 
@@ -140,7 +140,15 @@ class CoreMacros extends MacroSet
 	 */
 	public function macroTranslate(MacroNode $node, $writer)
 	{
-		return $writer->write('echo %modify', '$template->translate(' . $writer->formatArgs() . ')');
+		if ($node->closing) {
+			return $writer->write('echo %modify($template->translate(ob_get_clean()))');
+
+		} elseif ($node->isEmpty = ($node->args !== '')) {
+			return $writer->write('echo %modify($template->translate(%node.args))');
+
+		} else {
+			return 'ob_start()';
+		}
 	}
 
 
@@ -191,7 +199,7 @@ class CoreMacros extends MacroSet
 			$this->parser->templateId);
 
 		if ($node->modifiers) {
-			return $writer->write('echo %modify', $code . '->__toString(TRUE)');
+			return $writer->write('echo %modify(%raw->__toString(TRUE))', $code);
 		} else {
 			return $code . '->render()';
 		}
@@ -230,7 +238,7 @@ class CoreMacros extends MacroSet
 	 */
 	public function macroCaptureEnd(MacroNode $node, $writer)
 	{
-		return $writer->write("{$node->data->variable} = %modify", 'ob_get_clean()');
+		return $writer->write("{$node->data->variable} = %modify(ob_get_clean())");
 	}
 
 
@@ -261,7 +269,7 @@ class CoreMacros extends MacroSet
 	 */
 	public function macroAttr(MacroNode $node, $writer)
 	{
-		return $writer->write('if (($_l->tmp = (string) (%node.args)) !== \'\') echo \' @@="\' . %escape($_l->tmp) . \'"\'');
+		return $writer->write('echo Nette\Utils\Html::el(NULL, %node.array)->attributes()');
 	}
 
 
@@ -290,11 +298,12 @@ class CoreMacros extends MacroSet
 
 
 	/**
-	 * {debugbreak}
+	 * {debugbreak ...}
 	 */
-	public function macroDebugbreak()
+	public function macroDebugbreak(MacroNode $node, $writer)
 	{
-		return 'if (function_exists("debugbreak")) debugbreak(); elseif (function_exists("xdebug_break")) xdebug_break()';
+		return $writer->write(($node->args == NULL ? '' : 'if (!(%node.args)); else')
+			. 'if (function_exists("debugbreak")) debugbreak(); elseif (function_exists("xdebug_break")) xdebug_break()');
 	}
 
 
@@ -343,7 +352,7 @@ class CoreMacros extends MacroSet
 	 */
 	public function macroExpr(MacroNode $node, $writer)
 	{
-		return $writer->write(($node->name === '?' ? '' : 'echo ') . '%modify', $writer->formatArgs());
+		return $writer->write(($node->name === '?' ? '' : 'echo ') . '%modify(%node.args)');
 	}
 
 
